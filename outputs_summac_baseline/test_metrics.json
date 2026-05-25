@@ -1,0 +1,47 @@
+{
+  "baseline_category": "published_consistency_summac",
+  "baseline_description": "SummaC (NLI-based document-summary consistency); scores inverted via val min-max to P(hallucination)",
+  "summac": {
+    "model_name": "vitc",
+    "granularity": "document",
+    "device": "cpu",
+    "imager_load_cache": false,
+    "score_exceptions_val": 0,
+    "score_exceptions_test": 0,
+    "first_error_val": null,
+    "first_error_test": null,
+    "raw_consistency_std_val": 0.5873823371411206,
+    "raw_consistency_std_test": 0.579544691491079
+  },
+  "calibration": "val_minmax_consistency_to_prob_halluc",
+  "split": {
+    "train": 51605,
+    "val": 6451,
+    "test": 6451
+  },
+  "data_stats": {
+    "qa": {
+      "correct": 10000,
+      "hallucinated": 10000
+    },
+    "dialogue": {
+      "correct": 10000,
+      "hallucinated": 10000
+    },
+    "summarization": {
+      "correct": 10000,
+      "hallucinated": 10000
+    },
+    "general": {
+      "correct": 3692,
+      "hallucinated": 815
+    }
+  },
+  "metrics": {
+    "auroc": 0.6569543008562437,
+    "aupr": 0.6894704436499034,
+    "ece": 0.15166715156714655,
+    "auroc_val": 0.6711467633761966,
+    "aupr_val": 0.6977973722958751
+  }
+}

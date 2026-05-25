@@ -1,0 +1,377 @@
+{
+  "meta": {
+    "stage": 3,
+    "calibration_method": "temperature",
+    "prompt_max_chars": 4000,
+    "n_per_level_requested": 2,
+    "tier_pick_counts": {
+      "HIGH": 2,
+      "MEDIUM": 2,
+      "LOW": 2
+    },
+    "trust_tier_demo_indices": [
+      6210,
+      3349,
+      1543,
+      747,
+      5694,
+      2478
+    ],
+    "description": "Qualitative trust-tier demo only; mirrors terminal Stage 3 trust demo order.",
+    "export_scope": "trust_tier_demo_only",
+    "num_samples": 6,
+    "includes_formatted_terminal_output": true
+  },
+  "samples": [
+    {
+      "test_split_index": 6210,
+      "gold_label": 0,
+      "trust_tier": "HIGH",
+      "p_hallucination": 0.003679170971736312,
+      "model_confidence_correct": 0.9963208290282637,
+      "answer_demo_line": "DeLorean DMC-12",
+      "prompt_excerpt": "Knowledge:  In the feature film series, Dr. Emmett Brown builds a time machine based on a DeLorean DMC-12 car, to gain insights into history and the future. The car features gull-wing doors and an innovative fiberglass body structure with a steel backbone chassis, along with external brushed stainless steel body panels.\nQuestion: What transportation with gull-wing doors was used in the Back to the Future franchise?\nAnswer: DeLorean DMC-12",
+      "calibrated": true,
+      "signal_reliability": {
+        "reliability_score": 0.8400000000000001,
+        "trust_level": "HIGH",
+        "consistent_signals": [
+          "perplexity(low)",
+          "knowledge_overlap(high)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [],
+        "confidence_adjustment": 0.05,
+        "adjusted_confidence": 1.0,
+        "reasoning": [
+          "Signal consistency: 0.60",
+          "Detected 0 conflicts",
+          "Confidence agreement: 1.00",
+          "Verdict: cues agree; no conflicts"
+        ]
+      },
+      "formatted_terminal_output": "\n============================================================\nAnswer: DeLorean DMC-12\n============================================================\nP(hallucination) = 0.004\nFinal confidence = 100.0% [signal reliability aware]\n  └─ Model confidence = 99.6% (calibrated)\n  └─ Reliability score = 84.0%\nTrust level: HIGH\n✓ High reliability (84%); aligned cues; confidence 100.0%\n\n--- Signal reliability details ---\nSupportive cues: perplexity(low), knowledge_overlap(high), entity_overlap(high)\n============================================================\n",
+      "semantic_features": {
+        "semantic_similarity": 0.6547967791557312,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.3333333333333333,
+        "knowledge_overlap": 1.0
+      },
+      "uncertainty_features": {
+        "answer_length": 2,
+        "answer_char_length": 15,
+        "numeric_density": 0.5,
+        "sentence_count": 1,
+        "knowledge_overlap": 1.0,
+        "perplexity": 0.4932928507133483,
+        "token_entropy": 1.4164134924978844,
+        "avg_confidence": 1.0,
+        "sequence_entropy": 2.832826984995769
+      },
+      "signal_contributions": {
+        "semantic_similarity": -0.0473,
+        "entity_overlap_ratio": -0.1528,
+        "knowledge_overlap": -0.1528,
+        "entity_coverage": 0.0509,
+        "perplexity": -0.1498,
+        "token_entropy": -0.0446
+      }
+    },
+    {
+      "test_split_index": 3349,
+      "gold_label": 1,
+      "trust_tier": "HIGH",
+      "p_hallucination": 0.999313473701477,
+      "model_confidence_correct": 0.0006865262985229492,
+      "answer_demo_line": "Fede played for Sevilla FC.",
+      "prompt_excerpt": "Knowledge: Federico San Emeterio Díaz (born 16 March 1997), known simply as Fede, is a Spanish footballer who plays for Sevilla Atlético as a central midfielder.Sevilla Atlético Club is a Spanish football team based in Seville in the autonomous community of Andalusia. Founded in 1958 it plays in Segunda División and is the reserve team of Sevilla FC, holding home games at \"Viejo Nervión\", with a 7,500-seat capacity.\nQuestion: In which reserve team of Sevilla Federico San Emeterio Díaz played as a central midfielder?\nAnswer: Fede played for Sevilla FC.",
+      "calibrated": true,
+      "signal_reliability": {
+        "reliability_score": 0.76,
+        "trust_level": "HIGH",
+        "consistent_signals": [
+          "semantic_similarity(high)",
+          "perplexity(low)",
+          "token_entropy(low)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [],
+        "confidence_adjustment": 0.0,
+        "adjusted_confidence": 0.0006865262985229492,
+        "reasoning": [
+          "Signal consistency: 1.00",
+          "Detected 0 conflicts",
+          "Confidence agreement: 0.20",
+          "Verdict: cues agree; no conflicts"
+        ]
+      },
+      "formatted_terminal_output": "\n============================================================\nAnswer: Fede played for Sevilla FC.\n============================================================\nP(hallucination) = 0.999\nFinal confidence = 0.1% [signal reliability aware]\n  └─ Model confidence = 0.1% (calibrated)\n  └─ Reliability score = 76.0%\nTrust level: HIGH\n✓ High reliability (76%); aligned cues; confidence 0.1%\n\n--- Signal reliability details ---\nSupportive cues: semantic_similarity(high), perplexity(low), token_entropy(low), entity_overlap(high)\n============================================================\n",
+      "semantic_features": {
+        "semantic_similarity": 0.7682921290397644,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.11764705882352941,
+        "knowledge_overlap": 0.6
+      },
+      "uncertainty_features": {
+        "answer_length": 5,
+        "answer_char_length": 27,
+        "numeric_density": 0.0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.4,
+        "perplexity": 5.7889819607953985,
+        "token_entropy": 0.362038098381445,
+        "avg_confidence": 0.4,
+        "sequence_entropy": 1.8101904919072251
+      },
+      "signal_contributions": {
+        "semantic_similarity": 0.1047,
+        "entity_overlap_ratio": 0.1951,
+        "knowledge_overlap": 0.039,
+        "entity_coverage": -0.1492,
+        "perplexity": 0.1499,
+        "token_entropy": 0.1598
+      }
+    },
+    {
+      "test_split_index": 1543,
+      "gold_label": 0,
+      "trust_tier": "MEDIUM",
+      "p_hallucination": 0.0016987207345664501,
+      "model_confidence_correct": 0.9983012792654335,
+      "answer_demo_line": "1,500,000",
+      "prompt_excerpt": "Knowledge: Peter Laurits Jensen (16 May 1886 – 26 October 1961) was a Danish American engineer, inventor and entrepreneur. There are approximately 1,500,000 Americans of Danish origin or descent.\nQuestion: How many Americans are of the decent in which Peter L. Jensen is?\nAnswer: 1,500,000",
+      "calibrated": true,
+      "signal_reliability": {
+        "reliability_score": 0.6719999999999999,
+        "trust_level": "MEDIUM",
+        "consistent_signals": [
+          "perplexity(low)",
+          "knowledge_overlap(high)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [
+          "token_entropy(high)"
+        ],
+        "conflicts": [
+          "Large gap between knowledge overlap and semantic similarity",
+          "Low perplexity but high entropy"
+        ],
+        "confidence_adjustment": -0.2,
+        "adjusted_confidence": 0.7983012792654336,
+        "reasoning": [
+          "Signal consistency: 0.48",
+          "Detected 2 conflicts",
+          "Confidence agreement: 1.00",
+          "Verdict: moderately reliable cues"
+        ]
+      },
+      "formatted_terminal_output": "\n============================================================\nAnswer: 1,500,000\n============================================================\nP(hallucination) = 0.002\nFinal confidence = 79.8% [signal reliability aware]\n  └─ Model confidence = 99.8% (calibrated)\n  └─ Reliability score = 67.2%\nTrust level: MEDIUM\n⚠ Medium reliability (67%); confidence 79.8%\n\n--- Signal reliability details ---\nSupportive cues: perplexity(low), knowledge_overlap(high), entity_overlap(high)\nConflict cues: Large gap between knowledge overlap and semantic similarity, Low perplexity but high entropy\n============================================================\n",
+      "semantic_features": {
+        "semantic_similarity": 0.5490972995758057,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.21428571428571427,
+        "knowledge_overlap": 1.0
+      },
+      "uncertainty_features": {
+        "answer_length": 1,
+        "answer_char_length": 9,
+        "numeric_density": 3.0,
+        "sentence_count": 1,
+        "knowledge_overlap": 1.0,
+        "perplexity": 0.7443054032003105,
+        "token_entropy": 4.406876304670796,
+        "avg_confidence": 1.0,
+        "sequence_entropy": 4.406876304670796
+      },
+      "signal_contributions": {
+        "semantic_similarity": -0.0327,
+        "entity_overlap_ratio": -0.3329,
+        "knowledge_overlap": -0.3329,
+        "entity_coverage": 0.1902,
+        "perplexity": -0.323,
+        "token_entropy": 0.3329
+      }
+    },
+    {
+      "test_split_index": 747,
+      "gold_label": 1,
+      "trust_tier": "MEDIUM",
+      "p_hallucination": 0.9999440908432007,
+      "model_confidence_correct": 5.5909156799316406e-05,
+      "answer_demo_line": "\"The Kingsmen\" wrote the song.",
+      "prompt_excerpt": "Knowledge: Frederick \"Dennis\" Greene (January 11, 1949 – September 5, 2015) was an American singer who was a member of Sha Na Na who were formed in 1969 at Columbia University in New York as the Columbia Kingsmen. The name change to Sha Na Na occurred because of another group with a similar name, which was known for the song Louie Louie.\"Louie Louie\" is an American rhythm and blues song written by Richard Berry in 1955 and best known for the 1963 hit version by The Kingsmen.\nQuestion: Who wrote the song that caused the Columbia Kingsmen to change their name to Sha Na Na?\nAnswer: \"The Kingsmen\" wrote the song.",
+      "calibrated": true,
+      "signal_reliability": {
+        "reliability_score": 0.556,
+        "trust_level": "MEDIUM",
+        "consistent_signals": [
+          "semantic_similarity(high)",
+          "perplexity(low)",
+          "token_entropy(low)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [
+          "knowledge_overlap(low)"
+        ],
+        "conflicts": [
+          "Large gap between knowledge overlap and semantic similarity"
+        ],
+        "confidence_adjustment": -0.1,
+        "adjusted_confidence": 0.0,
+        "reasoning": [
+          "Signal consistency: 0.64",
+          "Detected 1 conflicts",
+          "Confidence agreement: 0.20",
+          "Verdict: moderately reliable cues"
+        ]
+      },
+      "formatted_terminal_output": "\n============================================================\nAnswer: \"The Kingsmen\" wrote the song.\n============================================================\nP(hallucination) = 1.000\nFinal confidence = 0.0% [signal reliability aware]\n  └─ Model confidence = 0.0% (calibrated)\n  └─ Reliability score = 55.6%\nTrust level: MEDIUM\n⚠ Medium reliability (56%); confidence 0.0%\n\n--- Signal reliability details ---\nSupportive cues: semantic_similarity(high), perplexity(low), token_entropy(low), entity_overlap(high)\nConflict cues: Large gap between knowledge overlap and semantic similarity\n============================================================\n",
+      "semantic_features": {
+        "semantic_similarity": 0.743219256401062,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.043478260869565216,
+        "knowledge_overlap": 0.0
+      },
+      "uncertainty_features": {
+        "answer_length": 5,
+        "answer_char_length": 30,
+        "numeric_density": 0.0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.2,
+        "perplexity": 6.920870143756758,
+        "token_entropy": 0.3273279241783099,
+        "avg_confidence": 0.2,
+        "sequence_entropy": 1.6366396208915495
+      },
+      "signal_contributions": {
+        "semantic_similarity": 0.2147,
+        "entity_overlap_ratio": 0.4413,
+        "knowledge_overlap": -0.4413,
+        "entity_coverage": -0.4029,
+        "perplexity": 0.3191,
+        "token_entropy": 0.3691
+      }
+    },
+    {
+      "test_split_index": 5694,
+      "gold_label": 0,
+      "trust_tier": "LOW",
+      "p_hallucination": 0.01282787136733532,
+      "model_confidence_correct": 0.9871721286326647,
+      "answer_demo_line": "yes",
+      "prompt_excerpt": "Knowledge: The Miniature American Shepherd, frequently abbreviated MAS, is a small herding dog breed.The Staffordshire Bull Terrier is a medium-sized, short-coated breed of dog of English lineage and may be considered to be within the pit bull type.\nQuestion: Is the Staffordshire Bull Terrier bigger than the Miniature American Shepherd?\nAnswer: yes",
+      "calibrated": true,
+      "signal_reliability": {
+        "reliability_score": 0.444,
+        "trust_level": "LOW",
+        "consistent_signals": [
+          "perplexity(low)",
+          "token_entropy(low)"
+        ],
+        "conflicting_signals": [
+          "semantic_similarity(low)",
+          "knowledge_overlap(low)",
+          "entity_overlap(low)"
+        ],
+        "conflicts": [
+          "Low semantic similarity yet low perplexity"
+        ],
+        "confidence_adjustment": -0.1,
+        "adjusted_confidence": 0.8871721286326647,
+        "reasoning": [
+          "Signal consistency: 0.36",
+          "Detected 1 conflicts",
+          "Confidence agreement: 0.20",
+          "Verdict: unreliable cues or unresolved conflicts"
+        ]
+      },
+      "formatted_terminal_output": "\n============================================================\nAnswer: yes\n============================================================\nP(hallucination) = 0.013\nFinal confidence = 88.7% [signal reliability aware]\n  └─ Model confidence = 98.7% (calibrated)\n  └─ Reliability score = 44.4%\nTrust level: LOW\n✗ Low reliability (44%); conflicting cues — proceed cautiously\n\n--- Signal reliability details ---\nSupportive cues: perplexity(low), token_entropy(low)\nConflict cues: Low semantic similarity yet low perplexity\n============================================================\n",
+      "semantic_features": {
+        "semantic_similarity": 0.24734778702259064,
+        "entity_overlap_ratio": 0.0,
+        "entity_coverage": 0.0,
+        "knowledge_overlap": 0.0
+      },
+      "uncertainty_features": {
+        "answer_length": 1,
+        "answer_char_length": 3,
+        "numeric_density": 0.0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.0,
+        "perplexity": 7.159163788500578,
+        "token_entropy": 0.4295406115376251,
+        "avg_confidence": 0.0,
+        "sequence_entropy": 0.4295406115376251
+      },
+      "signal_contributions": {
+        "semantic_similarity": -0.1227,
+        "entity_overlap_ratio": -0.2428,
+        "knowledge_overlap": -0.2428,
+        "entity_coverage": -0.2428,
+        "perplexity": 0.1733,
+        "token_entropy": 0.1907
+      }
+    },
+    {
+      "test_split_index": 2478,
+      "gold_label": 1,
+      "trust_tier": "LOW",
+      "p_hallucination": 0.9999276399612427,
+      "model_confidence_correct": 7.236003875732422e-05,
+      "answer_demo_line": "Sylvia McNair, the celebrated singer, is known for her brilliant baritone singing.",
+      "prompt_excerpt": "Knowledge: Roger Vignoles, born 12 July 1945, is a British pianist and accompanist. He regularly performs with the world's leading singers, including Kiri Te Kanawa, Thomas Allen, Anne Sofie von Otter, Thomas Hampson, Gitta-Maria Sjöberg, Sarah Walker, Sylvia McNair, Susan Graham, Christine Brewer, Felicity Lott, Stephan Genz, Monica Groop, Wolfgang Holzmair, Bernarda Fink, Christine Schäfer, Brigitte Fassbaender and Kathleen Battle. McNair, a soprano, has made several critically acclaimed recordings and has won two Grammy Awards.\nQuestion: Roger Vignoles has accompanied singer Sylvia McNair, what redister does she sing in?\nAnswer: Sylvia McNair, the celebrated singer, is known for her brilliant baritone singing.",
+      "calibrated": true,
+      "signal_reliability": {
+        "reliability_score": 0.492,
+        "trust_level": "LOW",
+        "consistent_signals": [
+          "semantic_similarity(high)",
+          "perplexity(low)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [
+          "knowledge_overlap(low)"
+        ],
+        "conflicts": [
+          "Large gap between knowledge overlap and semantic similarity"
+        ],
+        "confidence_adjustment": -0.1,
+        "adjusted_confidence": 0.0,
+        "reasoning": [
+          "Signal consistency: 0.48",
+          "Detected 1 conflicts",
+          "Confidence agreement: 0.20",
+          "Verdict: unreliable cues or unresolved conflicts"
+        ]
+      },
+      "formatted_terminal_output": "\n============================================================\nAnswer: Sylvia McNair, the celebrated singer, is known for her brilliant baritone singing.\n============================================================\nP(hallucination) = 1.000\nFinal confidence = 0.0% [signal reliability aware]\n  └─ Model confidence = 0.0% (calibrated)\n  └─ Reliability score = 49.2%\nTrust level: LOW\n✗ Low reliability (49%); conflicting cues — proceed cautiously\n\n--- Signal reliability details ---\nSupportive cues: semantic_similarity(high), perplexity(low), entity_overlap(high)\nConflict cues: Large gap between knowledge overlap and semantic similarity\n============================================================\n",
+      "semantic_features": {
+        "semantic_similarity": 0.8267366886138916,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.037037037037037035,
+        "knowledge_overlap": 0.1
+      },
+      "uncertainty_features": {
+        "answer_length": 12,
+        "answer_char_length": 82,
+        "numeric_density": 0.0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.3333333333333333,
+        "perplexity": 7.992425456079967,
+        "token_entropy": 0.8062166559963584,
+        "avg_confidence": 0.3333333333333333,
+        "sequence_entropy": 9.6745998719563
+      },
+      "signal_contributions": {
+        "semantic_similarity": 0.2712,
+        "entity_overlap_ratio": 0.415,
+        "knowledge_overlap": -0.332,
+        "entity_coverage": -0.3842,
+        "perplexity": 0.2823,
+        "token_entropy": 0.2477
+      }
+    }
+  ]
+}

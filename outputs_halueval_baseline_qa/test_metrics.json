@@ -1,0 +1,21 @@
+{
+  "model": "HaluEval Baseline",
+  "source": "result_file:HaluEval-Baseline/qa_gpt-3.5-turbo_result.json|qa_aligned:HaluEval-Data/qa_data.json",
+  "num_samples": 2000,
+  "failed_judgement_count": 10003,
+  "split": {
+    "seed": 42,
+    "test_ratio": 0.1,
+    "val_ratio": 0.1,
+    "mode": "test_only",
+    "train_size": 16000,
+    "val_size": 2000,
+    "test_size": 2000
+  },
+  "metrics": {
+    "auroc": 0.6102409999999999,
+    "aupr": 0.5841257254724226,
+    "ece": 0.17475,
+    "ece_10": 0.17475
+  }
+}

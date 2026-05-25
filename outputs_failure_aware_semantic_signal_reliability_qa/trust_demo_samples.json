@@ -1,0 +1,372 @@
+{
+  "meta": {
+    "stage": 3,
+    "calibration_method": "temperature",
+    "prompt_max_chars": 4000,
+    "n_per_level_requested": 2,
+    "tier_pick_counts": {
+      "HIGH": 2,
+      "MEDIUM": 2,
+      "LOW": 2
+    },
+    "trust_tier_demo_indices": [
+      310,
+      103,
+      567,
+      1725,
+      466,
+      84
+    ],
+    "description": "Qualitative trust-tier demo only; mirrors terminal Stage 3 trust demo order.",
+    "export_scope": "trust_tier_demo_only",
+    "num_samples": 6,
+    "includes_formatted_terminal_output": true
+  },
+  "samples": [
+    {
+      "test_split_index": 310,
+      "gold_label": 0,
+      "trust_tier": "HIGH",
+      "p_hallucination": 0.003110947785899043,
+      "model_confidence_correct": 0.996889052214101,
+      "answer_demo_line": "No. 5",
+      "prompt_excerpt": "Knowledge:  Martina Hingis was the defending champion but lost in the semifinals to Venus Williams.Venus Ebony Starr Williams (born June 17, 1980) is an American professional tennis player who is currently ranked world No. 5 in the WTA singles rankings.\nQuestion: The athlete that defeated Martina Hingis in the The 1999 Italian Open current holds what WTA singles rating?\nAnswer: No. 5",
+      "calibrated": true,
+      "signal_reliability": {
+        "reliability_score": 0.8400000000000001,
+        "trust_level": "HIGH",
+        "consistent_signals": [
+          "perplexity(low)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [],
+        "confidence_adjustment": 0.05,
+        "adjusted_confidence": 1.0,
+        "reasoning": [
+          "Signal consistency: 0.60",
+          "Detected 0 conflicts",
+          "Confidence agreement: 1.00",
+          "Verdict: cues agree; no conflicts"
+        ]
+      },
+      "formatted_terminal_output": "\n============================================================\nAnswer: No. 5\n============================================================\nP(hallucination) = 0.003\nFinal confidence = 100.0% [signal reliability aware]\n  └─ Model confidence = 99.7% (calibrated)\n  └─ Reliability score = 84.0%\nTrust level: HIGH\n✓ High reliability (84%); aligned cues; confidence 100.0%\n\n--- Signal reliability details ---\nSupportive cues: perplexity(low), entity_overlap(high)\n============================================================\n",
+      "semantic_features": {
+        "semantic_similarity": 0.42302870750427246,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.2,
+        "knowledge_overlap": 0.5
+      },
+      "uncertainty_features": {
+        "answer_length": 2,
+        "answer_char_length": 5,
+        "numeric_density": 0.5,
+        "sentence_count": 1,
+        "knowledge_overlap": 1.0,
+        "perplexity": 0.660542046265299,
+        "token_entropy": 1.130097375181575,
+        "avg_confidence": 1.0,
+        "sequence_entropy": 2.26019475036315
+      },
+      "signal_contributions": {
+        "semantic_similarity": 0.0462,
+        "entity_overlap_ratio": -0.3003,
+        "knowledge_overlap": -0.0,
+        "entity_coverage": 0.1802,
+        "perplexity": -0.2924,
+        "token_entropy": -0.1306
+      }
+    },
+    {
+      "test_split_index": 103,
+      "gold_label": 1,
+      "trust_tier": "HIGH",
+      "p_hallucination": 0.9994109869003296,
+      "model_confidence_correct": 0.0005890130996704102,
+      "answer_demo_line": "Paul Oakenfold did a remix for Bristol trip hop group.",
+      "prompt_excerpt": "Knowledge:  Paul has provided over 100 remixes for over 100 artists including U2, Moby, Madonna, Massive Attack, New Order, The Rolling Stones, The Stone Roses etc.Massive Attack are an English trip hop group formed in 1988 in Bristol, consisting of Robert \"3D\" Del Naja, Grant \"Daddy G\" Marshall and formerly Andy \"Mushroom\" Vowles (\"Mush\").\nQuestion: Which Bristol trip hop group did Paul Oakenfold do a remix for ?\nAnswer: Paul Oakenfold did a remix for Bristol trip hop group.",
+      "calibrated": true,
+      "signal_reliability": {
+        "reliability_score": 0.76,
+        "trust_level": "HIGH",
+        "consistent_signals": [
+          "semantic_similarity(high)",
+          "perplexity(low)",
+          "knowledge_overlap(high)",
+          "token_entropy(low)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [],
+        "confidence_adjustment": 0.0,
+        "adjusted_confidence": 0.0005890130996704102,
+        "reasoning": [
+          "Signal consistency: 1.00",
+          "Detected 0 conflicts",
+          "Confidence agreement: 0.20",
+          "Verdict: cues agree; no conflicts"
+        ]
+      },
+      "formatted_terminal_output": "\n============================================================\nAnswer: Paul Oakenfold did a remix for Bristol trip hop group.\n============================================================\nP(hallucination) = 0.999\nFinal confidence = 0.1% [signal reliability aware]\n  └─ Model confidence = 0.1% (calibrated)\n  └─ Reliability score = 76.0%\nTrust level: HIGH\n✓ High reliability (76%); aligned cues; confidence 0.1%\n\n--- Signal reliability details ---\nSupportive cues: semantic_similarity(high), perplexity(low), knowledge_overlap(high), token_entropy(low)\n============================================================\n",
+      "semantic_features": {
+        "semantic_similarity": 0.858604371547699,
+        "entity_overlap_ratio": 0.5,
+        "entity_coverage": 0.05,
+        "knowledge_overlap": 0.625
+      },
+      "uncertainty_features": {
+        "answer_length": 10,
+        "answer_char_length": 54,
+        "numeric_density": 0.0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.4,
+        "perplexity": 5.424984358172947,
+        "token_entropy": 0.40319077230324285,
+        "avg_confidence": 0.4,
+        "sequence_entropy": 4.031907723032429
+      },
+      "signal_contributions": {
+        "semantic_similarity": 0.2173,
+        "entity_overlap_ratio": 0.0,
+        "knowledge_overlap": 0.0757,
+        "entity_coverage": -0.2726,
+        "perplexity": 0.2372,
+        "token_entropy": 0.2419
+      }
+    },
+    {
+      "test_split_index": 567,
+      "gold_label": 0,
+      "trust_tier": "MEDIUM",
+      "p_hallucination": 0.002401794772595167,
+      "model_confidence_correct": 0.9975982052274048,
+      "answer_demo_line": "American",
+      "prompt_excerpt": "Knowledge: The Squirrel Nut Zippers is an American swing band formed in 1993 in Chapel Hill, North Carolina, by James \"Jimbo\" Mathus (vocals and guitar), Tom Maxwell (vocals and guitar), Katharine Whalen (vocals, banjo, ukulele), Chris Phillips (drums), Don Raleigh (bass guitar), and Ken Mosher.Sponge is an American alternative rock band from Detroit, Michigan formed in 1991 by Vinnie Dombroski, Mike Cross, Tim Cross, and Joey Mazzola.\nQuestion: What country of origin does Squirrel Nut Zippers and Sponge have in common?\nAnswer: American",
+      "calibrated": true,
+      "signal_reliability": {
+        "reliability_score": 0.736,
+        "trust_level": "MEDIUM",
+        "consistent_signals": [
+          "perplexity(low)",
+          "knowledge_overlap(high)",
+          "token_entropy(low)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [
+          "semantic_similarity(low)"
+        ],
+        "conflicts": [
+          "Low semantic similarity yet low perplexity",
+          "Large gap between knowledge overlap and semantic similarity"
+        ],
+        "confidence_adjustment": -0.2,
+        "adjusted_confidence": 0.7975982052274049,
+        "reasoning": [
+          "Signal consistency: 0.64",
+          "Detected 2 conflicts",
+          "Confidence agreement: 1.00",
+          "Verdict: moderately reliable cues"
+        ]
+      },
+      "formatted_terminal_output": "\n============================================================\nAnswer: American\n============================================================\nP(hallucination) = 0.002\nFinal confidence = 79.8% [signal reliability aware]\n  └─ Model confidence = 99.8% (calibrated)\n  └─ Reliability score = 73.6%\nTrust level: MEDIUM\n⚠ Medium reliability (74%); confidence 79.8%\n\n--- Signal reliability details ---\nSupportive cues: perplexity(low), knowledge_overlap(high), token_entropy(low), entity_overlap(high)\nConflict cues: Low semantic similarity yet low perplexity, Large gap between knowledge overlap and semantic similarity\n============================================================\n",
+      "semantic_features": {
+        "semantic_similarity": 0.23491618037223816,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.047619047619047616,
+        "knowledge_overlap": 1.0
+      },
+      "uncertainty_features": {
+        "answer_length": 1,
+        "answer_char_length": 8,
+        "numeric_density": 0.0,
+        "sentence_count": 1,
+        "knowledge_overlap": 1.0,
+        "perplexity": 0.46474290418923914,
+        "token_entropy": 0.33769197877589213,
+        "avg_confidence": 1.0,
+        "sequence_entropy": 0.33769197877589213
+      },
+      "signal_contributions": {
+        "semantic_similarity": 0.111,
+        "entity_overlap_ratio": -0.2093,
+        "knowledge_overlap": -0.2093,
+        "entity_coverage": 0.1894,
+        "perplexity": -0.2054,
+        "token_entropy": -0.1739
+      }
+    },
+    {
+      "test_split_index": 1725,
+      "gold_label": 1,
+      "trust_tier": "MEDIUM",
+      "p_hallucination": 0.9997383952140808,
+      "model_confidence_correct": 0.00026160478591918945,
+      "answer_demo_line": "Katleman invested in the famous Stardust Hotel which later got acquired by the Frontier Hotel.",
+      "prompt_excerpt": "Knowledge:  He was an investor in two other casinos, the Frontier Hotel and the Silver Slipper.The New Frontier (formerly Last Frontier and The Frontier) was a hotel and casino on the Las Vegas Strip in Paradise, Nevada, US. It was the second resort that opened on the Las Vegas Strip and operated continuously from October 30, 1942 until it closed on July 16, 2007.\nQuestion: Which hotel on the Las Vegas Strip in Paradise, Nevada, US did Beldon Katleman invest in that closed on July 16, 2007?\nAnswer: Katleman invested in the famous Stardust Hotel which later got acquired by the Frontier Hotel.",
+      "calibrated": true,
+      "signal_reliability": {
+        "reliability_score": 0.54,
+        "trust_level": "MEDIUM",
+        "consistent_signals": [
+          "semantic_similarity(high)",
+          "perplexity(low)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [
+          "Large gap between knowledge overlap and semantic similarity"
+        ],
+        "confidence_adjustment": -0.1,
+        "adjusted_confidence": 0.0,
+        "reasoning": [
+          "Signal consistency: 0.60",
+          "Detected 1 conflicts",
+          "Confidence agreement: 0.20",
+          "Verdict: moderately reliable cues"
+        ]
+      },
+      "formatted_terminal_output": "\n============================================================\nAnswer: Katleman invested in the famous Stardust Hotel which later got acquired by the Frontier Hotel.\n============================================================\nP(hallucination) = 1.000\nFinal confidence = 0.0% [signal reliability aware]\n  └─ Model confidence = 0.0% (calibrated)\n  └─ Reliability score = 54.0%\nTrust level: MEDIUM\n⚠ Medium reliability (54%); confidence 0.0%\n\n--- Signal reliability details ---\nSupportive cues: semantic_similarity(high), perplexity(low)\nConflict cues: Large gap between knowledge overlap and semantic similarity\n============================================================\n",
+      "semantic_features": {
+        "semantic_similarity": 0.8477646112442017,
+        "entity_overlap_ratio": 0.3333333333333333,
+        "entity_coverage": 0.05555555555555555,
+        "knowledge_overlap": 0.23076923076923078
+      },
+      "uncertainty_features": {
+        "answer_length": 15,
+        "answer_char_length": 94,
+        "numeric_density": 0.0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.2857142857142857,
+        "perplexity": 8.421164304567903,
+        "token_entropy": 0.5865556258343269,
+        "avg_confidence": 0.2857142857142857,
+        "sequence_entropy": 8.798334387514902
+      },
+      "signal_contributions": {
+        "semantic_similarity": 1.1407,
+        "entity_overlap_ratio": -0.5467,
+        "knowledge_overlap": -0.8831,
+        "entity_coverage": -1.4578,
+        "perplexity": 1.0876,
+        "token_entropy": 1.159
+      }
+    },
+    {
+      "test_split_index": 466,
+      "gold_label": 0,
+      "trust_tier": "LOW",
+      "p_hallucination": 0.00608742656186223,
+      "model_confidence_correct": 0.9939125734381378,
+      "answer_demo_line": "May 23, 2015",
+      "prompt_excerpt": "Knowledge: Stiller and Meara (Jerry Stiller and Anne Meara) were a husband-and-wife comedy duo that was popular primarily in the 1960s and 1970s.Anne Meara (September 20, 1929 – May 23, 2015) was an American actress and comedian.\nQuestion: Stiller and Meara, were a husband-and-wife comedy duo that was popular primarily in the 1960s and 1970s, true names are Jerry Stiller and Anne Meara, an American actress and comedian, that died on which date?\nAnswer: May 23, 2015",
+      "calibrated": true,
+      "signal_reliability": {
+        "reliability_score": 0.428,
+        "trust_level": "LOW",
+        "consistent_signals": [
+          "perplexity(low)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [
+          "knowledge_overlap(low)"
+        ],
+        "conflicts": [
+          "Large gap between knowledge overlap and semantic similarity"
+        ],
+        "confidence_adjustment": -0.1,
+        "adjusted_confidence": 0.8939125734381378,
+        "reasoning": [
+          "Signal consistency: 0.32",
+          "Detected 1 conflicts",
+          "Confidence agreement: 0.20",
+          "Verdict: unreliable cues or unresolved conflicts"
+        ]
+      },
+      "formatted_terminal_output": "\n============================================================\nAnswer: May 23, 2015\n============================================================\nP(hallucination) = 0.006\nFinal confidence = 89.4% [signal reliability aware]\n  └─ Model confidence = 99.4% (calibrated)\n  └─ Reliability score = 42.8%\nTrust level: LOW\n✗ Low reliability (43%); conflicting cues — proceed cautiously\n\n--- Signal reliability details ---\nSupportive cues: perplexity(low), entity_overlap(high)\nConflict cues: Large gap between knowledge overlap and semantic similarity\n============================================================\n",
+      "semantic_features": {
+        "semantic_similarity": 0.5488470792770386,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.3076923076923077,
+        "knowledge_overlap": 0.0
+      },
+      "uncertainty_features": {
+        "answer_length": 3,
+        "answer_char_length": 12,
+        "numeric_density": 0.6666666666666666,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.6666666666666666,
+        "perplexity": 2.877023727975213,
+        "token_entropy": 1.1376310705172084,
+        "avg_confidence": 0.6666666666666666,
+        "sequence_entropy": 3.412893211551625
+      },
+      "signal_contributions": {
+        "semantic_similarity": -0.0469,
+        "entity_overlap_ratio": -0.4799,
+        "knowledge_overlap": 0.4799,
+        "entity_coverage": 0.1846,
+        "perplexity": -0.4247,
+        "token_entropy": -0.2069
+      }
+    },
+    {
+      "test_split_index": 84,
+      "gold_label": 1,
+      "trust_tier": "LOW",
+      "p_hallucination": 0.9998401403427124,
+      "model_confidence_correct": 0.00015985965728759766,
+      "answer_demo_line": "Walt Housman was homeschooled.",
+      "prompt_excerpt": "Knowledge:  He attended Merrimack High School in Merrimack, New Hampshire.Merrimack High School (MHS) is the public secondary school of the town of Merrimack, New Hampshire. About 1,400 students from grades 9 through 12 attend the school each year.\nQuestion: Walt Housman attended which public secondary school that holds 1400 students?\nAnswer: Walt Housman was homeschooled.",
+      "calibrated": true,
+      "signal_reliability": {
+        "reliability_score": 0.444,
+        "trust_level": "LOW",
+        "consistent_signals": [
+          "semantic_similarity(high)",
+          "perplexity(low)",
+          "token_entropy(low)"
+        ],
+        "conflicting_signals": [
+          "knowledge_overlap(low)",
+          "entity_overlap(low)"
+        ],
+        "conflicts": [
+          "Large gap between knowledge overlap and semantic similarity"
+        ],
+        "confidence_adjustment": -0.1,
+        "adjusted_confidence": 0.0,
+        "reasoning": [
+          "Signal consistency: 0.36",
+          "Detected 1 conflicts",
+          "Confidence agreement: 0.20",
+          "Verdict: unreliable cues or unresolved conflicts"
+        ]
+      },
+      "formatted_terminal_output": "\n============================================================\nAnswer: Walt Housman was homeschooled.\n============================================================\nP(hallucination) = 1.000\nFinal confidence = 0.0% [signal reliability aware]\n  └─ Model confidence = 0.0% (calibrated)\n  └─ Reliability score = 44.4%\nTrust level: LOW\n✗ Low reliability (44%); conflicting cues — proceed cautiously\n\n--- Signal reliability details ---\nSupportive cues: semantic_similarity(high), perplexity(low), token_entropy(low)\nConflict cues: Large gap between knowledge overlap and semantic similarity\n============================================================\n",
+      "semantic_features": {
+        "semantic_similarity": 0.7377486228942871,
+        "entity_overlap_ratio": 0.0,
+        "entity_coverage": 0.0,
+        "knowledge_overlap": 0.0
+      },
+      "uncertainty_features": {
+        "answer_length": 4,
+        "answer_char_length": 30,
+        "numeric_density": 0.0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.0,
+        "perplexity": 8.630183560914272,
+        "token_entropy": 0.19624689123192368,
+        "avg_confidence": 0.0,
+        "sequence_entropy": 0.7849875649276947
+      },
+      "signal_contributions": {
+        "semantic_similarity": -0.2456,
+        "entity_overlap_ratio": 0.5165,
+        "knowledge_overlap": 0.5165,
+        "entity_coverage": 0.5165,
+        "perplexity": -0.3382,
+        "token_entropy": -0.4658
+      }
+    }
+  ]
+}

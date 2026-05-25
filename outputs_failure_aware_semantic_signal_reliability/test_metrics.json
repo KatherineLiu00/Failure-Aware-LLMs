@@ -1,0 +1,39 @@
+{
+  "stage": 3,
+  "calibration": "temperature",
+  "dataset": "all",
+  "data_stats": {
+    "qa": {
+      "correct": 10000,
+      "hallucinated": 10000
+    },
+    "dialogue": {
+      "correct": 10000,
+      "hallucinated": 10000
+    },
+    "summarization": {
+      "correct": 10000,
+      "hallucinated": 10000
+    },
+    "general": {
+      "correct": 3692,
+      "hallucinated": 815
+    }
+  },
+  "split": {
+    "train": 51605,
+    "val": 6451,
+    "test": 6451
+  },
+  "metrics": {
+    "auroc": 0.9248331304105128,
+    "aupr": 0.9254840213980373,
+    "ece": 0.037699546186443104,
+    "ece_10": 0.0378689863410097,
+    "acc@0.1_conf": 0.4775075987841945,
+    "acc@0.2_conf": 0.5086978131212724,
+    "acc@0.3_conf": 0.5053259480187473,
+    "loss": 0.0,
+    "accuracy": 0.8363044489226477
+  }
+}

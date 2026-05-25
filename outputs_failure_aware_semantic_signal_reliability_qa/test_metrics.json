@@ -1,0 +1,27 @@
+{
+  "stage": 3,
+  "calibration": "temperature",
+  "dataset": "qa",
+  "data_stats": {
+    "qa": {
+      "correct": 10000,
+      "hallucinated": 10000
+    }
+  },
+  "split": {
+    "train": 16000,
+    "val": 2000,
+    "test": 2000
+  },
+  "metrics": {
+    "auroc": 0.9972160000000001,
+    "aupr": 0.9981229415884193,
+    "ece": 0.008513487213756894,
+    "ece_10": 0.0072978008924983444,
+    "acc@0.1_conf": 0.5015151515151515,
+    "acc@0.2_conf": 0.5007541478129713,
+    "acc@0.3_conf": 0.5005020080321285,
+    "loss": 0.0,
+    "accuracy": 0.9885
+  }
+}

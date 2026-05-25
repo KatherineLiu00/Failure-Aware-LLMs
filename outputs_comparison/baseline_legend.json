@@ -1,0 +1,8 @@
+{
+  "description": "Main comparison baseline categories",
+  "models": {
+    "Baseline (without signal reliability)": "Learned detector — trained end-to-end on HaluEval (same encoder pipeline without signal-reliability branch; outputs P(hallucination))",
+    "Proposed (with signal reliability)": "Our method — learned detector with semantic + uncertainty cues and SignalReliabilityAnalyzer (outputs P(hallucination))",
+    "SummaC (published consistency)": "Published external baseline — SummaC NLI-based document–summary consistency (Laban et al.); mapped to P(hallucination) via val-split normalization (see run_summac_baseline.py)"
+  }
+}

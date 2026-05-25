@@ -1,0 +1,9 @@
+{
+  "description": "QA appendix baseline categories",
+  "models": {
+    "HaluEval Baseline (LLM-as-judge reference)": "HaluEval-style LLM-as-judge probabilities (reference line; not same architecture as local models)",
+    "Baseline (without signal reliability)": "Learned detector trained on QA-only split (no signal-reliability branch)",
+    "Proposed (with signal reliability)": "Our method trained on QA-only split (semantic + uncertainty + signal reliability)",
+    "SummaC (published consistency)": "Published SummaC consistency baseline on QA-only split (same seed/split as training; see run_summac_baseline.py)"
+  }
+}

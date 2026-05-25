@@ -1,0 +1,1355 @@
+{
+  "meta": {
+    "decision_threshold": 0.5,
+    "labels": {
+      "0": "correct / non-hallucination",
+      "1": "hallucination"
+    },
+    "false_positive": "gold 0, predicted 1 (model false alarm)",
+    "false_negative": "gold 1, predicted 0 (missed hallucination)",
+    "max_per_error_type": 25,
+    "export_all_errors": false,
+    "prompt_max_chars": 2000,
+    "counts_on_test_set": {
+      "false_positive_total": 5,
+      "false_negative_total": 18
+    }
+  },
+  "false_positives": [
+    {
+      "test_split_index": 298,
+      "error_type": "false_positive",
+      "gold_label": 0,
+      "predicted_label": 1,
+      "p_hallucination": 0.9916925430297852,
+      "model_confidence_correct": 0.008307456970214844,
+      "prompt_excerpt": "Knowledge: \" and \"What Do You Care What Other People Think?\", both written by Feynman and Ralph Leighton.: Further Adventures of a Curious Character (1988) is the second of two books consisting of transcribed and edited, oral reminiscences from American physicist Richard Feynman. It follows \"Surely You're Joking, Mr. Feynman!\nQuestion: The second of two books consisting of transcribed and edited, oral reminiscences from American physicist Richard Feynman which follows \"Surely You're Joking, Mr. Feynman!\" was written by Richard Feynman and who else?\nAnswer: Ralph Leighton.",
+      "semantic_features": {
+        "semantic_similarity": 0.5291040539741516,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.08333333333333333,
+        "knowledge_overlap": 0.5
+      },
+      "uncertainty_features": {
+        "answer_length": 2,
+        "answer_char_length": 15,
+        "numeric_density": 0.0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.5,
+        "perplexity": 4.409498091797751,
+        "token_entropy": 0.18485651175859238,
+        "avg_confidence": 0.5,
+        "sequence_entropy": 0.36971302351718477
+      },
+      "signal_reliability": {
+        "reliability_score": 0.6000000000000001,
+        "trust_level": "MEDIUM",
+        "consistent_signals": [
+          "perplexity(low)",
+          "token_entropy(low)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [],
+        "confidence_adjustment": 0.0,
+        "adjusted_confidence": 0.008307456970214844,
+        "reasoning": [
+          "Signal consistency: 0.60",
+          "Detected 0 conflicts",
+          "Confidence agreement: 0.20",
+          "Verdict: moderately reliable cues"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type2_missing_info",
+        "reason": "Moderate/low signals (semantic_similarity=0.53, knowledge_overlap=0.50)"
+      },
+      "signal_contributions": {
+        "semantic_similarity": 0.0146,
+        "entity_overlap_ratio": 0.2514,
+        "knowledge_overlap": 0.0,
+        "entity_coverage": -0.2095,
+        "perplexity": 0.207,
+        "token_entropy": 0.2281
+      }
+    },
+    {
+      "test_split_index": 769,
+      "error_type": "false_positive",
+      "gold_label": 0,
+      "predicted_label": 1,
+      "p_hallucination": 0.90012127161026,
+      "model_confidence_correct": 0.09987872838973999,
+      "prompt_excerpt": "Knowledge: Buddhist Yip Kei Nam Memorial College (Chinese: 佛敎葉紀南紀念中學) is the first secondary school on the Tsing Yi Island in the New Territories of Hong Kong. Located in Cheung Ching Estate, the school was founded by Hong Kong Buddhist Association in September, 1978 with buildings from Hong Kong Government and funds from Yip Hon (葉漢), a tycoon in Hong Kong and Macau.Yip Hon () (1904 – 7 May 1997) was a gambling tycoon in South China. His wealth was estimated to be HK$ 100 million.\nQuestion: Buddhist Yip Kei Nam Memorial College the school was founded with funds from a gambling tycoon whose wealth was estimated to be what?\nAnswer: HK$ 100 million",
+      "semantic_features": {
+        "semantic_similarity": 0.6670985221862793,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.05,
+        "knowledge_overlap": 1.0
+      },
+      "uncertainty_features": {
+        "answer_length": 3,
+        "answer_char_length": 15,
+        "numeric_density": 0.3333333333333333,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.6666666666666666,
+        "perplexity": 3.326251445430564,
+        "token_entropy": 0.8802483987498794,
+        "avg_confidence": 0.6666666666666666,
+        "sequence_entropy": 2.640745196249638
+      },
+      "signal_reliability": {
+        "reliability_score": 0.6000000000000001,
+        "trust_level": "MEDIUM",
+        "consistent_signals": [
+          "perplexity(low)",
+          "knowledge_overlap(high)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [],
+        "confidence_adjustment": 0.0,
+        "adjusted_confidence": 0.09987872838973999,
+        "reasoning": [
+          "Signal consistency: 0.60",
+          "Detected 0 conflicts",
+          "Confidence agreement: 0.20",
+          "Verdict: moderately reliable cues"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type2_missing_info",
+        "reason": "Moderate/low signals (semantic_similarity=0.67, knowledge_overlap=1.00)"
+      },
+      "signal_contributions": {
+        "semantic_similarity": 0.0467,
+        "entity_overlap_ratio": 0.1399,
+        "knowledge_overlap": 0.1399,
+        "entity_coverage": -0.1259,
+        "perplexity": 0.1212,
+        "token_entropy": 0.0783
+      }
+    },
+    {
+      "test_split_index": 773,
+      "error_type": "false_positive",
+      "gold_label": 0,
+      "predicted_label": 1,
+      "p_hallucination": 0.888579785823822,
+      "model_confidence_correct": 0.11142021417617798,
+      "prompt_excerpt": "Knowledge: n.y.d.c. Café & Restaurants is a restaurant chain based in Singapore, serving a menu based on recipes for homemade soups, breads, pastas, pizzas, cookies, pies, ice cream, mud pies, cheesecakes and special cake recipes that have been in their founder’s family for generations.Mississippi mud pie is a chocolate-based dessert pie that is likely to have originated in the U.S. state of Mississippi.\nQuestion: The mud pie served by n.y.d.c. Café & Restaurants is likely to have originated in what U. S. state?\nAnswer: Mississippi.",
+      "semantic_features": {
+        "semantic_similarity": 0.48065996170043945,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.25,
+        "knowledge_overlap": 0.0
+      },
+      "uncertainty_features": {
+        "answer_length": 1,
+        "answer_char_length": 12,
+        "numeric_density": 0.0,
+        "sentence_count": 1,
+        "knowledge_overlap": 1.0,
+        "perplexity": 0.9001539920886272,
+        "token_entropy": 0.39271305417751456,
+        "avg_confidence": 1.0,
+        "sequence_entropy": 0.39271305417751456
+      },
+      "signal_reliability": {
+        "reliability_score": 0.492,
+        "trust_level": "LOW",
+        "consistent_signals": [
+          "perplexity(low)",
+          "token_entropy(low)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [
+          "knowledge_overlap(low)"
+        ],
+        "conflicts": [
+          "Large gap between knowledge overlap and semantic similarity"
+        ],
+        "confidence_adjustment": -0.1,
+        "adjusted_confidence": 0.011420214176177973,
+        "reasoning": [
+          "Signal consistency: 0.48",
+          "Detected 1 conflicts",
+          "Confidence agreement: 0.20",
+          "Verdict: unreliable cues or unresolved conflicts"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type3_conflicting_signals",
+        "reason": "Conflicting signals prevent reliable prediction: Large gap between knowledge overlap and semantic similarity"
+      },
+      "signal_contributions": {
+        "semantic_similarity": -0.0122,
+        "entity_overlap_ratio": 0.3162,
+        "knowledge_overlap": -0.3162,
+        "entity_coverage": -0.1581,
+        "perplexity": 0.3048,
+        "token_entropy": 0.2541
+      }
+    },
+    {
+      "test_split_index": 1356,
+      "error_type": "false_positive",
+      "gold_label": 0,
+      "predicted_label": 1,
+      "p_hallucination": 0.8007968664169312,
+      "model_confidence_correct": 0.19920313358306885,
+      "prompt_excerpt": "Knowledge:  Known for his works at Luma Pictures as a visual effects supervisor in acclaimed films such as \"\" (2007), \"No Country for Old Men\" (2007), \"The Midnight Meat Train\" (2008), \"\" (2008), \"Harry Potter and the Half-Blood Prince\" (2009), \"The Book of Eli\" (2010), \"\" (2011), \"\" (2012), \"Prometheus\" (2012), \"The Avengers\" (2012), \"Saving Mr. Banks\" (2013), \"Guardians of the Galaxy\" (2014), \"\" (2015), \"In the Heart of the Sea\" (2015), \"Deadpool\" (2015) and \"Doctor Strange\" (2016), for which he received an Academy Award for Best Visual Effects nomination at the 89th Academy Awards.Prometheus ( ) is a 2012 science fiction film directed by Ridley Scott, written by Jon Spaihts and Damon Lindelof and starring Noomi Rapace, Michael Fassbender, Guy Pearce, Idris Elba, Logan Marshall-Green and Charlize Theron.\nQuestion: Vincent Cirelli is a special effects supervisor for what 2012 sci-fi film directed by Ridley Scott?\nAnswer: Prometheus",
+      "semantic_features": {
+        "semantic_similarity": 0.5566939115524292,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.022727272727272728,
+        "knowledge_overlap": 0.0
+      },
+      "uncertainty_features": {
+        "answer_length": 1,
+        "answer_char_length": 10,
+        "numeric_density": 0.0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.0,
+        "perplexity": 7.079399796612261,
+        "token_entropy": 0.6431919312041854,
+        "avg_confidence": 0.0,
+        "sequence_entropy": 0.6431919312041854
+      },
+      "signal_reliability": {
+        "reliability_score": 0.428,
+        "trust_level": "LOW",
+        "consistent_signals": [
+          "perplexity(low)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [
+          "knowledge_overlap(low)"
+        ],
+        "conflicts": [
+          "Large gap between knowledge overlap and semantic similarity"
+        ],
+        "confidence_adjustment": -0.1,
+        "adjusted_confidence": 0.09920313358306884,
+        "reasoning": [
+          "Signal consistency: 0.32",
+          "Detected 1 conflicts",
+          "Confidence agreement: 0.20",
+          "Verdict: unreliable cues or unresolved conflicts"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type3_conflicting_signals",
+        "reason": "Conflicting signals prevent reliable prediction: Large gap between knowledge overlap and semantic similarity"
+      },
+      "signal_contributions": {
+        "semantic_similarity": 0.0616,
+        "entity_overlap_ratio": 0.5429,
+        "knowledge_overlap": -0.5429,
+        "entity_coverage": -0.5182,
+        "perplexity": 0.3892,
+        "token_entropy": 0.3683
+      }
+    },
+    {
+      "test_split_index": 265,
+      "error_type": "false_positive",
+      "gold_label": 0,
+      "predicted_label": 1,
+      "p_hallucination": 0.6415550112724304,
+      "model_confidence_correct": 0.3584449887275696,
+      "prompt_excerpt": "Knowledge: Zootopia is a 2016 American 3D computer-animated comedy-adventure film produced by Walt Disney Animation Studios and released by Walt Disney Pictures. It is the 55th Disney animated feature film. The film was directed by Byron Howard and Rich Moore, co-directed by Jared Bush, and stars the voices of Ginnifer Goodwin, Jason Bateman, Idris Elba, Jenny Slate, Nate Torrence, Bonnie Hunt, Don Lake, Tommy Chong, J. K. Simmons, Octavia Spencer, Alan Tudyk, and Shakira. The film details the unlikely partnership between a rabbit police officer and a red fox con artist as they uncover a conspiracy involving the disappearance of savage predator inhabitants of a mammalian metropolis.Stylianos \"Stelios\" Kyriakides (Greek: Στυλιανός \"Στέλιος\" Κυριακίδης ; January 15, 1910 (Paphos, Cyprus OS/NS) – December 1987) was a marathon runner who came first at the Boston Marathon in 1946, with the aim of raising money to provide food and shelter to the Greeks, who were experiencing severe poverty issues from the Second World War.\nQuestion: Which has more to do with the Boston Marathon, Zootopia or Stylianos Kyriakides?\nAnswer: Stylianos \"Stelios\" Kyriakides",
+      "semantic_features": {
+        "semantic_similarity": 0.6738365888595581,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.07692307692307693,
+        "knowledge_overlap": 0.6666666666666666
+      },
+      "uncertainty_features": {
+        "answer_length": 3,
+        "answer_char_length": 30,
+        "numeric_density": 0.0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.6666666666666666,
+        "perplexity": 3.4222550639080502,
+        "token_entropy": 0.6702923126793874,
+        "avg_confidence": 0.6666666666666666,
+        "sequence_entropy": 2.0108769380381624
+      },
+      "signal_reliability": {
+        "reliability_score": 0.6000000000000001,
+        "trust_level": "MEDIUM",
+        "consistent_signals": [
+          "perplexity(low)",
+          "knowledge_overlap(high)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [],
+        "confidence_adjustment": 0.0,
+        "adjusted_confidence": 0.3584449887275696,
+        "reasoning": [
+          "Signal consistency: 0.60",
+          "Detected 0 conflicts",
+          "Confidence agreement: 0.20",
+          "Verdict: moderately reliable cues"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type2_missing_info",
+        "reason": "Moderate/low signals (semantic_similarity=0.67, knowledge_overlap=0.67)"
+      },
+      "signal_contributions": {
+        "semantic_similarity": 0.0208,
+        "entity_overlap_ratio": 0.0599,
+        "knowledge_overlap": 0.02,
+        "entity_coverage": -0.0507,
+        "perplexity": 0.0517,
+        "token_entropy": 0.0398
+      }
+    }
+  ],
+  "false_negatives": [
+    {
+      "test_split_index": 1212,
+      "error_type": "false_negative",
+      "gold_label": 1,
+      "predicted_label": 0,
+      "p_hallucination": 0.0032271253876388073,
+      "model_confidence_correct": 0.9967728746123612,
+      "prompt_excerpt": "Knowledge:  Released in 2008, it features a performance from June 1, 2001 by the band at the Rock im Park festival in Nuremberg, Germany.The Rock am Ring (German: \"Rock at the Ring\" ) and Rock im Park (German: \"Rock in the Park\" ) festivals are two simultaneous rock music festivals held annually.\nQuestion: Rock im Park 2001 is a live album and DVD by the American nu metal band Limp Bizkit, released in 2008,  it features a performance from June 1, 2001 by the band at which festival in Nuremberg, that are two simultaneous rock music festivals held annually?\nAnswer: Rock am Ring",
+      "semantic_features": {
+        "semantic_similarity": 0.6710938215255737,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.15384615384615385,
+        "knowledge_overlap": 1.0
+      },
+      "uncertainty_features": {
+        "answer_length": 3,
+        "answer_char_length": 12,
+        "numeric_density": 0.0,
+        "sentence_count": 1,
+        "knowledge_overlap": 1.0,
+        "perplexity": 0.5741859693562175,
+        "token_entropy": 0.20880937256192117,
+        "avg_confidence": 1.0,
+        "sequence_entropy": 0.6264281176857636
+      },
+      "signal_reliability": {
+        "reliability_score": 0.9200000000000002,
+        "trust_level": "HIGH",
+        "consistent_signals": [
+          "perplexity(low)",
+          "knowledge_overlap(high)",
+          "token_entropy(low)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [],
+        "confidence_adjustment": 0.05,
+        "adjusted_confidence": 1.0,
+        "reasoning": [
+          "Signal consistency: 0.80",
+          "Detected 0 conflicts",
+          "Confidence agreement: 1.00",
+          "Verdict: cues agree; no conflicts"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type1_semantic_failure",
+        "reason": "High semantic similarity (semantic_similarity=0.67) but wrong fact — surface matches, content wrong"
+      },
+      "signal_contributions": {
+        "semantic_similarity": -0.0483,
+        "entity_overlap_ratio": -0.141,
+        "knowledge_overlap": -0.141,
+        "entity_coverage": 0.0976,
+        "perplexity": -0.1378,
+        "token_entropy": -0.1263
+      }
+    },
+    {
+      "test_split_index": 676,
+      "error_type": "false_negative",
+      "gold_label": 1,
+      "predicted_label": 0,
+      "p_hallucination": 0.004756217822432518,
+      "model_confidence_correct": 0.9952437821775675,
+      "prompt_excerpt": "Knowledge: Rebecca Rippy (born 1977) is an American singer/songwriter, most notably in the roots country and Americana genres. She has played or shared the stage with such well-known acts and artists as REM producer Don Dixon, Leon Russell, Lucy Kaplansky, Tony Rice, Donna the Buffalo, Jim Lauderdale, Bill Mallonee and the Vigilantes of Love, blues legend Tinsley Ellis, John Cowan, Rhonda Vincent, Danielle Howle, and Old Crow Medicine Show, and has become a regular performer at such prestigious songwriter venues as the Bluebird Café in Nashville, TN, and at the Neighborhood Theater in Charlotte, NC.Rhonda Lea Vincent (born July 13, 1962) is an American bluegrass singer, songwriter, and multi-instrumentalist.\nQuestion: Which singer, born in 1977, shared the stage with an American bluegrass singer, songwriter, and multi-instrumentalist known as the \"the new Queen of Bluegrass\"?\nAnswer: Rhonda Lea Vincent",
+      "semantic_features": {
+        "semantic_similarity": 0.637755274772644,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.034482758620689655,
+        "knowledge_overlap": 1.0
+      },
+      "uncertainty_features": {
+        "answer_length": 3,
+        "answer_char_length": 18,
+        "numeric_density": 0.0,
+        "sentence_count": 1,
+        "knowledge_overlap": 1.0,
+        "perplexity": 0.9401652373849047,
+        "token_entropy": 0.39468267270578344,
+        "avg_confidence": 1.0,
+        "sequence_entropy": 1.1840480181173503
+      },
+      "signal_reliability": {
+        "reliability_score": 0.9200000000000002,
+        "trust_level": "HIGH",
+        "consistent_signals": [
+          "perplexity(low)",
+          "knowledge_overlap(high)",
+          "token_entropy(low)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [],
+        "confidence_adjustment": 0.05,
+        "adjusted_confidence": 1.0,
+        "reasoning": [
+          "Signal consistency: 0.80",
+          "Detected 0 conflicts",
+          "Confidence agreement: 1.00",
+          "Verdict: cues agree; no conflicts"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type1_semantic_failure",
+        "reason": "High semantic similarity (semantic_similarity=0.64) but wrong fact — surface matches, content wrong"
+      },
+      "signal_contributions": {
+        "semantic_similarity": -0.0439,
+        "entity_overlap_ratio": -0.1593,
+        "knowledge_overlap": -0.1593,
+        "entity_coverage": 0.1483,
+        "perplexity": -0.1533,
+        "token_entropy": -0.1278
+      }
+    },
+    {
+      "test_split_index": 1052,
+      "error_type": "false_negative",
+      "gold_label": 1,
+      "predicted_label": 0,
+      "p_hallucination": 0.0066098542883992195,
+      "model_confidence_correct": 0.9933901457116008,
+      "prompt_excerpt": "Knowledge: \"Drink You Away\" is a song recorded by American singer and songwriter Justin Timberlake for his fourth studio album, \"The 20/20 Experience – 2 of 2\" (2013). Lyrically, on the track, Timberlake compares love to alcoholism while making references to several alcoholic brands including Jack Daniel's and Jim Beam.Jim Beam is a brand of bourbon whiskey produced in Clermont, Kentucky, by Beam Suntory, a subsidiary of Suntory Holdings of Osaka, Japan. Since 1795 (interrupted by Prohibition), seven generations of the Beam family have been involved in whiskey production for the company that produces the brand, which was given the name \"Jim Beam\" in 1933 in honor of James B. Beam, who rebuilt the business after Prohibition ended.\nQuestion: Which alcoholic brand named after the man who rebuilt its business did Justin Timberlake sing about in 2015?\nAnswer: Jack Daniel's",
+      "semantic_features": {
+        "semantic_similarity": 0.561934232711792,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.041666666666666664,
+        "knowledge_overlap": 1.0
+      },
+      "uncertainty_features": {
+        "answer_length": 2,
+        "answer_char_length": 13,
+        "numeric_density": 0.0,
+        "sentence_count": 1,
+        "knowledge_overlap": 1.0,
+        "perplexity": 0.3311735230656059,
+        "token_entropy": 0.6337931025994316,
+        "avg_confidence": 1.0,
+        "sequence_entropy": 1.2675862051988631
+      },
+      "signal_reliability": {
+        "reliability_score": 0.78,
+        "trust_level": "MEDIUM",
+        "consistent_signals": [
+          "perplexity(low)",
+          "knowledge_overlap(high)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [
+          "Large gap between knowledge overlap and semantic similarity"
+        ],
+        "confidence_adjustment": -0.1,
+        "adjusted_confidence": 0.8933901457116008,
+        "reasoning": [
+          "Signal consistency: 0.60",
+          "Detected 1 conflicts",
+          "Confidence agreement: 1.00",
+          "Verdict: moderately reliable cues"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type3_conflicting_signals",
+        "reason": "Conflicting signals prevent reliable prediction: Large gap between knowledge overlap and semantic similarity"
+      },
+      "signal_contributions": {
+        "semantic_similarity": -0.0212,
+        "entity_overlap_ratio": -0.1715,
+        "knowledge_overlap": -0.1715,
+        "entity_coverage": 0.1572,
+        "perplexity": -0.1692,
+        "token_entropy": -0.1171
+      }
+    },
+    {
+      "test_split_index": 1338,
+      "error_type": "false_negative",
+      "gold_label": 1,
+      "predicted_label": 0,
+      "p_hallucination": 0.007600454613566399,
+      "model_confidence_correct": 0.9923995453864336,
+      "prompt_excerpt": "Knowledge: Mrs Hodgson bought 31 Gibbs Green, Edgware, Middlesex in 1939. After being widowed in April 1959 she took Mr Evans as a lodger, and in June 1960 transferred him her freehold for free. He registered himself, and sold it to Mr Marks, who gave a charge to Cheltenham & Gloucester Building Society.Cheltenham & Gloucester plc (C&G) was a mortgage and savings provider in the United Kingdom, a subsidiary of Lloyds Banking Group.\nQuestion: What mortgage and savings provider did Mr. Marks charge on Mrs. Hodgson freehold?\nAnswer: Lloyds Banking Group",
+      "semantic_features": {
+        "semantic_similarity": 0.6789478659629822,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.05263157894736842,
+        "knowledge_overlap": 1.0
+      },
+      "uncertainty_features": {
+        "answer_length": 3,
+        "answer_char_length": 20,
+        "numeric_density": 0.0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.6666666666666666,
+        "perplexity": 2.7910833322498925,
+        "token_entropy": 0.6892738466326955,
+        "avg_confidence": 0.6666666666666666,
+        "sequence_entropy": 2.0678215398980866
+      },
+      "signal_reliability": {
+        "reliability_score": 0.8400000000000001,
+        "trust_level": "HIGH",
+        "consistent_signals": [
+          "perplexity(low)",
+          "knowledge_overlap(high)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [],
+        "confidence_adjustment": 0.05,
+        "adjusted_confidence": 1.0,
+        "reasoning": [
+          "Signal consistency: 0.60",
+          "Detected 0 conflicts",
+          "Confidence agreement: 1.00",
+          "Verdict: cues agree; no conflicts"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type1_semantic_failure",
+        "reason": "High semantic similarity (semantic_similarity=0.68) but wrong fact — surface matches, content wrong"
+      },
+      "signal_contributions": {
+        "semantic_similarity": -0.0586,
+        "entity_overlap_ratio": -0.1638,
+        "knowledge_overlap": -0.1638,
+        "entity_coverage": 0.1465,
+        "perplexity": -0.1455,
+        "token_entropy": -0.1073
+      }
+    },
+    {
+      "test_split_index": 14,
+      "error_type": "false_negative",
+      "gold_label": 1,
+      "predicted_label": 0,
+      "p_hallucination": 0.009070920757949352,
+      "model_confidence_correct": 0.9909290792420506,
+      "prompt_excerpt": "Knowledge: \"Clunk Click Every Trip\" is the slogan of a series of British public information films, commencing in January 1971 and starring the now disgraced entertainer Jimmy Savile.Sir James Wilson Vincent Savile, OBE, KCSG ( ; 31 October 1926 – 29 October 2011) was an English DJ, television and radio personality, dance hall manager, and charity fundraiser. He hosted the BBC television show \"Jim'll Fix It\", was the first and last presenter of the long-running BBC music chart show \"Top of the Pops\", and raised an estimated £40 million for charities.\nQuestion: Clunk Click Every Trip starred the DJ and fundraiser who hosted what BBC television show?\nAnswer: Top of the Pops",
+      "semantic_features": {
+        "semantic_similarity": 0.629755437374115,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.1111111111111111,
+        "knowledge_overlap": 0.3333333333333333
+      },
+      "uncertainty_features": {
+        "answer_length": 4,
+        "answer_char_length": 15,
+        "numeric_density": 0.0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.5,
+        "perplexity": 5.415942217644532,
+        "token_entropy": 0.5820127976032479,
+        "avg_confidence": 0.5,
+        "sequence_entropy": 2.3280511904129915
+      },
+      "signal_reliability": {
+        "reliability_score": 0.8400000000000001,
+        "trust_level": "HIGH",
+        "consistent_signals": [
+          "perplexity(low)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [],
+        "confidence_adjustment": 0.05,
+        "adjusted_confidence": 1.0,
+        "reasoning": [
+          "Signal consistency: 0.60",
+          "Detected 0 conflicts",
+          "Confidence agreement: 1.00",
+          "Verdict: cues agree; no conflicts"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type1_semantic_failure",
+        "reason": "High semantic similarity (semantic_similarity=0.63) but wrong fact — surface matches, content wrong"
+      },
+      "signal_contributions": {
+        "semantic_similarity": -0.0776,
+        "entity_overlap_ratio": -0.2992,
+        "knowledge_overlap": 0.0997,
+        "entity_coverage": 0.2327,
+        "perplexity": -0.2344,
+        "token_entropy": -0.2121
+      }
+    },
+    {
+      "test_split_index": 1000,
+      "error_type": "false_negative",
+      "gold_label": 1,
+      "predicted_label": 0,
+      "p_hallucination": 0.01225293893367052,
+      "model_confidence_correct": 0.9877470610663295,
+      "prompt_excerpt": "Knowledge: Natalia Vitalyevna Vorobieva (Russian: Наталья Витальевна Воробьёва ; born 27 May 1991 in Tulun, Irkutsk oblast, Russian SFSR, Soviet Union) is a Russian wrestler, who competed at the 2012 Summer Olympics. Vorobyeva train with UFC and M-1 Global MMA fighters, such as Khabib Nurmagomedov, Islam Makhachev, Vyacheslav Vasilevsky, Abubakar Nurmagomedov, Mikhail Malyutin, Ali Bagov.Islam Ramazanovich Makhachev (Russian: Ислам Рамазанович Махачев ; born October 27, 1991 in Dagestan) is a Russian mixed martial artist, judoka and sambist of Lak origin.\nQuestion: Name the Russian mixed martial artist who currently fights in the lightweight division of the UFC and is a training partner of Natalia Vitalyevna Vorobieva, a Russian wrestler who competed in the 2012 Summer Olympics?\nAnswer: Khabib Nurmagomedov",
+      "semantic_features": {
+        "semantic_similarity": 0.73023921251297,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.041666666666666664,
+        "knowledge_overlap": 1.0
+      },
+      "uncertainty_features": {
+        "answer_length": 2,
+        "answer_char_length": 19,
+        "numeric_density": 0.0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.5,
+        "perplexity": 3.8588939658484396,
+        "token_entropy": 0.6290317088627425,
+        "avg_confidence": 0.5,
+        "sequence_entropy": 1.258063417725485
+      },
+      "signal_reliability": {
+        "reliability_score": 0.9200000000000002,
+        "trust_level": "HIGH",
+        "consistent_signals": [
+          "semantic_similarity(high)",
+          "perplexity(low)",
+          "knowledge_overlap(high)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [],
+        "confidence_adjustment": 0.05,
+        "adjusted_confidence": 1.0,
+        "reasoning": [
+          "Signal consistency: 0.80",
+          "Detected 0 conflicts",
+          "Confidence agreement: 1.00",
+          "Verdict: cues agree; no conflicts"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type1_semantic_failure",
+        "reason": "High semantic similarity (semantic_similarity=0.73) but wrong fact — surface matches, content wrong"
+      },
+      "signal_contributions": {
+        "semantic_similarity": -0.073,
+        "entity_overlap_ratio": -0.1586,
+        "knowledge_overlap": -0.1586,
+        "entity_coverage": 0.1454,
+        "perplexity": -0.1341,
+        "token_entropy": -0.1087
+      }
+    },
+    {
+      "test_split_index": 499,
+      "error_type": "false_negative",
+      "gold_label": 1,
+      "predicted_label": 0,
+      "p_hallucination": 0.013474681414663792,
+      "model_confidence_correct": 0.9865253185853362,
+      "prompt_excerpt": "Knowledge: The G7 Research Group (formerly the G8 Research Group) is an independent source of information, analysis and research on the institutions, issues and members of the Group of Seven (formerly the Group of Eight) and the G7 Summit.The G8 (reformatted as G7 from 2014 due to Russia's suspension) was an inter-governmental political forum from 1997 until 2014, with participation from the world′s major highly industrialized economies in countries that viewed themselves as democracies.\nQuestion: What research group was formed in 2014 due to Russia's suspension?\nAnswer: The G7 Summit Research Group",
+      "semantic_features": {
+        "semantic_similarity": 0.7989330291748047,
+        "entity_overlap_ratio": 0.5,
+        "entity_coverage": 0.1111111111111111,
+        "knowledge_overlap": 0.75
+      },
+      "uncertainty_features": {
+        "answer_length": 5,
+        "answer_char_length": 28,
+        "numeric_density": 0.2,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.8,
+        "perplexity": 2.2284917260313724,
+        "token_entropy": 0.46405433558332343,
+        "avg_confidence": 0.8,
+        "sequence_entropy": 2.320271677916617
+      },
+      "signal_reliability": {
+        "reliability_score": 1.0,
+        "trust_level": "HIGH",
+        "consistent_signals": [
+          "semantic_similarity(high)",
+          "perplexity(low)",
+          "knowledge_overlap(high)",
+          "token_entropy(low)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [],
+        "confidence_adjustment": 0.05,
+        "adjusted_confidence": 1.0,
+        "reasoning": [
+          "Signal consistency: 1.00",
+          "Detected 0 conflicts",
+          "Confidence agreement: 1.00",
+          "Verdict: cues agree; no conflicts"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type1_semantic_failure",
+        "reason": "High semantic similarity (semantic_similarity=0.80) but wrong fact — surface matches, content wrong"
+      },
+      "signal_contributions": {
+        "semantic_similarity": -0.1455,
+        "entity_overlap_ratio": -0.0,
+        "knowledge_overlap": -0.1217,
+        "entity_coverage": 0.1893,
+        "perplexity": -0.2217,
+        "token_entropy": -0.1869
+      }
+    },
+    {
+      "test_split_index": 309,
+      "error_type": "false_negative",
+      "gold_label": 1,
+      "predicted_label": 0,
+      "p_hallucination": 0.016136717051267624,
+      "model_confidence_correct": 0.9838632829487324,
+      "prompt_excerpt": "Knowledge: \"Anyone Can Fall in Love\" is a song, released in 1986, by \"EastEnders\" actress Anita Dobson, who played the character of Angie Watts.Anita Dobson (born 29 April 1949) is an English stage, film and television actress, and singer.\nQuestion: \"Anyone Can Fall in Love\" is a song, released in 1986, by an \"EastEnders\" actress born in which year ?\nAnswer: 1950",
+      "semantic_features": {
+        "semantic_similarity": 0.3413996994495392,
+        "entity_overlap_ratio": 0.0,
+        "entity_coverage": 0.0,
+        "knowledge_overlap": 0.0
+      },
+      "uncertainty_features": {
+        "answer_length": 1,
+        "answer_char_length": 4,
+        "numeric_density": 1.0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.0,
+        "perplexity": 7.168813215918639,
+        "token_entropy": 1.5567135018168647,
+        "avg_confidence": 0.0,
+        "sequence_entropy": 1.5567135018168647
+      },
+      "signal_reliability": {
+        "reliability_score": 0.48800000000000004,
+        "trust_level": "LOW",
+        "consistent_signals": [
+          "perplexity(low)"
+        ],
+        "conflicting_signals": [
+          "knowledge_overlap(low)",
+          "entity_overlap(low)"
+        ],
+        "conflicts": [],
+        "confidence_adjustment": 0.0,
+        "adjusted_confidence": 0.9838632829487324,
+        "reasoning": [
+          "Signal consistency: 0.32",
+          "Detected 0 conflicts",
+          "Confidence agreement: 0.20",
+          "Verdict: unreliable cues or unresolved conflicts"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type2_missing_info",
+        "reason": "Low knowledge coverage (knowledge_overlap=0.00) — hallucination via missing info"
+      },
+      "signal_contributions": {
+        "semantic_similarity": -0.0644,
+        "entity_overlap_ratio": -0.2031,
+        "knowledge_overlap": -0.2031,
+        "entity_coverage": -0.2031,
+        "perplexity": 0.1449,
+        "token_entropy": 0.045
+      }
+    },
+    {
+      "test_split_index": 622,
+      "error_type": "false_negative",
+      "gold_label": 1,
+      "predicted_label": 0,
+      "p_hallucination": 0.01806151494383812,
+      "model_confidence_correct": 0.9819384850561619,
+      "prompt_excerpt": "Knowledge: Legoman's Great Escape is a short film by Mike Sidorov and Michael Soare about a Legoman whose mission is to escape the G.I. Joe infested house while desperately trying to stay alive.G.I. Joe is a line of action figures produced and owned by the toy company Hasbro.\nQuestion: Legoman's Great Escape is a short film by Mike Sidorov and Michael Soare about a Legoman whose mission is to escape the G.I. Joe infested house while desperately trying to stay alive, G.I. Joe is a line of action figures produced and owned by which toy company ?\nAnswer: Lego",
+      "semantic_features": {
+        "semantic_similarity": 0.3735450804233551,
+        "entity_overlap_ratio": 0.0,
+        "entity_coverage": 0.0,
+        "knowledge_overlap": 0.0
+      },
+      "uncertainty_features": {
+        "answer_length": 1,
+        "answer_char_length": 4,
+        "numeric_density": 0.0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.0,
+        "perplexity": 6.804788805320703,
+        "token_entropy": 0.23121310485962188,
+        "avg_confidence": 0.0,
+        "sequence_entropy": 0.23121310485962188
+      },
+      "signal_reliability": {
+        "reliability_score": 0.456,
+        "trust_level": "LOW",
+        "consistent_signals": [
+          "perplexity(low)",
+          "token_entropy(low)"
+        ],
+        "conflicting_signals": [
+          "knowledge_overlap(low)",
+          "entity_overlap(low)"
+        ],
+        "conflicts": [],
+        "confidence_adjustment": 0.0,
+        "adjusted_confidence": 0.9819384850561619,
+        "reasoning": [
+          "Signal consistency: 0.24",
+          "Detected 0 conflicts",
+          "Confidence agreement: 0.20",
+          "Verdict: unreliable cues or unresolved conflicts"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type2_missing_info",
+        "reason": "Low knowledge coverage (knowledge_overlap=0.00) — hallucination via missing info"
+      },
+      "signal_contributions": {
+        "semantic_similarity": -0.0743,
+        "entity_overlap_ratio": -0.2937,
+        "knowledge_overlap": -0.2937,
+        "entity_coverage": -0.2937,
+        "perplexity": 0.2138,
+        "token_entropy": 0.2598
+      }
+    },
+    {
+      "test_split_index": 1977,
+      "error_type": "false_negative",
+      "gold_label": 1,
+      "predicted_label": 0,
+      "p_hallucination": 0.029076160863041878,
+      "model_confidence_correct": 0.9709238391369581,
+      "prompt_excerpt": "Knowledge:  It is published by the Blackpool Gazette and therefore owned by Johnson Press. It was founded as \"The West Lancashire Evening Gazette\" in 1929 before being renamed the \"Evening Gazette\", and then \"Blackpool Gazette\".\nQuestion: What was the original name of the gazette that publishes Lytham St Annes Express?\nAnswer: Lytham St Annes Evening Gazette",
+      "semantic_features": {
+        "semantic_similarity": 0.743462085723877,
+        "entity_overlap_ratio": 0.0,
+        "entity_coverage": 0.0,
+        "knowledge_overlap": 0.4
+      },
+      "uncertainty_features": {
+        "answer_length": 5,
+        "answer_char_length": 31,
+        "numeric_density": 0.0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.4,
+        "perplexity": 5.973906289859176,
+        "token_entropy": 0.6574195108188863,
+        "avg_confidence": 0.4,
+        "sequence_entropy": 3.2870975540944314
+      },
+      "signal_reliability": {
+        "reliability_score": 0.728,
+        "trust_level": "HIGH",
+        "consistent_signals": [
+          "semantic_similarity(high)",
+          "perplexity(low)"
+        ],
+        "conflicting_signals": [
+          "entity_overlap(low)"
+        ],
+        "conflicts": [],
+        "confidence_adjustment": 0.0,
+        "adjusted_confidence": 0.9709238391369581,
+        "reasoning": [
+          "Signal consistency: 0.32",
+          "Detected 0 conflicts",
+          "Confidence agreement: 1.00",
+          "Verdict: cues agree; no conflicts"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type1_semantic_failure",
+        "reason": "High semantic similarity (semantic_similarity=0.74) but wrong fact — surface matches, content wrong"
+      },
+      "signal_contributions": {
+        "semantic_similarity": 0.8168,
+        "entity_overlap_ratio": -1.6774,
+        "knowledge_overlap": -0.3355,
+        "entity_coverage": -1.6774,
+        "perplexity": 1.2766,
+        "token_entropy": 1.126
+      }
+    },
+    {
+      "test_split_index": 919,
+      "error_type": "false_negative",
+      "gold_label": 1,
+      "predicted_label": 0,
+      "p_hallucination": 0.029081162065267563,
+      "model_confidence_correct": 0.9709188379347324,
+      "prompt_excerpt": "Knowledge:  24, is an opera (\"lyrical scenes\") in 3 acts (7 scenes), composed by Pyotr Ilyich Tchaikovsky.Il trovatore (] ; Italian for \"The Troubadour\") is an opera in four acts by Giuseppe Verdi to an Italian libretto largely written by Salvadore Cammarano, based on the play \"El trovador\" (1836) by Antonio García Gutiérrez.\nQuestion: What dramatic work does Eugene Onegin and Il trovatore have in common?\nAnswer: musical composition",
+      "semantic_features": {
+        "semantic_similarity": 0.47318601608276367,
+        "entity_overlap_ratio": 0.0,
+        "entity_coverage": 0.0,
+        "knowledge_overlap": 0.0
+      },
+      "uncertainty_features": {
+        "answer_length": 2,
+        "answer_char_length": 19,
+        "numeric_density": 0.0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.0,
+        "perplexity": 6.71188178320586,
+        "token_entropy": 0.41781980906421795,
+        "avg_confidence": 0.0,
+        "sequence_entropy": 0.8356396181284359
+      },
+      "signal_reliability": {
+        "reliability_score": 0.39599999999999996,
+        "trust_level": "LOW",
+        "consistent_signals": [
+          "perplexity(low)",
+          "token_entropy(low)"
+        ],
+        "conflicting_signals": [
+          "knowledge_overlap(low)",
+          "entity_overlap(low)"
+        ],
+        "conflicts": [
+          "Large gap between knowledge overlap and semantic similarity"
+        ],
+        "confidence_adjustment": -0.1,
+        "adjusted_confidence": 0.8709188379347325,
+        "reasoning": [
+          "Signal consistency: 0.24",
+          "Detected 1 conflicts",
+          "Confidence agreement: 0.20",
+          "Verdict: unreliable cues or unresolved conflicts"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type3_conflicting_signals",
+        "reason": "Conflicting signals prevent reliable prediction: Large gap between knowledge overlap and semantic similarity"
+      },
+      "signal_contributions": {
+        "semantic_similarity": -0.0165,
+        "entity_overlap_ratio": -0.3076,
+        "knowledge_overlap": -0.3076,
+        "entity_coverage": -0.3076,
+        "perplexity": 0.225,
+        "token_entropy": 0.2433
+      }
+    },
+    {
+      "test_split_index": 702,
+      "error_type": "false_negative",
+      "gold_label": 1,
+      "predicted_label": 0,
+      "p_hallucination": 0.04282992333173752,
+      "model_confidence_correct": 0.9571700766682625,
+      "prompt_excerpt": "Knowledge:  The Cougars were led by third-year head coach Kelvin Sampson and were members of the American Athletic Conference. He was a head coach at Montana Tech from 1981 to 1985, Washington State University from 1987 to 1994, the University of Oklahoma from 1994 to 2006, and Indiana University 2006 to 2008.\nQuestion: Where did the head coach of the 2016-17 Houston Cougars men's basketball team first work as a head coach?\nAnswer: Washington State University.",
+      "semantic_features": {
+        "semantic_similarity": 0.6670102477073669,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.06666666666666667,
+        "knowledge_overlap": 0.6666666666666666
+      },
+      "uncertainty_features": {
+        "answer_length": 3,
+        "answer_char_length": 28,
+        "numeric_density": 0.0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.6666666666666666,
+        "perplexity": 2.8567080095547337,
+        "token_entropy": 0.44264735724771515,
+        "avg_confidence": 0.6666666666666666,
+        "sequence_entropy": 1.3279420717431454
+      },
+      "signal_reliability": {
+        "reliability_score": 0.9200000000000002,
+        "trust_level": "HIGH",
+        "consistent_signals": [
+          "perplexity(low)",
+          "knowledge_overlap(high)",
+          "token_entropy(low)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [],
+        "confidence_adjustment": 0.05,
+        "adjusted_confidence": 1.0,
+        "reasoning": [
+          "Signal consistency: 0.80",
+          "Detected 0 conflicts",
+          "Confidence agreement: 1.00",
+          "Verdict: cues agree; no conflicts"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type1_semantic_failure",
+        "reason": "High semantic similarity (semantic_similarity=0.67) but wrong fact — surface matches, content wrong"
+      },
+      "signal_contributions": {
+        "semantic_similarity": -0.0619,
+        "entity_overlap_ratio": -0.1855,
+        "knowledge_overlap": -0.0618,
+        "entity_coverage": 0.1607,
+        "perplexity": -0.1643,
+        "token_entropy": -0.1444
+      }
+    },
+    {
+      "test_split_index": 259,
+      "error_type": "false_negative",
+      "gold_label": 1,
+      "predicted_label": 0,
+      "p_hallucination": 0.04679841175675392,
+      "model_confidence_correct": 0.9532015882432461,
+      "prompt_excerpt": "Knowledge: Maniac Cop is a 1988 American action horror film directed by William Lustig and written by Larry Cohen. It stars Tom Atkins, Bruce Campbell, Laurene Landon, Richard Roundtree, William Smith, Robert Z'Dar, and Sheree North.Bruce Lorne Campbell (born June 22, 1958) is an American actor, producer, writer, comedian and director. One of his best-known roles is portraying Ash Williams in Sam Raimi's \"Evil Dead\" franchise, from the 1978 short film \"Within the Woods\" to the ongoing TV series \"Ash vs Evil Dead\". He has starred in many low-budget cult films such as \"Crimewave\" (1985), \"Maniac Cop\" (1988), \"\" (1989), and \"Bubba Ho-Tep\" (2002).\nQuestion: Who was the American actor who starred in \"Maniac Cop\" and \"Bubba Ho Tep\"?\nAnswer: Bruce Willis",
+      "semantic_features": {
+        "semantic_similarity": 0.4761386215686798,
+        "entity_overlap_ratio": 0.0,
+        "entity_coverage": 0.0,
+        "knowledge_overlap": 0.5
+      },
+      "uncertainty_features": {
+        "answer_length": 2,
+        "answer_char_length": 12,
+        "numeric_density": 0.0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.5,
+        "perplexity": 4.250698662815487,
+        "token_entropy": 0.22216697435005434,
+        "avg_confidence": 0.5,
+        "sequence_entropy": 0.44433394870010867
+      },
+      "signal_reliability": {
+        "reliability_score": 0.728,
+        "trust_level": "HIGH",
+        "consistent_signals": [
+          "perplexity(low)",
+          "token_entropy(low)"
+        ],
+        "conflicting_signals": [
+          "entity_overlap(low)"
+        ],
+        "conflicts": [],
+        "confidence_adjustment": 0.0,
+        "adjusted_confidence": 0.9532015882432461,
+        "reasoning": [
+          "Signal consistency: 0.32",
+          "Detected 0 conflicts",
+          "Confidence agreement: 1.00",
+          "Verdict: cues agree; no conflicts"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type2_missing_info",
+        "reason": "Moderate/low signals (semantic_similarity=0.48, knowledge_overlap=0.50)"
+      },
+      "signal_contributions": {
+        "semantic_similarity": -0.0658,
+        "entity_overlap_ratio": -1.3782,
+        "knowledge_overlap": 0.0,
+        "entity_coverage": -1.3782,
+        "perplexity": 1.1439,
+        "token_entropy": 1.2251
+      }
+    },
+    {
+      "test_split_index": 132,
+      "error_type": "false_negative",
+      "gold_label": 1,
+      "predicted_label": 0,
+      "p_hallucination": 0.050522878766059875,
+      "model_confidence_correct": 0.9494771212339401,
+      "prompt_excerpt": "Knowledge: \"Cool Down\" is a song by Filipino-Australian singer-actor James Reid, from his third studio album \"Palm Dreams\" (2017).He began acting professionally in the early 2010s after being named as the Big Winner of \"\", and rose to prominence in 2014 for his leading role in the film \"Diary ng Panget: The Movie\".\nQuestion: What movie did the \"Cool Down\" singer rise to prominence with?\nAnswer: The \"Cool Down\" singer rose to prominence with \"Ang Diary ng Panget\"",
+      "semantic_features": {
+        "semantic_similarity": 0.8398382067680359,
+        "entity_overlap_ratio": 0.5,
+        "entity_coverage": 0.16666666666666666,
+        "knowledge_overlap": 0.5454545454545454
+      },
+      "uncertainty_features": {
+        "answer_length": 12,
+        "answer_char_length": 68,
+        "numeric_density": 0.0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.5833333333333334,
+        "perplexity": 5.64978053300331,
+        "token_entropy": 0.7415736021111382,
+        "avg_confidence": 0.5833333333333334,
+        "sequence_entropy": 8.898883225333659
+      },
+      "signal_reliability": {
+        "reliability_score": 0.8400000000000001,
+        "trust_level": "HIGH",
+        "consistent_signals": [
+          "semantic_similarity(high)",
+          "perplexity(low)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [],
+        "confidence_adjustment": 0.05,
+        "adjusted_confidence": 0.9994771212339402,
+        "reasoning": [
+          "Signal consistency: 0.60",
+          "Detected 0 conflicts",
+          "Confidence agreement: 1.00",
+          "Verdict: cues agree; no conflicts"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type1_semantic_failure",
+        "reason": "High semantic similarity (semantic_similarity=0.84) but wrong fact — surface matches, content wrong"
+      },
+      "signal_contributions": {
+        "semantic_similarity": -0.2027,
+        "entity_overlap_ratio": -0.0,
+        "knowledge_overlap": -0.0271,
+        "entity_coverage": 0.1988,
+        "perplexity": -0.2308,
+        "token_entropy": -0.1877
+      }
+    },
+    {
+      "test_split_index": 908,
+      "error_type": "false_negative",
+      "gold_label": 1,
+      "predicted_label": 0,
+      "p_hallucination": 0.06402688473463058,
+      "model_confidence_correct": 0.9359731152653694,
+      "prompt_excerpt": "Knowledge:  Since the albums' release, three more singles have charted; \"Best Days of Your Life\" at number 9 (which was co-wrote with fellow country artist Taylor Swift), \"Didn't You Know How Much I Loved You\" at number 14 (a re-recording of an album cut from Pickler's debut album \"Small Town Girl\") and \"Makin' Me Fall in Love Again\" at number 30.\"Best Days of Your Life\" is a song written and performed by American country artist Kellie Pickler, and co-written by Taylor Swift.\nQuestion: Kellie Pickler is the self-titled second studio album by the American country artist, Since the albums' release, three more singles have charted; including which song, written and performed by American country artist Kellie Pickler, and co-written by Taylor Swift, at number 9?\nAnswer: \"Didn't You Know How Much I Loved You\"",
+      "semantic_features": {
+        "semantic_similarity": 0.7247334122657776,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.17647058823529413,
+        "knowledge_overlap": 1.0
+      },
+      "uncertainty_features": {
+        "answer_length": 8,
+        "answer_char_length": 38,
+        "numeric_density": 0.0,
+        "sentence_count": 1,
+        "knowledge_overlap": 1.0,
+        "perplexity": 0.7336206294488126,
+        "token_entropy": 0.8679370988897461,
+        "avg_confidence": 1.0,
+        "sequence_entropy": 6.943496791117969
+      },
+      "signal_reliability": {
+        "reliability_score": 0.9200000000000002,
+        "trust_level": "HIGH",
+        "consistent_signals": [
+          "semantic_similarity(high)",
+          "perplexity(low)",
+          "knowledge_overlap(high)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [],
+        "confidence_adjustment": 0.05,
+        "adjusted_confidence": 0.9859731152653695,
+        "reasoning": [
+          "Signal consistency: 0.80",
+          "Detected 0 conflicts",
+          "Confidence agreement: 1.00",
+          "Verdict: cues agree; no conflicts"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type1_semantic_failure",
+        "reason": "High semantic similarity (semantic_similarity=0.72) but wrong fact — surface matches, content wrong"
+      },
+      "signal_contributions": {
+        "semantic_similarity": -0.0587,
+        "entity_overlap_ratio": -0.1306,
+        "knowledge_overlap": -0.1306,
+        "entity_coverage": 0.0845,
+        "perplexity": -0.1267,
+        "token_entropy": -0.0739
+      }
+    },
+    {
+      "test_split_index": 1834,
+      "error_type": "false_negative",
+      "gold_label": 1,
+      "predicted_label": 0,
+      "p_hallucination": 0.0712820291519165,
+      "model_confidence_correct": 0.9287179708480835,
+      "prompt_excerpt": "Knowledge: EuroVelo 3 (EV3), named \"the Pilgrims Route\", is a EuroVelo long-distance cycling route running 5122 km running from Trondheim in Norway to Santiago de Compostela in Spain. It has a population of 187,353 (January 1, 2016), and is the third most populous municipality in Norway, although the fourth largest urban area.\nQuestion: Which city with population of 187,353 did  EV3 The Pilgrims Route run from \nAnswer: EV3 does not run from Trondheim",
+      "semantic_features": {
+        "semantic_similarity": 0.7228460311889648,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.058823529411764705,
+        "knowledge_overlap": 0.4
+      },
+      "uncertainty_features": {
+        "answer_length": 6,
+        "answer_char_length": 31,
+        "numeric_density": 0.16666666666666666,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.3333333333333333,
+        "perplexity": 6.261920531208565,
+        "token_entropy": 1.1846931577904103,
+        "avg_confidence": 0.3333333333333333,
+        "sequence_entropy": 7.108158946742462
+      },
+      "signal_reliability": {
+        "reliability_score": 0.8400000000000001,
+        "trust_level": "HIGH",
+        "consistent_signals": [
+          "semantic_similarity(high)",
+          "perplexity(low)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [],
+        "confidence_adjustment": 0.05,
+        "adjusted_confidence": 0.9787179708480835,
+        "reasoning": [
+          "Signal consistency: 0.60",
+          "Detected 0 conflicts",
+          "Confidence agreement: 1.00",
+          "Verdict: cues agree; no conflicts"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type1_semantic_failure",
+        "reason": "High semantic similarity (semantic_similarity=0.72) but wrong fact — surface matches, content wrong"
+      },
+      "signal_contributions": {
+        "semantic_similarity": -0.1257,
+        "entity_overlap_ratio": -0.282,
+        "knowledge_overlap": 0.0564,
+        "entity_coverage": 0.2488,
+        "perplexity": -0.2113,
+        "token_entropy": -0.1149
+      }
+    },
+    {
+      "test_split_index": 1445,
+      "error_type": "false_negative",
+      "gold_label": 1,
+      "predicted_label": 0,
+      "p_hallucination": 0.1284203827381134,
+      "model_confidence_correct": 0.8715796172618866,
+      "prompt_excerpt": "Knowledge:  His latest film is \"Blackway\" starring Anthony Hopkins, Julia Stiles and Ray Liotta. She went on to gain prominence for her lead roles in teen films such as \"10 Things I Hate About You\" (1999) for which she won MTV Movie Award for Best Breakthrough Performance and was nominated for two Teen Choice Awards, \"Down to You\" (2000), for which she was nominated for another two Teen Choice Awards, and \"Save the Last Dance\" (2001), winning the Teen Choice Award for Choice Movie Actress and was nominated for the MTV Movie Award for Best Female Performance.\nQuestion: What is the name of a film featuring Ray Liotta and one of the stars of \"10 Things I Hate About You\"?\nAnswer: \"10 Things I Hate About Blackway\"",
+      "semantic_features": {
+        "semantic_similarity": 0.6983422040939331,
+        "entity_overlap_ratio": 0.6666666666666666,
+        "entity_coverage": 0.09090909090909091,
+        "knowledge_overlap": 0.8333333333333334
+      },
+      "uncertainty_features": {
+        "answer_length": 6,
+        "answer_char_length": 33,
+        "numeric_density": 0.16666666666666666,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.8333333333333334,
+        "perplexity": 2.1594323780704445,
+        "token_entropy": 0.661316338362236,
+        "avg_confidence": 0.8333333333333334,
+        "sequence_entropy": 3.967898030173416
+      },
+      "signal_reliability": {
+        "reliability_score": 0.8400000000000001,
+        "trust_level": "HIGH",
+        "consistent_signals": [
+          "perplexity(low)",
+          "knowledge_overlap(high)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [],
+        "confidence_adjustment": 0.05,
+        "adjusted_confidence": 0.9215796172618866,
+        "reasoning": [
+          "Signal consistency: 0.60",
+          "Detected 0 conflicts",
+          "Confidence agreement: 1.00",
+          "Verdict: cues agree; no conflicts"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type1_semantic_failure",
+        "reason": "High semantic similarity (semantic_similarity=0.70) but wrong fact — surface matches, content wrong"
+      },
+      "signal_contributions": {
+        "semantic_similarity": -0.0682,
+        "entity_overlap_ratio": -0.0573,
+        "knowledge_overlap": -0.1146,
+        "entity_coverage": 0.1407,
+        "perplexity": -0.1571,
+        "token_entropy": -0.1151
+      }
+    },
+    {
+      "test_split_index": 1139,
+      "error_type": "false_negative",
+      "gold_label": 1,
+      "predicted_label": 0,
+      "p_hallucination": 0.16212709248065948,
+      "model_confidence_correct": 0.8378729075193405,
+      "prompt_excerpt": "Knowledge: Daniel Heartz is an American musicologist and Professor emeritus of Music at the University of California, Berkeley.The University of California, Berkeley (also referred to as UC Berkeley, Berkeley, and Cal ) is a public research university located in Berkeley, California.\nQuestion: Daniel Heartz is an American musicologist and Professor emeritus of Music at which public research university located in Berkeley, California?\nAnswer: California State University, Berkeley",
+      "semantic_features": {
+        "semantic_similarity": 0.7670513987541199,
+        "entity_overlap_ratio": 0.5,
+        "entity_coverage": 0.1111111111111111,
+        "knowledge_overlap": 0.5
+      },
+      "uncertainty_features": {
+        "answer_length": 4,
+        "answer_char_length": 37,
+        "numeric_density": 0.0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.25,
+        "perplexity": 6.572160905919253,
+        "token_entropy": 0.2729057433460413,
+        "avg_confidence": 0.25,
+        "sequence_entropy": 1.0916229733841651
+      },
+      "signal_reliability": {
+        "reliability_score": 0.9200000000000002,
+        "trust_level": "HIGH",
+        "consistent_signals": [
+          "semantic_similarity(high)",
+          "perplexity(low)",
+          "token_entropy(low)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [],
+        "confidence_adjustment": 0.05,
+        "adjusted_confidence": 0.8878729075193406,
+        "reasoning": [
+          "Signal consistency: 0.80",
+          "Detected 0 conflicts",
+          "Confidence agreement: 1.00",
+          "Verdict: cues agree; no conflicts"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type1_semantic_failure",
+        "reason": "High semantic similarity (semantic_similarity=0.77) but wrong fact — surface matches, content wrong"
+      },
+      "signal_contributions": {
+        "semantic_similarity": -0.133,
+        "entity_overlap_ratio": -0.0,
+        "knowledge_overlap": -0.0,
+        "entity_coverage": 0.1937,
+        "perplexity": -0.1835,
+        "token_entropy": -0.215
+      }
+    }
+  ]
+}

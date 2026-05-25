@@ -1,0 +1,2955 @@
+{
+  "meta": {
+    "decision_threshold": 0.5,
+    "labels": {
+      "0": "correct / non-hallucination",
+      "1": "hallucination"
+    },
+    "false_positive": "gold 0, predicted 1 (model false alarm)",
+    "false_negative": "gold 1, predicted 0 (missed hallucination)",
+    "max_per_error_type": 25,
+    "export_all_errors": false,
+    "prompt_max_chars": 2000,
+    "counts_on_test_set": {
+      "false_positive_total": 617,
+      "false_negative_total": 439
+    }
+  },
+  "false_positives": [
+    {
+      "test_split_index": 3340,
+      "error_type": "false_positive",
+      "gold_label": 0,
+      "predicted_label": 1,
+      "p_hallucination": 0.9970343112945557,
+      "model_confidence_correct": 0.002965688705444336,
+      "prompt_excerpt": "Knowledge: The Picture of Dorian Gray has genre Speculative fiction. Speculative fiction has examples: The Handmaid's Tale\nDialogue: [Human]: Could you recommend novels similar to The Picture of Dorian Gray? [Assistant]: The Handmaid's Tale is a good one if you like Speculative fiction or Masque of the Red Death which is more to Gothic fiction. Do you like those genre? [Human]: I like the Gothic fiction genre. Who is the author of Masque of the Red Death? [Assistant]: Edgar Allan Poe is the writer. Touch the Dark is also a good one tho. Have you read it? [Human]: No I haven't read that is Edgar Allan Poe the writer of that novel? \nResponse: No, He didn't write Touch the Dark. Karen Chance is actually the author of that novel. ",
+      "semantic_features": {
+        "semantic_similarity": 0.8642752766609192,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.22727272727272727,
+        "knowledge_overlap": 0.7692307692307693
+      },
+      "uncertainty_features": {
+        "answer_length": 0,
+        "answer_char_length": 0,
+        "numeric_density": 0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.5,
+        "perplexity": 3.8442959375083285,
+        "token_entropy": 0.621838094395939,
+        "avg_confidence": 0.5,
+        "sequence_entropy": 0.0
+      },
+      "signal_reliability": {
+        "reliability_score": 0.6800000000000002,
+        "trust_level": "MEDIUM",
+        "consistent_signals": [
+          "semantic_similarity(high)",
+          "perplexity(low)",
+          "knowledge_overlap(high)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [],
+        "confidence_adjustment": 0.0,
+        "adjusted_confidence": 0.002965688705444336,
+        "reasoning": [
+          "Signal consistency: 0.80",
+          "Detected 0 conflicts",
+          "Confidence agreement: 0.20",
+          "Verdict: moderately reliable cues"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type2_missing_info",
+        "reason": "Moderate/low signals (semantic_similarity=0.86, knowledge_overlap=0.77)"
+      },
+      "signal_contributions": {
+        "semantic_similarity": 0.1112,
+        "entity_overlap_ratio": 0.1526,
+        "knowledge_overlap": 0.0822,
+        "entity_coverage": -0.0832,
+        "perplexity": 0.1291,
+        "token_entropy": 0.1052
+      }
+    },
+    {
+      "test_split_index": 1031,
+      "error_type": "false_positive",
+      "gold_label": 0,
+      "predicted_label": 1,
+      "p_hallucination": 0.9964304566383362,
+      "model_confidence_correct": 0.0035695433616638184,
+      "prompt_excerpt": "Knowledge: Robert Downey Jr. starred in Tropic ThunderTropic Thunder has genre Adventure Film\nDialogue: [Human]: I like some of the stuff Robert Downey Jr. does so do you have any recommendations for movies with him? [Assistant]: He starred in The Pick-Up Artist, The Judge, and Iron Man. What genres do you prefer? [Human]: I like Comedy mostly right now. [Assistant]: The Pick-Up Artist, Tropic Thunder, and Kiss Kiss Bang Bang are all comedies that he starred in. [Human]: Oh, I think I hearod of Tropic Thunder and something about it is also an Adventure Film, correct? \nResponse: No, it's more of an Action film. ",
+      "semantic_features": {
+        "semantic_similarity": 0.7982460260391235,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.10526315789473684,
+        "knowledge_overlap": 0.6666666666666666
+      },
+      "uncertainty_features": {
+        "answer_length": 0,
+        "answer_char_length": 0,
+        "numeric_density": 0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.5,
+        "perplexity": 4.232507416907901,
+        "token_entropy": 0.3284810959415303,
+        "avg_confidence": 0.5,
+        "sequence_entropy": 0.0
+      },
+      "signal_reliability": {
+        "reliability_score": 0.76,
+        "trust_level": "HIGH",
+        "consistent_signals": [
+          "semantic_similarity(high)",
+          "perplexity(low)",
+          "knowledge_overlap(high)",
+          "token_entropy(low)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [],
+        "confidence_adjustment": 0.0,
+        "adjusted_confidence": 0.0035695433616638184,
+        "reasoning": [
+          "Signal consistency: 1.00",
+          "Detected 0 conflicts",
+          "Confidence agreement: 0.20",
+          "Verdict: cues agree; no conflicts"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type2_missing_info",
+        "reason": "Moderate/low signals (semantic_similarity=0.80, knowledge_overlap=0.67)"
+      },
+      "signal_contributions": {
+        "semantic_similarity": 0.1055,
+        "entity_overlap_ratio": 0.1769,
+        "knowledge_overlap": 0.059,
+        "entity_coverage": -0.1396,
+        "perplexity": 0.1469,
+        "token_entropy": 0.1478
+      }
+    },
+    {
+      "test_split_index": 4518,
+      "error_type": "false_positive",
+      "gold_label": 0,
+      "predicted_label": 1,
+      "p_hallucination": 0.9961835741996765,
+      "model_confidence_correct": 0.0038164258003234863,
+      "prompt_excerpt": "Knowledge: Jack Thorne wrote Harry Potter and the Cursed Child, Parts One and Two. Harry Potter and the Cursed Child, Parts One and Two was released 2016\nDialogue: [Human]: I like the author Jack Thorne, can you tell me about some of his works? [Assistant]: Are you familiar with the Harry Potter series? [Human]: Yes, did he write those? [Assistant]: Right, he wrote Harry Potter and the Cursed Child, Parts One and Two which is the same year two by two was released. I can find it for you, if you'd like to read it. [Human]: I didn't know that! I might like to read that, what else did he write? \nResponse: Well it's most notable writer is probably J.K. Rowling.  He's written mostly for radio, television, theater, and film.",
+      "semantic_features": {
+        "semantic_similarity": 0.8748961687088013,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.1875,
+        "knowledge_overlap": 0.6470588235294118
+      },
+      "uncertainty_features": {
+        "answer_length": 0,
+        "answer_char_length": 0,
+        "numeric_density": 0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.5,
+        "perplexity": 3.5802488188261057,
+        "token_entropy": 0.398774143367437,
+        "avg_confidence": 0.5,
+        "sequence_entropy": 0.0
+      },
+      "signal_reliability": {
+        "reliability_score": 0.76,
+        "trust_level": "HIGH",
+        "consistent_signals": [
+          "semantic_similarity(high)",
+          "perplexity(low)",
+          "knowledge_overlap(high)",
+          "token_entropy(low)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [],
+        "confidence_adjustment": 0.0,
+        "adjusted_confidence": 0.0038164258003234863,
+        "reasoning": [
+          "Signal consistency: 1.00",
+          "Detected 0 conflicts",
+          "Confidence agreement: 0.20",
+          "Verdict: cues agree; no conflicts"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type2_missing_info",
+        "reason": "Moderate/low signals (semantic_similarity=0.87, knowledge_overlap=0.65)"
+      },
+      "signal_contributions": {
+        "semantic_similarity": 0.1209,
+        "entity_overlap_ratio": 0.1613,
+        "knowledge_overlap": 0.0474,
+        "entity_coverage": -0.1008,
+        "perplexity": 0.1382,
+        "token_entropy": 0.1291
+      }
+    },
+    {
+      "test_split_index": 6094,
+      "error_type": "false_positive",
+      "gold_label": 0,
+      "predicted_label": 1,
+      "p_hallucination": 0.9957756400108337,
+      "model_confidence_correct": 0.00422435998916626,
+      "prompt_excerpt": "Knowledge: Fallen is written by Lauren KateLauren Kate wrote Fallen\nDialogue: [Human]: Do you like Fallen?  [Assistant]: Yes, I enjoy romantic mysteries.  Fallen was an intriguing movie! [Human]: Yes it was written by NIchole Millard do you know anything else she has done?  [Assistant]: Oh, I thought it was written by Lauren Kate.  She also wrote Passion, Torment, Teardrop, and Rapture.  [Human]: She wrote the book. And the other Novels.  \nResponse: Yes, I realize that now.  Lauren Kate wrote the book, but Nichole Millard wrote the screenplay. Nichole Millard is actually working on a script for a new TV show for Fox.  Cool! ",
+      "semantic_features": {
+        "semantic_similarity": 0.9296854734420776,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.23809523809523808,
+        "knowledge_overlap": 0.7391304347826086
+      },
+      "uncertainty_features": {
+        "answer_length": 0,
+        "answer_char_length": 0,
+        "numeric_density": 0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.5,
+        "perplexity": 3.9106367819721566,
+        "token_entropy": 0.582235751577085,
+        "avg_confidence": 0.5,
+        "sequence_entropy": 0.0
+      },
+      "signal_reliability": {
+        "reliability_score": 0.6800000000000002,
+        "trust_level": "MEDIUM",
+        "consistent_signals": [
+          "semantic_similarity(high)",
+          "perplexity(low)",
+          "knowledge_overlap(high)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [],
+        "confidence_adjustment": 0.0,
+        "adjusted_confidence": 0.00422435998916626,
+        "reasoning": [
+          "Signal consistency: 0.80",
+          "Detected 0 conflicts",
+          "Confidence agreement: 0.20",
+          "Verdict: moderately reliable cues"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type2_missing_info",
+        "reason": "Moderate/low signals (semantic_similarity=0.93, knowledge_overlap=0.74)"
+      },
+      "signal_contributions": {
+        "semantic_similarity": 0.1266,
+        "entity_overlap_ratio": 0.1473,
+        "knowledge_overlap": 0.0704,
+        "entity_coverage": -0.0771,
+        "perplexity": 0.1242,
+        "token_entropy": 0.1044
+      }
+    },
+    {
+      "test_split_index": 5996,
+      "error_type": "false_positive",
+      "gold_label": 0,
+      "predicted_label": 1,
+      "p_hallucination": 0.9945411086082458,
+      "model_confidence_correct": 0.00545889139175415,
+      "prompt_excerpt": "Knowledge: James Cameron has edited True Lies. True Lies has genre Action\nDialogue: [Human]: Do you have any movies by James Cameron [Assistant]: Are you looking for action or fantasy by James Cameron? [Human]: I am looking for action please [Assistant]: James Cameron wrote True Lies and Aliens. Both are considered action films. Titanic is also considered an action film, but is also a historical period drama. [Human]: Okay I'll try Aliens thanks \nResponse: If you like sci-fi, you might also like The Terminator or Avatar, which are also both Cameron films.. ",
+      "semantic_features": {
+        "semantic_similarity": 0.8991883993148804,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.25,
+        "knowledge_overlap": 0.75
+      },
+      "uncertainty_features": {
+        "answer_length": 0,
+        "answer_char_length": 0,
+        "numeric_density": 0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.5,
+        "perplexity": 3.9633442817445568,
+        "token_entropy": 0.40528810934939785,
+        "avg_confidence": 0.5,
+        "sequence_entropy": 0.0
+      },
+      "signal_reliability": {
+        "reliability_score": 0.76,
+        "trust_level": "HIGH",
+        "consistent_signals": [
+          "semantic_similarity(high)",
+          "perplexity(low)",
+          "knowledge_overlap(high)",
+          "token_entropy(low)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [],
+        "confidence_adjustment": 0.0,
+        "adjusted_confidence": 0.00545889139175415,
+        "reasoning": [
+          "Signal consistency: 1.00",
+          "Detected 0 conflicts",
+          "Confidence agreement: 0.20",
+          "Verdict: cues agree; no conflicts"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type2_missing_info",
+        "reason": "Moderate/low signals (semantic_similarity=0.90, knowledge_overlap=0.75)"
+      },
+      "signal_contributions": {
+        "semantic_similarity": 0.1149,
+        "entity_overlap_ratio": 0.1439,
+        "knowledge_overlap": 0.0719,
+        "entity_coverage": -0.0719,
+        "perplexity": 0.1211,
+        "token_entropy": 0.1147
+      }
+    },
+    {
+      "test_split_index": 55,
+      "error_type": "false_positive",
+      "gold_label": 0,
+      "predicted_label": 1,
+      "p_hallucination": 0.994509756565094,
+      "model_confidence_correct": 0.005490243434906006,
+      "prompt_excerpt": "Knowledge: Marriage plot is a term used, often in academic circles, to categorize a storyline that recurs in novels most prominently and more recently in films.Mary Anne Evans (22 November 1819 – 22 December 1880; alternatively \"Mary Ann\" or \"Marian\"), known by her pen name George Eliot, was an English novelist, poet, journalist, translator and one of the leading writers of the Victorian era. She is the author of seven novels, including \"Adam Bede\" (1859), \"The Mill on the Floss\" (1860), \"Silas Marner\" (1861), \"Middlemarch\" (1871–72), and \"Daniel Deronda\" (1876), most of which are set in provincial England and known for their realism and psychological insight.\nQuestion: What is the author that wrote Adam Bede a foremost practitioner of?\nAnswer: Marriage plot is a term used, often in academic circles, to categorize a storyline that recurs in novels most prominently and more recently in films.",
+      "semantic_features": {
+        "semantic_similarity": 0.844791054725647,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.038461538461538464,
+        "knowledge_overlap": 0.85
+      },
+      "uncertainty_features": {
+        "answer_length": 25,
+        "answer_char_length": 149,
+        "numeric_density": 0.0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.9545454545454546,
+        "perplexity": 1.9745956096317343,
+        "token_entropy": 0.959483827968608,
+        "avg_confidence": 0.9545454545454546,
+        "sequence_entropy": 23.9870956992152
+      },
+      "signal_reliability": {
+        "reliability_score": 0.6800000000000002,
+        "trust_level": "MEDIUM",
+        "consistent_signals": [
+          "semantic_similarity(high)",
+          "perplexity(low)",
+          "knowledge_overlap(high)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [],
+        "confidence_adjustment": 0.0,
+        "adjusted_confidence": 0.005490243434906006,
+        "reasoning": [
+          "Signal consistency: 0.80",
+          "Detected 0 conflicts",
+          "Confidence agreement: 0.20",
+          "Verdict: moderately reliable cues"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type2_missing_info",
+        "reason": "Moderate/low signals (semantic_similarity=0.84, knowledge_overlap=0.85)"
+      },
+      "signal_contributions": {
+        "semantic_similarity": 0.1173,
+        "entity_overlap_ratio": 0.1701,
+        "knowledge_overlap": 0.119,
+        "entity_coverage": -0.157,
+        "perplexity": 0.1566,
+        "token_entropy": 0.0885
+      }
+    },
+    {
+      "test_split_index": 530,
+      "error_type": "false_positive",
+      "gold_label": 0,
+      "predicted_label": 1,
+      "p_hallucination": 0.9935576319694519,
+      "model_confidence_correct": 0.006442368030548096,
+      "prompt_excerpt": "Knowledge: Eminem starred in The Wash (Comedy)\nDialogue: [Human]: What do you think about Eminem? I know people who think he's awesome but I feel he's overrated. [Assistant]: I am not a big rap guy. I appreciate what he's done with that genre. He is a movie guy too. He was in The Wash and Pauly Shore is Dead.  [Human]: I don't think I ever watched one of his films. I can't imagine he's a great actor. Who starred with him in The Wash? [Assistant]: Dr. Dre was in that movie. It was a comedy with Eminem's song Going Through Changes. [Human]: That song was okay. Was that a drama? It's been so long that I can't remember. \nResponse: No, it was a comedy. It was not that good according to Rotten Tomatoes. ",
+      "semantic_features": {
+        "semantic_similarity": 0.8088211417198181,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.15,
+        "knowledge_overlap": 0.7
+      },
+      "uncertainty_features": {
+        "answer_length": 0,
+        "answer_char_length": 0,
+        "numeric_density": 0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.5,
+        "perplexity": 4.008455111695001,
+        "token_entropy": 0.3785612301134708,
+        "avg_confidence": 0.5,
+        "sequence_entropy": 0.0
+      },
+      "signal_reliability": {
+        "reliability_score": 0.76,
+        "trust_level": "HIGH",
+        "consistent_signals": [
+          "semantic_similarity(high)",
+          "perplexity(low)",
+          "knowledge_overlap(high)",
+          "token_entropy(low)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [],
+        "confidence_adjustment": 0.0,
+        "adjusted_confidence": 0.006442368030548096,
+        "reasoning": [
+          "Signal consistency: 1.00",
+          "Detected 0 conflicts",
+          "Confidence agreement: 0.20",
+          "Verdict: cues agree; no conflicts"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type2_missing_info",
+        "reason": "Moderate/low signals (semantic_similarity=0.81, knowledge_overlap=0.70)"
+      },
+      "signal_contributions": {
+        "semantic_similarity": 0.1027,
+        "entity_overlap_ratio": 0.1663,
+        "knowledge_overlap": 0.0665,
+        "entity_coverage": -0.1164,
+        "perplexity": 0.1396,
+        "token_entropy": 0.1348
+      }
+    },
+    {
+      "test_split_index": 1935,
+      "error_type": "false_positive",
+      "gold_label": 0,
+      "predicted_label": 1,
+      "p_hallucination": 0.9933874607086182,
+      "model_confidence_correct": 0.006612539291381836,
+      "prompt_excerpt": "Knowledge: Die Hard 2 : `~Sequel`: Die Hard. Die Hard has genre Action Film\nDialogue: [Human]: I like Die Hard 2. Do you know of any other movies like it? [Assistant]: Well, it is a sequel to the original that you may like, Die Hard. [Human]: Who wrote Die Hard? [Assistant]: There were several authors apparently, such as Steven E de Souza and Roderick Thorp. [Human]: Has Steven E. de Souza done anything else of note? \nResponse: Actually, he also participated in writing Die Hard 2.",
+      "semantic_features": {
+        "semantic_similarity": 0.8057010173797607,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.1875,
+        "knowledge_overlap": 0.7777777777777778
+      },
+      "uncertainty_features": {
+        "answer_length": 0,
+        "answer_char_length": 0,
+        "numeric_density": 0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.5,
+        "perplexity": 3.5908768410789285,
+        "token_entropy": 0.5481707663598203,
+        "avg_confidence": 0.5,
+        "sequence_entropy": 0.0
+      },
+      "signal_reliability": {
+        "reliability_score": 0.6800000000000002,
+        "trust_level": "MEDIUM",
+        "consistent_signals": [
+          "semantic_similarity(high)",
+          "perplexity(low)",
+          "knowledge_overlap(high)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [],
+        "confidence_adjustment": 0.0,
+        "adjusted_confidence": 0.006612539291381836,
+        "reasoning": [
+          "Signal consistency: 0.80",
+          "Detected 0 conflicts",
+          "Confidence agreement: 0.20",
+          "Verdict: moderately reliable cues"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type2_missing_info",
+        "reason": "Moderate/low signals (semantic_similarity=0.81, knowledge_overlap=0.78)"
+      },
+      "signal_contributions": {
+        "semantic_similarity": 0.0966,
+        "entity_overlap_ratio": 0.1579,
+        "knowledge_overlap": 0.0877,
+        "entity_coverage": -0.0987,
+        "perplexity": 0.1352,
+        "token_entropy": 0.1146
+      }
+    },
+    {
+      "test_split_index": 5598,
+      "error_type": "false_positive",
+      "gold_label": 0,
+      "predicted_label": 1,
+      "p_hallucination": 0.9924653768539429,
+      "model_confidence_correct": 0.007534623146057129,
+      "prompt_excerpt": "Knowledge: The Lego Movie is starring Will FerrellWill Ferrell wrote Step Brothers. Step Brothers is starring Rob RiggleStep Brothers : `~Film Executive Produced`: Adam McKay. Adam McKay directed Talladega Nights: The Ballad of Ricky Bobby\nDialogue: [Human]: Have you seen The Lego Movie? [Assistant]: Yes. Did you know that Will Ferrell and Morgan Freeman are in it? [Human]: I love Will Ferrell, he wrote and starred in Step Brothers, with Rob Riggle \nResponse: That's a great movie. If you enjoyed it, you may also like Talladega Nights: The Ballad of Ricky Bobby. It also features Will Ferrell and was directed by Adam McKay.",
+      "semantic_features": {
+        "semantic_similarity": 0.9025222659111023,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.36363636363636365,
+        "knowledge_overlap": 0.782608695652174
+      },
+      "uncertainty_features": {
+        "answer_length": 0,
+        "answer_char_length": 0,
+        "numeric_density": 0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.5,
+        "perplexity": 4.035075331348147,
+        "token_entropy": 0.4609458778547984,
+        "avg_confidence": 0.5,
+        "sequence_entropy": 0.0
+      },
+      "signal_reliability": {
+        "reliability_score": 0.76,
+        "trust_level": "HIGH",
+        "consistent_signals": [
+          "semantic_similarity(high)",
+          "perplexity(low)",
+          "knowledge_overlap(high)",
+          "token_entropy(low)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [],
+        "confidence_adjustment": 0.0,
+        "adjusted_confidence": 0.007534623146057129,
+        "reasoning": [
+          "Signal consistency: 1.00",
+          "Detected 0 conflicts",
+          "Confidence agreement: 0.20",
+          "Verdict: cues agree; no conflicts"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type2_missing_info",
+        "reason": "Moderate/low signals (semantic_similarity=0.90, knowledge_overlap=0.78)"
+      },
+      "signal_contributions": {
+        "semantic_similarity": 0.107,
+        "entity_overlap_ratio": 0.1329,
+        "knowledge_overlap": 0.0751,
+        "entity_coverage": -0.0362,
+        "perplexity": 0.1114,
+        "token_entropy": 0.1023
+      }
+    },
+    {
+      "test_split_index": 1043,
+      "error_type": "false_positive",
+      "gold_label": 0,
+      "predicted_label": 1,
+      "p_hallucination": 0.9919778108596802,
+      "model_confidence_correct": 0.008022189140319824,
+      "prompt_excerpt": "Knowledge:  Willard Beach is known for its views of Spring Point Ledge Light as well as island forts including Fort Gorges. Advancing military technology, including iron clad ships and long range guns, made the fort obsolete before it could be used.\nQuestion: Why was the fort viewable from Willard Beach never used? \nAnswer: Advancing military technology, including iron clad ships and long range guns, made the fort obsolete before it could be used.",
+      "semantic_features": {
+        "semantic_similarity": 0.9112984538078308,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.25,
+        "knowledge_overlap": 0.8235294117647058
+      },
+      "uncertainty_features": {
+        "answer_length": 20,
+        "answer_char_length": 125,
+        "numeric_density": 0.0,
+        "sentence_count": 1,
+        "knowledge_overlap": 1.0,
+        "perplexity": 1.2633653412302115,
+        "token_entropy": 0.895857489174134,
+        "avg_confidence": 1.0,
+        "sequence_entropy": 17.917149783482678
+      },
+      "signal_reliability": {
+        "reliability_score": 0.6800000000000002,
+        "trust_level": "MEDIUM",
+        "consistent_signals": [
+          "semantic_similarity(high)",
+          "perplexity(low)",
+          "knowledge_overlap(high)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [],
+        "confidence_adjustment": 0.0,
+        "adjusted_confidence": 0.008022189140319824,
+        "reasoning": [
+          "Signal consistency: 0.80",
+          "Detected 0 conflicts",
+          "Confidence agreement: 0.20",
+          "Verdict: moderately reliable cues"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type2_missing_info",
+        "reason": "Moderate/low signals (semantic_similarity=0.91, knowledge_overlap=0.82)"
+      },
+      "signal_contributions": {
+        "semantic_similarity": 0.1166,
+        "entity_overlap_ratio": 0.1417,
+        "knowledge_overlap": 0.0917,
+        "entity_coverage": -0.0709,
+        "perplexity": 0.1346,
+        "token_entropy": 0.0782
+      }
+    },
+    {
+      "test_split_index": 1103,
+      "error_type": "false_positive",
+      "gold_label": 0,
+      "predicted_label": 1,
+      "p_hallucination": 0.9916253685951233,
+      "model_confidence_correct": 0.008374631404876709,
+      "prompt_excerpt": "Knowledge: Alice Braga starred in Predators. Predators is starring Laurence Fishburne\nDialogue: [Human]: Do you have any information about Alice Braga? [Assistant]: Sure! Alice Braga starred in a lot of movies. One of them is Predators. Laurence Fishburne starred alongside her in that movie. Do you want to hear more? [Human]: I would love to hear more about that movie, what genre is it? [Assistant]: Predators was genre Adventure and Action. Do you like watching these types of films? [Human]: I do! When was it released? \nResponse: It was released in 2010. It actually has a sequel called Predator 2.",
+      "semantic_features": {
+        "semantic_similarity": 0.7627543807029724,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.23529411764705882,
+        "knowledge_overlap": 0.7777777777777778
+      },
+      "uncertainty_features": {
+        "answer_length": 0,
+        "answer_char_length": 0,
+        "numeric_density": 0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.5,
+        "perplexity": 4.362732940937726,
+        "token_entropy": 0.6261498852011372,
+        "avg_confidence": 0.5,
+        "sequence_entropy": 0.0
+      },
+      "signal_reliability": {
+        "reliability_score": 0.6800000000000002,
+        "trust_level": "MEDIUM",
+        "consistent_signals": [
+          "semantic_similarity(high)",
+          "perplexity(low)",
+          "knowledge_overlap(high)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [],
+        "confidence_adjustment": 0.0,
+        "adjusted_confidence": 0.008374631404876709,
+        "reasoning": [
+          "Signal consistency: 0.80",
+          "Detected 0 conflicts",
+          "Confidence agreement: 0.20",
+          "Verdict: moderately reliable cues"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type2_missing_info",
+        "reason": "Moderate/low signals (semantic_similarity=0.76, knowledge_overlap=0.78)"
+      },
+      "signal_contributions": {
+        "semantic_similarity": 0.0843,
+        "entity_overlap_ratio": 0.1604,
+        "knowledge_overlap": 0.0891,
+        "entity_coverage": -0.0849,
+        "perplexity": 0.1324,
+        "token_entropy": 0.1102
+      }
+    },
+    {
+      "test_split_index": 1987,
+      "error_type": "false_positive",
+      "gold_label": 0,
+      "predicted_label": 1,
+      "p_hallucination": 0.9894354343414307,
+      "model_confidence_correct": 0.010564565658569336,
+      "prompt_excerpt": "Knowledge: Laura Esquivel is a/an WriterWriter has example: Winston GroomWinston Groom wrote Forrest Gump\nDialogue: [Human]: Do you like Laura Esquivel? [Assistant]: I certainly do! She is a wonderful writer and teacher. One of her most famous works is Como agua para chocolate. Have you read her work before? [Human]: I haven't. But, I heard her writing style was similar to Winston Groom. Have you read any of his works? \nResponse: Forrest Gump is a treasure! In the film version, Tom Hanks really brought the lead to life! Are you a fan of Tom's?",
+      "semantic_features": {
+        "semantic_similarity": 0.8719762563705444,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.2631578947368421,
+        "knowledge_overlap": 0.7647058823529411
+      },
+      "uncertainty_features": {
+        "answer_length": 0,
+        "answer_char_length": 0,
+        "numeric_density": 0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.5,
+        "perplexity": 4.222942332733539,
+        "token_entropy": 0.6426970008307806,
+        "avg_confidence": 0.5,
+        "sequence_entropy": 0.0
+      },
+      "signal_reliability": {
+        "reliability_score": 0.6800000000000002,
+        "trust_level": "MEDIUM",
+        "consistent_signals": [
+          "semantic_similarity(high)",
+          "perplexity(low)",
+          "knowledge_overlap(high)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [],
+        "confidence_adjustment": 0.0,
+        "adjusted_confidence": 0.010564565658569336,
+        "reasoning": [
+          "Signal consistency: 0.80",
+          "Detected 0 conflicts",
+          "Confidence agreement: 0.20",
+          "Verdict: moderately reliable cues"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type2_missing_info",
+        "reason": "Moderate/low signals (semantic_similarity=0.87, knowledge_overlap=0.76)"
+      },
+      "signal_contributions": {
+        "semantic_similarity": 0.11,
+        "entity_overlap_ratio": 0.1479,
+        "knowledge_overlap": 0.0783,
+        "entity_coverage": -0.0701,
+        "perplexity": 0.1229,
+        "token_entropy": 0.1004
+      }
+    },
+    {
+      "test_split_index": 4414,
+      "error_type": "false_positive",
+      "gold_label": 0,
+      "predicted_label": 1,
+      "p_hallucination": 0.9877598881721497,
+      "model_confidence_correct": 0.012240111827850342,
+      "prompt_excerpt": "Knowledge: Matt Reeves wrote The Pallbearer. The Pallbearer is starring David Schwimmer\nDialogue: [Human]: Do you know about Matt Reeves ? [Assistant]: Yes! He wrote The Pallbearer. It stars David Schwimmer. It is a Romance movie. What type of movies do you like? [Human]: I \nResponse: It is actually a Romantic Comedy, so if you are into that genre, you'll likely enjoy it.",
+      "semantic_features": {
+        "semantic_similarity": 0.8628473281860352,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.14285714285714285,
+        "knowledge_overlap": 0.7857142857142857
+      },
+      "uncertainty_features": {
+        "answer_length": 0,
+        "answer_char_length": 0,
+        "numeric_density": 0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.5,
+        "perplexity": 3.718894531151202,
+        "token_entropy": 0.6988564082614707,
+        "avg_confidence": 0.5,
+        "sequence_entropy": 0.0
+      },
+      "signal_reliability": {
+        "reliability_score": 0.6800000000000002,
+        "trust_level": "MEDIUM",
+        "consistent_signals": [
+          "semantic_similarity(high)",
+          "perplexity(low)",
+          "knowledge_overlap(high)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [],
+        "confidence_adjustment": 0.0,
+        "adjusted_confidence": 0.012240111827850342,
+        "reasoning": [
+          "Signal consistency: 0.80",
+          "Detected 0 conflicts",
+          "Confidence agreement: 0.20",
+          "Verdict: moderately reliable cues"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type2_missing_info",
+        "reason": "Moderate/low signals (semantic_similarity=0.86, knowledge_overlap=0.79)"
+      },
+      "signal_contributions": {
+        "semantic_similarity": 0.1148,
+        "entity_overlap_ratio": 0.1581,
+        "knowledge_overlap": 0.0904,
+        "entity_coverage": -0.1129,
+        "perplexity": 0.1346,
+        "token_entropy": 0.1029
+      }
+    },
+    {
+      "test_split_index": 3980,
+      "error_type": "false_positive",
+      "gold_label": 0,
+      "predicted_label": 1,
+      "p_hallucination": 0.9858126640319824,
+      "model_confidence_correct": 0.014187335968017578,
+      "prompt_excerpt": "Knowledge: Frank Coraci starred in Here Comes the Boom. Here Comes the Boom is starring Greg Germann\nDialogue: [Human]: he has done a lot of work with Adam Sandler.  [Assistant]: Oh yes, Frank Coraci starred together withg him in Click [Human]: Who else was in that movie? [Assistant]: I am not sure, I just know they both were in it. Actually, Coraci also directed it, and also Here Comes the Boom. [Human]: Who wrote Here Comes the Boom? \nResponse: Kevin James did. He also wrote Zookeeper.",
+      "semantic_features": {
+        "semantic_similarity": 0.7793014049530029,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.1875,
+        "knowledge_overlap": 0.7142857142857143
+      },
+      "uncertainty_features": {
+        "answer_length": 0,
+        "answer_char_length": 0,
+        "numeric_density": 0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.5,
+        "perplexity": 4.369943481920663,
+        "token_entropy": 0.6235747689702965,
+        "avg_confidence": 0.5,
+        "sequence_entropy": 0.0
+      },
+      "signal_reliability": {
+        "reliability_score": 0.6800000000000002,
+        "trust_level": "MEDIUM",
+        "consistent_signals": [
+          "semantic_similarity(high)",
+          "perplexity(low)",
+          "knowledge_overlap(high)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [],
+        "confidence_adjustment": 0.0,
+        "adjusted_confidence": 0.014187335968017578,
+        "reasoning": [
+          "Signal consistency: 0.80",
+          "Detected 0 conflicts",
+          "Confidence agreement: 0.20",
+          "Verdict: moderately reliable cues"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type2_missing_info",
+        "reason": "Moderate/low signals (semantic_similarity=0.78, knowledge_overlap=0.71)"
+      },
+      "signal_contributions": {
+        "semantic_similarity": 0.0944,
+        "entity_overlap_ratio": 0.1689,
+        "knowledge_overlap": 0.0724,
+        "entity_coverage": -0.1056,
+        "perplexity": 0.1394,
+        "token_entropy": 0.1163
+      }
+    },
+    {
+      "test_split_index": 2275,
+      "error_type": "false_positive",
+      "gold_label": 0,
+      "predicted_label": 1,
+      "p_hallucination": 0.9856761693954468,
+      "model_confidence_correct": 0.014323830604553223,
+      "prompt_excerpt": "Knowledge: Harry Potter and the Deathly Hallows has genre FantasyFantasy has examples: The Looking Glass Wars. The Looking Glass Wars is written by Frank BeddorThe Looking Glass Wars has genre Fantasy\nDialogue: [Human]: Do you like Harry Potter and the Deathly Hallows? [Assistant]: Yes, it's a great example of fantasy fiction.  Have you watched the whole Harry Potter series? [Human]: I have watched several but not this one. What other Fantasy examples to you know? \nResponse: The Looking Glass Wars and Jurassic Park are both fantasies.  Do you like either of those?",
+      "semantic_features": {
+        "semantic_similarity": 0.8748478889465332,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.2,
+        "knowledge_overlap": 0.8461538461538461
+      },
+      "uncertainty_features": {
+        "answer_length": 0,
+        "answer_char_length": 0,
+        "numeric_density": 0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.5,
+        "perplexity": 4.238665821676399,
+        "token_entropy": 0.6126608937433873,
+        "avg_confidence": 0.5,
+        "sequence_entropy": 0.0
+      },
+      "signal_reliability": {
+        "reliability_score": 0.6800000000000002,
+        "trust_level": "MEDIUM",
+        "consistent_signals": [
+          "semantic_similarity(high)",
+          "perplexity(low)",
+          "knowledge_overlap(high)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [],
+        "confidence_adjustment": 0.0,
+        "adjusted_confidence": 0.014323830604553223,
+        "reasoning": [
+          "Signal consistency: 0.80",
+          "Detected 0 conflicts",
+          "Confidence agreement: 0.20",
+          "Verdict: moderately reliable cues"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type2_missing_info",
+        "reason": "Moderate/low signals (semantic_similarity=0.87, knowledge_overlap=0.85)"
+      },
+      "signal_contributions": {
+        "semantic_similarity": 0.1082,
+        "entity_overlap_ratio": 0.1443,
+        "knowledge_overlap": 0.0999,
+        "entity_coverage": -0.0866,
+        "perplexity": 0.1198,
+        "token_entropy": 0.1001
+      }
+    },
+    {
+      "test_split_index": 1019,
+      "error_type": "false_positive",
+      "gold_label": 0,
+      "predicted_label": 1,
+      "p_hallucination": 0.9821017980575562,
+      "model_confidence_correct": 0.017898201942443848,
+      "prompt_excerpt": "Knowledge: Pauline Baynes is a/an Author\nDialogue: [Human]: Do you know if Pauline Baynes is a writer or an actor? [Assistant]: Pauline Baynes is an author.  Would you like book recommendation by her? [Human]: Yes please. \nResponse: The Lion, The Witch and the Wardrobe was illustrated by Pauline Baynes.",
+      "semantic_features": {
+        "semantic_similarity": 0.7976436614990234,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.36363636363636365,
+        "knowledge_overlap": 0.75
+      },
+      "uncertainty_features": {
+        "answer_length": 0,
+        "answer_char_length": 0,
+        "numeric_density": 0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.5,
+        "perplexity": 4.393105857153527,
+        "token_entropy": 0.5584091035331715,
+        "avg_confidence": 0.5,
+        "sequence_entropy": 0.0
+      },
+      "signal_reliability": {
+        "reliability_score": 0.6800000000000002,
+        "trust_level": "MEDIUM",
+        "consistent_signals": [
+          "semantic_similarity(high)",
+          "perplexity(low)",
+          "knowledge_overlap(high)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [],
+        "confidence_adjustment": 0.0,
+        "adjusted_confidence": 0.017898201942443848,
+        "reasoning": [
+          "Signal consistency: 0.80",
+          "Detected 0 conflicts",
+          "Confidence agreement: 0.20",
+          "Verdict: moderately reliable cues"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type2_missing_info",
+        "reason": "Moderate/low signals (semantic_similarity=0.80, knowledge_overlap=0.75)"
+      },
+      "signal_contributions": {
+        "semantic_similarity": 0.0852,
+        "entity_overlap_ratio": 0.1432,
+        "knowledge_overlap": 0.0716,
+        "entity_coverage": -0.039,
+        "perplexity": 0.118,
+        "token_entropy": 0.1032
+      }
+    },
+    {
+      "test_split_index": 4118,
+      "error_type": "false_positive",
+      "gold_label": 0,
+      "predicted_label": 1,
+      "p_hallucination": 0.9784440398216248,
+      "model_confidence_correct": 0.021555960178375244,
+      "prompt_excerpt": "Knowledge: Renny Harlin directed Cutthroat Island. Cutthroat Island has genre Action Film\nDialogue: [Human]: Do you know any movies that Renny Harlin directed? [Assistant]: Yes he directed an action film called Cutthroat Island, and a thriller called The Long Kiss Goodnight.  [Human]: Who starred in Cutthroat Island? [Assistant]: Rex Linn, Renny Harlin, and Maury Chaykin star in this movie. Renny Harlin also produced and directed this movie! [Human]: It sounds very interesting, do you know of anymore action films that Renny Harlin directed and starred in as well? \nResponse: I'm not sure he starred in any other movies he directed, but he did direct Die Hard 2, and The Legend of Hercules.  ",
+      "semantic_features": {
+        "semantic_similarity": 0.8786496520042419,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.23529411764705882,
+        "knowledge_overlap": 0.8421052631578947
+      },
+      "uncertainty_features": {
+        "answer_length": 0,
+        "answer_char_length": 0,
+        "numeric_density": 0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.5,
+        "perplexity": 4.214630549938796,
+        "token_entropy": 0.15263690614880604,
+        "avg_confidence": 0.5,
+        "sequence_entropy": 0.0
+      },
+      "signal_reliability": {
+        "reliability_score": 0.76,
+        "trust_level": "HIGH",
+        "consistent_signals": [
+          "semantic_similarity(high)",
+          "perplexity(low)",
+          "knowledge_overlap(high)",
+          "token_entropy(low)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [],
+        "confidence_adjustment": 0.0,
+        "adjusted_confidence": 0.021555960178375244,
+        "reasoning": [
+          "Signal consistency: 1.00",
+          "Detected 0 conflicts",
+          "Confidence agreement: 0.20",
+          "Verdict: cues agree; no conflicts"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type2_missing_info",
+        "reason": "Moderate/low signals (semantic_similarity=0.88, knowledge_overlap=0.84)"
+      },
+      "signal_contributions": {
+        "semantic_similarity": 0.0988,
+        "entity_overlap_ratio": 0.1305,
+        "knowledge_overlap": 0.0893,
+        "entity_coverage": -0.0691,
+        "perplexity": 0.1085,
+        "token_entropy": 0.1205
+      }
+    },
+    {
+      "test_split_index": 54,
+      "error_type": "false_positive",
+      "gold_label": 0,
+      "predicted_label": 1,
+      "p_hallucination": 0.9783303141593933,
+      "model_confidence_correct": 0.02166968584060669,
+      "prompt_excerpt": "Knowledge: Serena Williams starred in Hair Show\nDialogue: [Human]: Do you like Serena Williams? \nResponse: I do like Serena Williams. I know she and her sister Venus Williams are great tennis players. They are from Palm Beach Gardens, Fl. Did you know Serena starred in a movie titled Hair Show?",
+      "semantic_features": {
+        "semantic_similarity": 0.9703282713890076,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.6666666666666666,
+        "knowledge_overlap": 0.8148148148148148
+      },
+      "uncertainty_features": {
+        "answer_length": 0,
+        "answer_char_length": 0,
+        "numeric_density": 0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.5,
+        "perplexity": 4.304184066671321,
+        "token_entropy": 0.3003060481582619,
+        "avg_confidence": 0.5,
+        "sequence_entropy": 0.0
+      },
+      "signal_reliability": {
+        "reliability_score": 0.76,
+        "trust_level": "HIGH",
+        "consistent_signals": [
+          "semantic_similarity(high)",
+          "perplexity(low)",
+          "knowledge_overlap(high)",
+          "token_entropy(low)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [],
+        "confidence_adjustment": 0.0,
+        "adjusted_confidence": 0.02166968584060669,
+        "reasoning": [
+          "Signal consistency: 1.00",
+          "Detected 0 conflicts",
+          "Confidence agreement: 0.20",
+          "Verdict: cues agree; no conflicts"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type2_missing_info",
+        "reason": "Moderate/low signals (semantic_similarity=0.97, knowledge_overlap=0.81)"
+      },
+      "signal_contributions": {
+        "semantic_similarity": 0.0982,
+        "entity_overlap_ratio": 0.1044,
+        "knowledge_overlap": 0.0657,
+        "entity_coverage": 0.0348,
+        "perplexity": 0.0864,
+        "token_entropy": 0.0887
+      }
+    },
+    {
+      "test_split_index": 4023,
+      "error_type": "false_positive",
+      "gold_label": 0,
+      "predicted_label": 1,
+      "p_hallucination": 0.9772606492042542,
+      "model_confidence_correct": 0.02273935079574585,
+      "prompt_excerpt": "Knowledge: Damian Lillard : `~has_person`: OaklandOakland : `~Sport Team Location`: Oakland RaidersOakland Raiders : `~Team`: National Football League\nDialogue: [Human]: Do you know anything about Damian Lillard? Doesn't he play for the Trailblazers? [Assistant]: Yes, he is the point guard for Oakland.  Do you think he's any good? [Human]: Actually, isn't he with Portland? I believe Steph Curry is the point guard for Oakland. The Warriors are my team! [Assistant]: Yes, he is from Oakland.  I was confused.  I don't follow the Warriors.  How are they doing? [Human]: Oh I didn't realize he was from Oakland, how funny. The Warriors are hit and miss this year. Steph's hurt :(. Do you follow the Raiders? \nResponse: No, I'm a Chicago girl actually, so Bears, Bulls, Cubs.  Do you like the Raiders?",
+      "semantic_features": {
+        "semantic_similarity": 0.8605824708938599,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.25925925925925924,
+        "knowledge_overlap": 0.5
+      },
+      "uncertainty_features": {
+        "answer_length": 0,
+        "answer_char_length": 0,
+        "numeric_density": 0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.5,
+        "perplexity": 4.274220443845907,
+        "token_entropy": 0.4621580219112259,
+        "avg_confidence": 0.5,
+        "sequence_entropy": 0.0
+      },
+      "signal_reliability": {
+        "reliability_score": 0.6800000000000002,
+        "trust_level": "MEDIUM",
+        "consistent_signals": [
+          "semantic_similarity(high)",
+          "perplexity(low)",
+          "token_entropy(low)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [],
+        "confidence_adjustment": 0.0,
+        "adjusted_confidence": 0.02273935079574585,
+        "reasoning": [
+          "Signal consistency: 0.80",
+          "Detected 0 conflicts",
+          "Confidence agreement: 0.20",
+          "Verdict: moderately reliable cues"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type2_missing_info",
+        "reason": "Moderate/low signals (semantic_similarity=0.86, knowledge_overlap=0.50)"
+      },
+      "signal_contributions": {
+        "semantic_similarity": 0.1213,
+        "entity_overlap_ratio": 0.1682,
+        "knowledge_overlap": 0.0,
+        "entity_coverage": -0.081,
+        "perplexity": 0.1394,
+        "token_entropy": 0.1293
+      }
+    },
+    {
+      "test_split_index": 4636,
+      "error_type": "false_positive",
+      "gold_label": 0,
+      "predicted_label": 1,
+      "p_hallucination": 0.977172315120697,
+      "model_confidence_correct": 0.02282768487930298,
+      "prompt_excerpt": "Knowledge: Kingdom of Heaven is starring Edward NortonEdward Norton starred in Keeping the Faith. Keeping the Faith has genre Comedy-dramaKeeping the Faith has genre Comedy-drama\nDialogue: [Human]: Could you recommend films in the genre of Kingdom of Heaven? [Assistant]: That is a war film starring Edward Norton. If you like war movies, you might enjoy Journey from the Fall. [Human]: I like Edward Norton! What other films did he make aside from this one? I want something light. \nResponse: Then I think you'd like Keeping the Faith. It's a comedy-drama similar to The Best Exotic Marigold Hotel.",
+      "semantic_features": {
+        "semantic_similarity": 0.8824863433837891,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.25,
+        "knowledge_overlap": 0.8666666666666667
+      },
+      "uncertainty_features": {
+        "answer_length": 0,
+        "answer_char_length": 0,
+        "numeric_density": 0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.5,
+        "perplexity": 3.5852190924723586,
+        "token_entropy": 0.6065521630317141,
+        "avg_confidence": 0.5,
+        "sequence_entropy": 0.0
+      },
+      "signal_reliability": {
+        "reliability_score": 0.6800000000000002,
+        "trust_level": "MEDIUM",
+        "consistent_signals": [
+          "semantic_similarity(high)",
+          "perplexity(low)",
+          "knowledge_overlap(high)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [],
+        "confidence_adjustment": 0.0,
+        "adjusted_confidence": 0.02282768487930298,
+        "reasoning": [
+          "Signal consistency: 0.80",
+          "Detected 0 conflicts",
+          "Confidence agreement: 0.20",
+          "Verdict: moderately reliable cues"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type2_missing_info",
+        "reason": "Moderate/low signals (semantic_similarity=0.88, knowledge_overlap=0.87)"
+      },
+      "signal_contributions": {
+        "semantic_similarity": 0.1028,
+        "entity_overlap_ratio": 0.1344,
+        "knowledge_overlap": 0.0985,
+        "entity_coverage": -0.0672,
+        "perplexity": 0.1151,
+        "token_entropy": 0.0936
+      }
+    },
+    {
+      "test_split_index": 6362,
+      "error_type": "false_positive",
+      "gold_label": 0,
+      "predicted_label": 1,
+      "p_hallucination": 0.9762174487113953,
+      "model_confidence_correct": 0.023782551288604736,
+      "prompt_excerpt": "Knowledge: Thiago Silva starred in UFC 94UFC 94 is starring Thiago Silva. Thiago Silva : `Martial Art(s)`: Brazilian jiu-jitsuBrazilian jiu-jitsu : `~Sport played`: Miesha Tate\nDialogue: [Human]: What do you think about Thiago Silva? I honestly don't know much about them. [Assistant]: I know that he starred in UFC 94 and is a mixed martial arts athlete.  [Human]: That's really neat.  I've heard he did Brazilian Jiu-Jitsu, too.  Which makes sense, because he's Brazilian.  Do you know anything else about him? \nResponse: Speaking of Brazilian jiu-jitsu, have you heard of Miesha Tate? She's an amazing athlete.",
+      "semantic_features": {
+        "semantic_similarity": 0.8920512199401855,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.2222222222222222,
+        "knowledge_overlap": 0.7272727272727273
+      },
+      "uncertainty_features": {
+        "answer_length": 0,
+        "answer_char_length": 0,
+        "numeric_density": 0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.5,
+        "perplexity": 3.7947152937814264,
+        "token_entropy": 0.3775961435343647,
+        "avg_confidence": 0.5,
+        "sequence_entropy": 0.0
+      },
+      "signal_reliability": {
+        "reliability_score": 0.76,
+        "trust_level": "HIGH",
+        "consistent_signals": [
+          "semantic_similarity(high)",
+          "perplexity(low)",
+          "knowledge_overlap(high)",
+          "token_entropy(low)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [],
+        "confidence_adjustment": 0.0,
+        "adjusted_confidence": 0.023782551288604736,
+        "reasoning": [
+          "Signal consistency: 1.00",
+          "Detected 0 conflicts",
+          "Confidence agreement: 0.20",
+          "Verdict: cues agree; no conflicts"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type2_missing_info",
+        "reason": "Moderate/low signals (semantic_similarity=0.89, knowledge_overlap=0.73)"
+      },
+      "signal_contributions": {
+        "semantic_similarity": 0.1117,
+        "entity_overlap_ratio": 0.1425,
+        "knowledge_overlap": 0.0648,
+        "entity_coverage": -0.0792,
+        "perplexity": 0.1208,
+        "token_entropy": 0.1156
+      }
+    },
+    {
+      "test_split_index": 5169,
+      "error_type": "false_positive",
+      "gold_label": 0,
+      "predicted_label": 1,
+      "p_hallucination": 0.9755802750587463,
+      "model_confidence_correct": 0.024419724941253662,
+      "prompt_excerpt": "Knowledge: Arsenal is a/an Sports Team. Sports Team has example: Brooklyn Nets\nDialogue: [Human]: Do you like Arsenal Football Club? [Assistant]: I am not sure. Are they like the Brooklyn Nets? [Human]: Well, Arsenal is a soccer team, so they're a bit different. They're still professional athletes though. Are you a big Nets fan? [Assistant]: No, actually I have always been loyal to the Los Angeles Lakers when it comes to nets. [Human]: Who is your favorite Lakers player? \nResponse: Magic Johnson was certainly one!",
+      "semantic_features": {
+        "semantic_similarity": 0.7218198180198669,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.05555555555555555,
+        "knowledge_overlap": 0.75
+      },
+      "uncertainty_features": {
+        "answer_length": 0,
+        "answer_char_length": 0,
+        "numeric_density": 0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.5,
+        "perplexity": 3.849032035923911,
+        "token_entropy": 0.3518459702671531,
+        "avg_confidence": 0.5,
+        "sequence_entropy": 0.0
+      },
+      "signal_reliability": {
+        "reliability_score": 0.76,
+        "trust_level": "HIGH",
+        "consistent_signals": [
+          "semantic_similarity(high)",
+          "perplexity(low)",
+          "knowledge_overlap(high)",
+          "token_entropy(low)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [],
+        "confidence_adjustment": 0.0,
+        "adjusted_confidence": 0.024419724941253662,
+        "reasoning": [
+          "Signal consistency: 1.00",
+          "Detected 0 conflicts",
+          "Confidence agreement: 0.20",
+          "Verdict: cues agree; no conflicts"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type2_missing_info",
+        "reason": "Moderate/low signals (semantic_similarity=0.72, knowledge_overlap=0.75)"
+      },
+      "signal_contributions": {
+        "semantic_similarity": 0.0774,
+        "entity_overlap_ratio": 0.1745,
+        "knowledge_overlap": 0.0873,
+        "entity_coverage": -0.1551,
+        "perplexity": 0.1477,
+        "token_entropy": 0.1438
+      }
+    },
+    {
+      "test_split_index": 850,
+      "error_type": "false_positive",
+      "gold_label": 0,
+      "predicted_label": 1,
+      "p_hallucination": 0.9735676050186157,
+      "model_confidence_correct": 0.026432394981384277,
+      "prompt_excerpt": "Knowledge: Stephen Sommers wrote Van Helsing. Van Helsing is starring Richard RoxburghVan Helsing is starring Silvia CollocaSilvia Colloca starred in Vampire Killers\nDialogue: [Human]: Do you have something directed by Stephen Sommers? [Assistant]: Stephen Sommers wrote Van Helsing a thriller that incorporates the Vampire and Werewolf genre. Is that of interest? [Human]: That's so cool! I think Silvia Colloca is in that, right? Who else?  \nResponse: Hugh Jackman played Van Helsing but if you like Silvia Colloca, she also starred in Vampire Killers. ",
+      "semantic_features": {
+        "semantic_similarity": 0.8802897930145264,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.2222222222222222,
+        "knowledge_overlap": 0.8823529411764706
+      },
+      "uncertainty_features": {
+        "answer_length": 0,
+        "answer_char_length": 0,
+        "numeric_density": 0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.5,
+        "perplexity": 4.300679485330394,
+        "token_entropy": 0.18516549595238013,
+        "avg_confidence": 0.5,
+        "sequence_entropy": 0.0
+      },
+      "signal_reliability": {
+        "reliability_score": 0.76,
+        "trust_level": "HIGH",
+        "consistent_signals": [
+          "semantic_similarity(high)",
+          "perplexity(low)",
+          "knowledge_overlap(high)",
+          "token_entropy(low)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [],
+        "confidence_adjustment": 0.0,
+        "adjusted_confidence": 0.026432394981384277,
+        "reasoning": [
+          "Signal consistency: 1.00",
+          "Detected 0 conflicts",
+          "Confidence agreement: 0.20",
+          "Verdict: cues agree; no conflicts"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type2_missing_info",
+        "reason": "Moderate/low signals (semantic_similarity=0.88, knowledge_overlap=0.88)"
+      },
+      "signal_contributions": {
+        "semantic_similarity": 0.0972,
+        "entity_overlap_ratio": 0.1278,
+        "knowledge_overlap": 0.0977,
+        "entity_coverage": -0.071,
+        "perplexity": 0.1058,
+        "token_entropy": 0.116
+      }
+    },
+    {
+      "test_split_index": 2898,
+      "error_type": "false_positive",
+      "gold_label": 0,
+      "predicted_label": 1,
+      "p_hallucination": 0.9731196761131287,
+      "model_confidence_correct": 0.026880323886871338,
+      "prompt_excerpt": "Knowledge: Stan Wawrinka : `Sport played`: TennisTennis : `~Sport played`: Xavier Malisse\nDialogue: [Human]: Do you know much about Stan Wawrinka? [Assistant]: Sure!  He is a Swiss professional tennis player.  Do you enjoy tennis? [Human]: I don't know much about tennis really, can you tell me some other famous players? [Assistant]: Of course!  Swiss professional tennis playe  [Human]: Oh Xavier Malisse, is he Swiss? \nResponse: While Malisse is a tennis player, he is actually from Belgium, not Switzerland.  Fun fact; his nick name is X-Man, and is one out of only 2 players from Belgium to be ranked in the top 20 players in the world! ",
+      "semantic_features": {
+        "semantic_similarity": 0.9080759286880493,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.35,
+        "knowledge_overlap": 0.8
+      },
+      "uncertainty_features": {
+        "answer_length": 0,
+        "answer_char_length": 0,
+        "numeric_density": 0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.5,
+        "perplexity": 3.630416516108524,
+        "token_entropy": 0.13696097421922537,
+        "avg_confidence": 0.5,
+        "sequence_entropy": 0.0
+      },
+      "signal_reliability": {
+        "reliability_score": 0.76,
+        "trust_level": "HIGH",
+        "consistent_signals": [
+          "semantic_similarity(high)",
+          "perplexity(low)",
+          "knowledge_overlap(high)",
+          "token_entropy(low)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [],
+        "confidence_adjustment": 0.0,
+        "adjusted_confidence": 0.026880323886871338,
+        "reasoning": [
+          "Signal consistency: 1.00",
+          "Detected 0 conflicts",
+          "Confidence agreement: 0.20",
+          "Verdict: cues agree; no conflicts"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type2_missing_info",
+        "reason": "Moderate/low signals (semantic_similarity=0.91, knowledge_overlap=0.80)"
+      },
+      "signal_contributions": {
+        "semantic_similarity": 0.0989,
+        "entity_overlap_ratio": 0.1212,
+        "knowledge_overlap": 0.0727,
+        "entity_coverage": -0.0364,
+        "perplexity": 0.1036,
+        "token_entropy": 0.1129
+      }
+    },
+    {
+      "test_split_index": 5002,
+      "error_type": "false_positive",
+      "gold_label": 0,
+      "predicted_label": 1,
+      "p_hallucination": 0.9730445146560669,
+      "model_confidence_correct": 0.026955485343933105,
+      "prompt_excerpt": "Knowledge: New Orleans Saints : `~Team`: National Football League\nDialogue: [Human]: Do you have any information on New Orleans Saints? [Assistant]: Yes! The New Orleans Saints are a football team under the NFL, and are part of the NFC South Division. Do you like football? [Human]: I am not a fan of American Football, as I called it throw ball [Assistant]: Ah I see, well they are a proficient team, with a great coaching history including coaches Jim Haslett and Jim E. Mora! [Human]: That's good to know, Who founded the Team? \nResponse: I'm not sure who founded the team but Jim Thorpe was the founder of the National Football League.",
+      "semantic_features": {
+        "semantic_similarity": 0.8556886911392212,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.10526315789473684,
+        "knowledge_overlap": 0.9285714285714286
+      },
+      "uncertainty_features": {
+        "answer_length": 0,
+        "answer_char_length": 0,
+        "numeric_density": 0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.5,
+        "perplexity": 4.211109461534971,
+        "token_entropy": 0.2738136066570904,
+        "avg_confidence": 0.5,
+        "sequence_entropy": 0.0
+      },
+      "signal_reliability": {
+        "reliability_score": 0.76,
+        "trust_level": "HIGH",
+        "consistent_signals": [
+          "semantic_similarity(high)",
+          "perplexity(low)",
+          "knowledge_overlap(high)",
+          "token_entropy(low)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [],
+        "confidence_adjustment": 0.0,
+        "adjusted_confidence": 0.026955485343933105,
+        "reasoning": [
+          "Signal consistency: 1.00",
+          "Detected 0 conflicts",
+          "Confidence agreement: 0.20",
+          "Verdict: cues agree; no conflicts"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type2_missing_info",
+        "reason": "Moderate/low signals (semantic_similarity=0.86, knowledge_overlap=0.93)"
+      },
+      "signal_contributions": {
+        "semantic_similarity": 0.0969,
+        "entity_overlap_ratio": 0.1362,
+        "knowledge_overlap": 0.1167,
+        "entity_coverage": -0.1075,
+        "perplexity": 0.1132,
+        "token_entropy": 0.1175
+      }
+    }
+  ],
+  "false_negatives": [
+    {
+      "test_split_index": 1465,
+      "error_type": "false_negative",
+      "gold_label": 1,
+      "predicted_label": 0,
+      "p_hallucination": 0.007470505312085152,
+      "model_confidence_correct": 0.9925294946879148,
+      "prompt_excerpt": "Knowledge: Elora Danan is a fictional character from the 1988 fantasy \"Willow\", played by infant twins Kate and Ruth Greenfield.Willow is a 1988 British-American high fantasy film directed by Ron Howard, produced and with a story by George Lucas, and starring Warwick Davis, Val Kilmer, Joanne Whalley, Jean Marsh, and Billy Barty.\nQuestion:  Elora Danan is a fictional character from a British-American high fantasy film directed by who?\nAnswer: George Lucas",
+      "semantic_features": {
+        "semantic_similarity": 0.4830890893936157,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.07142857142857142,
+        "knowledge_overlap": 1.0
+      },
+      "uncertainty_features": {
+        "answer_length": 2,
+        "answer_char_length": 12,
+        "numeric_density": 0.0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.5,
+        "perplexity": 4.2912778749502,
+        "token_entropy": 0.5400297121094535,
+        "avg_confidence": 0.5,
+        "sequence_entropy": 1.080059424218907
+      },
+      "signal_reliability": {
+        "reliability_score": 0.78,
+        "trust_level": "MEDIUM",
+        "consistent_signals": [
+          "perplexity(low)",
+          "knowledge_overlap(high)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [
+          "Large gap between knowledge overlap and semantic similarity"
+        ],
+        "confidence_adjustment": -0.1,
+        "adjusted_confidence": 0.8925294946879149,
+        "reasoning": [
+          "Signal consistency: 0.60",
+          "Detected 1 conflicts",
+          "Confidence agreement: 1.00",
+          "Verdict: moderately reliable cues"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type3_conflicting_signals",
+        "reason": "Conflicting signals prevent reliable prediction: Large gap between knowledge overlap and semantic similarity"
+      },
+      "signal_contributions": {
+        "semantic_similarity": 0.0062,
+        "entity_overlap_ratio": -0.1846,
+        "knowledge_overlap": -0.1846,
+        "entity_coverage": 0.1583,
+        "perplexity": -0.153,
+        "token_entropy": -0.1348
+      }
+    },
+    {
+      "test_split_index": 6077,
+      "error_type": "false_negative",
+      "gold_label": 1,
+      "predicted_label": 0,
+      "p_hallucination": 0.008011792786419392,
+      "model_confidence_correct": 0.9919882072135806,
+      "prompt_excerpt": "Knowledge:  The feud took place primarily in the border areas of Hawkins County (formerly part of Sullivan County, North Carolina, one of the earliest Tennessee counties and said to have a large Melungeon population), Washington County, Claiborne County, Hancock County, Tennessee (created when Hawkins County, Tennessee was subdivided), and Lee County, Virginia, not far from Cumberland Gap, the narrow Appalachian Mountain pass sometimes called The Wilderness Road leading into Kentucky. Despite Kentucky Senator Henry Clay's advocacy of this route, early in the 19th century, the northern route was selected for the National Road, connecting near Washington, Pennsylvania into the Ohio Valley of northern Kentucky and Ohio.\nQuestion: Which road leading into Kentucky was near one of locales of the Green-Jones War and was turned down to become the National Road?\nAnswer: The Appalachian Mountain Pass",
+      "semantic_features": {
+        "semantic_similarity": 0.6266334056854248,
+        "entity_overlap_ratio": 0.0,
+        "entity_coverage": 0.0,
+        "knowledge_overlap": 1.0
+      },
+      "uncertainty_features": {
+        "answer_length": 4,
+        "answer_char_length": 29,
+        "numeric_density": 0.0,
+        "sentence_count": 1,
+        "knowledge_overlap": 1.0,
+        "perplexity": 0.7300311241893797,
+        "token_entropy": 0.4734283850122691,
+        "avg_confidence": 1.0,
+        "sequence_entropy": 1.8937135400490763
+      },
+      "signal_reliability": {
+        "reliability_score": 0.792,
+        "trust_level": "HIGH",
+        "consistent_signals": [
+          "perplexity(low)",
+          "knowledge_overlap(high)",
+          "token_entropy(low)"
+        ],
+        "conflicting_signals": [
+          "entity_overlap(low)"
+        ],
+        "conflicts": [],
+        "confidence_adjustment": 0.0,
+        "adjusted_confidence": 0.9919882072135806,
+        "reasoning": [
+          "Signal consistency: 0.48",
+          "Detected 0 conflicts",
+          "Confidence agreement: 1.00",
+          "Verdict: cues agree; no conflicts"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type1_semantic_failure",
+        "reason": "High semantic similarity (semantic_similarity=0.63) but wrong fact — surface matches, content wrong"
+      },
+      "signal_contributions": {
+        "semantic_similarity": -0.1262,
+        "entity_overlap_ratio": 0.4983,
+        "knowledge_overlap": -0.4983,
+        "entity_coverage": 0.4983,
+        "perplexity": -0.4837,
+        "token_entropy": -0.3803
+      }
+    },
+    {
+      "test_split_index": 3977,
+      "error_type": "false_negative",
+      "gold_label": 1,
+      "predicted_label": 0,
+      "p_hallucination": 0.012777146883308887,
+      "model_confidence_correct": 0.9872228531166911,
+      "prompt_excerpt": "Knowledge: The Ethics & Religious Liberty Commission (ERLC) is the public policy arm of the Southern Baptist Convention, the largest non-Catholic Christian denomination in the United States, with over 16 million members in over 43,000 independent churches.Russell D. Moore is an American evangelical theologian, ethicist, and preacher.\nQuestion: Which is the largest non-Catholic Christian denomination in the United States headed by Russell D. Moore, an American evangelical theologian, ethicist, and preacher?\nAnswer: The Baptist Church",
+      "semantic_features": {
+        "semantic_similarity": 0.5961588621139526,
+        "entity_overlap_ratio": 0.0,
+        "entity_coverage": 0.0,
+        "knowledge_overlap": 0.5
+      },
+      "uncertainty_features": {
+        "answer_length": 3,
+        "answer_char_length": 18,
+        "numeric_density": 0.0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.6666666666666666,
+        "perplexity": 2.5028897676332464,
+        "token_entropy": 0.2464034133963874,
+        "avg_confidence": 0.6666666666666666,
+        "sequence_entropy": 0.7392102401891623
+      },
+      "signal_reliability": {
+        "reliability_score": 0.728,
+        "trust_level": "HIGH",
+        "consistent_signals": [
+          "perplexity(low)",
+          "token_entropy(low)"
+        ],
+        "conflicting_signals": [
+          "entity_overlap(low)"
+        ],
+        "conflicts": [],
+        "confidence_adjustment": 0.0,
+        "adjusted_confidence": 0.9872228531166911,
+        "reasoning": [
+          "Signal consistency: 0.32",
+          "Detected 0 conflicts",
+          "Confidence agreement: 1.00",
+          "Verdict: cues agree; no conflicts"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type2_missing_info",
+        "reason": "Moderate/low signals (semantic_similarity=0.60, knowledge_overlap=0.50)"
+      },
+      "signal_contributions": {
+        "semantic_similarity": 3.0227,
+        "entity_overlap_ratio": -15.7171,
+        "knowledge_overlap": 0.0,
+        "entity_coverage": -15.7171,
+        "perplexity": 14.1436,
+        "token_entropy": 13.7807
+      }
+    },
+    {
+      "test_split_index": 5985,
+      "error_type": "false_negative",
+      "gold_label": 1,
+      "predicted_label": 0,
+      "p_hallucination": 0.0131413284689188,
+      "model_confidence_correct": 0.9868586715310812,
+      "prompt_excerpt": "Knowledge:  The games were in commemoration of the 1800th anniversary of the Bar Kokhba revolt, a major rebellion by the Jews of Judaea Province against the Roman Empire. Some historians also refer to it as the Second Revolt of Judea, not counting the Kitos War (115–117 CE), which had only marginally been fought in Judea.\nQuestion: The 1932 Maccabiah Games were in commemoration of the 1800th anniversary of a revolt that historians also refer to as what?\nAnswer: The Jewish War",
+      "semantic_features": {
+        "semantic_similarity": 0.6028663516044617,
+        "entity_overlap_ratio": 0.0,
+        "entity_coverage": 0.0,
+        "knowledge_overlap": 0.5
+      },
+      "uncertainty_features": {
+        "answer_length": 3,
+        "answer_char_length": 14,
+        "numeric_density": 0.0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.6666666666666666,
+        "perplexity": 3.17115932197348,
+        "token_entropy": 0.48926416200148165,
+        "avg_confidence": 0.6666666666666666,
+        "sequence_entropy": 1.467792486004445
+      },
+      "signal_reliability": {
+        "reliability_score": 0.728,
+        "trust_level": "HIGH",
+        "consistent_signals": [
+          "perplexity(low)",
+          "token_entropy(low)"
+        ],
+        "conflicting_signals": [
+          "entity_overlap(low)"
+        ],
+        "conflicts": [],
+        "confidence_adjustment": 0.0,
+        "adjusted_confidence": 0.9868586715310812,
+        "reasoning": [
+          "Signal consistency: 0.32",
+          "Detected 0 conflicts",
+          "Confidence agreement: 1.00",
+          "Verdict: cues agree; no conflicts"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type1_semantic_failure",
+        "reason": "High semantic similarity (semantic_similarity=0.60) but wrong fact — surface matches, content wrong"
+      },
+      "signal_contributions": {
+        "semantic_similarity": 0.6043,
+        "entity_overlap_ratio": -2.9374,
+        "knowledge_overlap": 0.0,
+        "entity_coverage": -2.9374,
+        "perplexity": 2.5648,
+        "token_entropy": 2.2188
+      }
+    },
+    {
+      "test_split_index": 2458,
+      "error_type": "false_negative",
+      "gold_label": 1,
+      "predicted_label": 0,
+      "p_hallucination": 0.02004641853272915,
+      "model_confidence_correct": 0.9799535814672709,
+      "prompt_excerpt": "Knowledge: Ghost Whisperer is a casual hidden-object mystery adventure game developed by Legacy Games for Microsoft Windows and Mac OS. The game is based on the CBS supernatural television drama Ghost Whisperer starring Melinda Gordon (Jennifer Love Hewitt).Jennifer Love Hewitt (born February 21, 1979) is an American actress, television producer and director, singer/songwriter and author. Hewitt began her acting career as a child by appearing in television commercials and the Disney Channel series \"Kids Incorporated\".\nQuestion: What is the birthdate of this American actress, television producer and director, singer/songwriter and author, appearing in Kids Incorporated and starring in Ghost Whisperer? \nAnswer: January 21, 1979",
+      "semantic_features": {
+        "semantic_similarity": 0.49870139360427856,
+        "entity_overlap_ratio": 0.5,
+        "entity_coverage": 0.13333333333333333,
+        "knowledge_overlap": 0.0
+      },
+      "uncertainty_features": {
+        "answer_length": 3,
+        "answer_char_length": 16,
+        "numeric_density": 0.6666666666666666,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.3333333333333333,
+        "perplexity": 4.594110683965227,
+        "token_entropy": 1.5477936624758377,
+        "avg_confidence": 0.3333333333333333,
+        "sequence_entropy": 4.643380987427513
+      },
+      "signal_reliability": {
+        "reliability_score": 0.428,
+        "trust_level": "LOW",
+        "consistent_signals": [
+          "perplexity(low)"
+        ],
+        "conflicting_signals": [
+          "knowledge_overlap(low)"
+        ],
+        "conflicts": [
+          "Large gap between knowledge overlap and semantic similarity"
+        ],
+        "confidence_adjustment": -0.1,
+        "adjusted_confidence": 0.8799535814672709,
+        "reasoning": [
+          "Signal consistency: 0.32",
+          "Detected 1 conflicts",
+          "Confidence agreement: 0.20",
+          "Verdict: unreliable cues or unresolved conflicts"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type3_conflicting_signals",
+        "reason": "Conflicting signals prevent reliable prediction: Large gap between knowledge overlap and semantic similarity"
+      },
+      "signal_contributions": {
+        "semantic_similarity": -0.0018,
+        "entity_overlap_ratio": 0.0,
+        "knowledge_overlap": -0.692,
+        "entity_coverage": -0.5075,
+        "perplexity": 0.5648,
+        "token_entropy": 0.1565
+      }
+    },
+    {
+      "test_split_index": 1317,
+      "error_type": "false_negative",
+      "gold_label": 1,
+      "predicted_label": 0,
+      "p_hallucination": 0.02033204399049282,
+      "model_confidence_correct": 0.9796679560095072,
+      "prompt_excerpt": "Knowledge:  He is best known for writing and directing \"Road Trip\" (2000), \"Old School\" (2003), \"Starsky & Hutch\" (2004), \"The Hangover Trilogy\" (2009, 2011, and 2013), \"Due Date\" (2010) and \"War Dogs\" (2016).Road Trip is a 2000 American comedy film directed by Todd Phillips and written by Scot Armstrong and Phillips. The film stars Breckin Meyer, Seann William Scott, Paulo Costanzo, and DJ Qualls as four college friends who embark on an 1800-mile road trip to retrieve an illicit tape mistakenly mailed to a girlfriend.\nQuestion: The director of War Dogs also directed which film starring Breckin Meyer?\nAnswer: Due Date",
+      "semantic_features": {
+        "semantic_similarity": 0.377850741147995,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.038461538461538464,
+        "knowledge_overlap": 0.0
+      },
+      "uncertainty_features": {
+        "answer_length": 2,
+        "answer_char_length": 8,
+        "numeric_density": 0.0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.0,
+        "perplexity": 7.080308821360668,
+        "token_entropy": 0.3816976058196541,
+        "avg_confidence": 0.0,
+        "sequence_entropy": 0.7633952116393082
+      },
+      "signal_reliability": {
+        "reliability_score": 0.552,
+        "trust_level": "MEDIUM",
+        "consistent_signals": [
+          "perplexity(low)",
+          "token_entropy(low)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [
+          "knowledge_overlap(low)"
+        ],
+        "conflicts": [],
+        "confidence_adjustment": 0.0,
+        "adjusted_confidence": 0.9796679560095072,
+        "reasoning": [
+          "Signal consistency: 0.48",
+          "Detected 0 conflicts",
+          "Confidence agreement: 0.20",
+          "Verdict: moderately reliable cues"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type2_missing_info",
+        "reason": "Low knowledge coverage (knowledge_overlap=0.00) — hallucination via missing info"
+      },
+      "signal_contributions": {
+        "semantic_similarity": 0.3268,
+        "entity_overlap_ratio": -1.3377,
+        "knowledge_overlap": 1.3377,
+        "entity_coverage": 1.2348,
+        "perplexity": -0.9589,
+        "token_entropy": -1.0824
+      }
+    },
+    {
+      "test_split_index": 3819,
+      "error_type": "false_negative",
+      "gold_label": 1,
+      "predicted_label": 0,
+      "p_hallucination": 0.021367620676755905,
+      "model_confidence_correct": 0.9786323793232441,
+      "prompt_excerpt": "Knowledge:  Sen states Narasimhavarman, or Rajamalla, reigned from 695 to 722 AD.The Shore Temple (built in 700–728 AD) is so named because it overlooks the shore of the Bay of Bengal.\nQuestion: Narasimhavarman II, popularly known as Rajasimha Pallava, reigned from 695 to when, was a ruler of the Pallava kingdom, Rajasimha is credited with the construction of the Shore Temple?\nAnswer: 700 AD",
+      "semantic_features": {
+        "semantic_similarity": 0.5271788835525513,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.1,
+        "knowledge_overlap": 0.0
+      },
+      "uncertainty_features": {
+        "answer_length": 2,
+        "answer_char_length": 6,
+        "numeric_density": 0.5,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.0,
+        "perplexity": 7.503073365781608,
+        "token_entropy": 1.2473256157834673,
+        "avg_confidence": 0.0,
+        "sequence_entropy": 2.4946512315669347
+      },
+      "signal_reliability": {
+        "reliability_score": 0.428,
+        "trust_level": "LOW",
+        "consistent_signals": [
+          "perplexity(low)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [
+          "knowledge_overlap(low)"
+        ],
+        "conflicts": [
+          "Large gap between knowledge overlap and semantic similarity"
+        ],
+        "confidence_adjustment": -0.1,
+        "adjusted_confidence": 0.8786323793232441,
+        "reasoning": [
+          "Signal consistency: 0.32",
+          "Detected 1 conflicts",
+          "Confidence agreement: 0.20",
+          "Verdict: unreliable cues or unresolved conflicts"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type3_conflicting_signals",
+        "reason": "Conflicting signals prevent reliable prediction: Large gap between knowledge overlap and semantic similarity"
+      },
+      "signal_contributions": {
+        "semantic_similarity": -0.0787,
+        "entity_overlap_ratio": -1.4479,
+        "knowledge_overlap": 1.4479,
+        "entity_coverage": 1.1583,
+        "perplexity": -1.0133,
+        "token_entropy": -0.5449
+      }
+    },
+    {
+      "test_split_index": 2892,
+      "error_type": "false_negative",
+      "gold_label": 1,
+      "predicted_label": 0,
+      "p_hallucination": 0.022536588832736015,
+      "model_confidence_correct": 0.977463411167264,
+      "prompt_excerpt": "Knowledge:  He has appeared in many stage musicals and dramas, including \"On the Twentieth Century\" (1978) and \"Shenandoah\" (1975), winning the Tony Awards for Best Leading Actor in a Musical for each. Based partly on the 1930s film and play of the same name, the musical is part operetta, part farce and part screwball comedy.\nQuestion: One of the musicals John Cullum won Best Leading Actor in a Musical for was a screwball comedy. What was the name of the other?\nAnswer: \"On the Twentieth Century\"",
+      "semantic_features": {
+        "semantic_similarity": 0.5920228958129883,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.2,
+        "knowledge_overlap": 1.0
+      },
+      "uncertainty_features": {
+        "answer_length": 4,
+        "answer_char_length": 26,
+        "numeric_density": 0.0,
+        "sentence_count": 1,
+        "knowledge_overlap": 1.0,
+        "perplexity": 1.4331442840598814,
+        "token_entropy": 0.12832044702625162,
+        "avg_confidence": 1.0,
+        "sequence_entropy": 0.5132817881050065
+      },
+      "signal_reliability": {
+        "reliability_score": 0.8600000000000001,
+        "trust_level": "MEDIUM",
+        "consistent_signals": [
+          "perplexity(low)",
+          "knowledge_overlap(high)",
+          "token_entropy(low)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [
+          "Large gap between knowledge overlap and semantic similarity"
+        ],
+        "confidence_adjustment": -0.1,
+        "adjusted_confidence": 0.877463411167264,
+        "reasoning": [
+          "Signal consistency: 0.80",
+          "Detected 1 conflicts",
+          "Confidence agreement: 1.00",
+          "Verdict: moderately reliable cues"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type3_conflicting_signals",
+        "reason": "Conflicting signals prevent reliable prediction: Large gap between knowledge overlap and semantic similarity"
+      },
+      "signal_contributions": {
+        "semantic_similarity": -0.0254,
+        "entity_overlap_ratio": -0.1379,
+        "knowledge_overlap": -0.1379,
+        "entity_coverage": 0.0827,
+        "perplexity": -0.13,
+        "token_entropy": -0.129
+      }
+    },
+    {
+      "test_split_index": 974,
+      "error_type": "false_negative",
+      "gold_label": 1,
+      "predicted_label": 0,
+      "p_hallucination": 0.026058712974190712,
+      "model_confidence_correct": 0.9739412870258093,
+      "prompt_excerpt": "Knowledge: Gore Verbinski wrote Rango. Rango is starring Johnny Depp\nDialogue: [Human]: Could you recommend any movies directed by Gore Verbinski? [Assistant]: Gore Verbinski wrote/directed the Family film Rango starring Johnny Depp. do you like Johnny Depp movies? [Human]: Yes, I do! Was that one a cartoon? [Assistant]: yes. Rango is a computer animated film. Do you like those type of movies? [Human]: I love to watch them with my children. When was it released? \nResponse: In 2013",
+      "semantic_features": {
+        "semantic_similarity": 0.35828256607055664,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.13333333333333333,
+        "knowledge_overlap": 1.0
+      },
+      "uncertainty_features": {
+        "answer_length": 0,
+        "answer_char_length": 0,
+        "numeric_density": 0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.5,
+        "perplexity": 4.177003184550764,
+        "token_entropy": 0.13675576804597195,
+        "avg_confidence": 0.5,
+        "sequence_entropy": 0.0
+      },
+      "signal_reliability": {
+        "reliability_score": 0.8600000000000001,
+        "trust_level": "MEDIUM",
+        "consistent_signals": [
+          "perplexity(low)",
+          "knowledge_overlap(high)",
+          "token_entropy(low)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [
+          "Large gap between knowledge overlap and semantic similarity"
+        ],
+        "confidence_adjustment": -0.1,
+        "adjusted_confidence": 0.8739412870258093,
+        "reasoning": [
+          "Signal consistency: 0.80",
+          "Detected 1 conflicts",
+          "Confidence agreement: 1.00",
+          "Verdict: moderately reliable cues"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type3_conflicting_signals",
+        "reason": "Conflicting signals prevent reliable prediction: Large gap between knowledge overlap and semantic similarity"
+      },
+      "signal_contributions": {
+        "semantic_similarity": 0.0489,
+        "entity_overlap_ratio": -0.1725,
+        "knowledge_overlap": -0.1725,
+        "entity_coverage": 0.1265,
+        "perplexity": -0.1437,
+        "token_entropy": -0.1607
+      }
+    },
+    {
+      "test_split_index": 539,
+      "error_type": "false_negative",
+      "gold_label": 1,
+      "predicted_label": 0,
+      "p_hallucination": 0.026192450895905495,
+      "model_confidence_correct": 0.9738075491040945,
+      "prompt_excerpt": "Knowledge: City Messenger is a weekly suburban newspaper in Adelaide, part of the Messenger Newspapers group.Messenger Newspapers is the publisher of 11 free suburban weekly newspapers together covering the Adelaide metropolitan area.\nQuestion: What is the name of this publisher of 11 free suburban weekly newspapers, established by Roger Baynes, and for which City Messenger is part of the group?\nAnswer: Baynes Publications",
+      "semantic_features": {
+        "semantic_similarity": 0.5487047433853149,
+        "entity_overlap_ratio": 0.0,
+        "entity_coverage": 0.0,
+        "knowledge_overlap": 0.0
+      },
+      "uncertainty_features": {
+        "answer_length": 2,
+        "answer_char_length": 19,
+        "numeric_density": 0.0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.0,
+        "perplexity": 7.671992486576212,
+        "token_entropy": 0.17276450027407816,
+        "avg_confidence": 0.0,
+        "sequence_entropy": 0.34552900054815633
+      },
+      "signal_reliability": {
+        "reliability_score": 0.39599999999999996,
+        "trust_level": "LOW",
+        "consistent_signals": [
+          "perplexity(low)",
+          "token_entropy(low)"
+        ],
+        "conflicting_signals": [
+          "knowledge_overlap(low)",
+          "entity_overlap(low)"
+        ],
+        "conflicts": [
+          "Large gap between knowledge overlap and semantic similarity"
+        ],
+        "confidence_adjustment": -0.1,
+        "adjusted_confidence": 0.8738075491040945,
+        "reasoning": [
+          "Signal consistency: 0.24",
+          "Detected 1 conflicts",
+          "Confidence agreement: 0.20",
+          "Verdict: unreliable cues or unresolved conflicts"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type3_conflicting_signals",
+        "reason": "Conflicting signals prevent reliable prediction: Large gap between knowledge overlap and semantic similarity"
+      },
+      "signal_contributions": {
+        "semantic_similarity": 0.0356,
+        "entity_overlap_ratio": -0.3656,
+        "knowledge_overlap": -0.3656,
+        "entity_coverage": -0.3656,
+        "perplexity": 0.2534,
+        "token_entropy": 0.334
+      }
+    },
+    {
+      "test_split_index": 3673,
+      "error_type": "false_negative",
+      "gold_label": 1,
+      "predicted_label": 0,
+      "p_hallucination": 0.02696199156343937,
+      "model_confidence_correct": 0.9730380084365606,
+      "prompt_excerpt": "Knowledge: Pictures at an Exhibition (Russian: Картинки с выставки – Воспоминание о Викторе Гартмане , \"Kartínki s výstavki – Vospominániye o Víktore Gártmane\" , \"Pictures from an Exhibition – A Remembrance of Viktor Hartmann\"; French: \"Tableaux d'une exposition\" ) is a suite of ten pieces (plus a recurring, varied Promenade) composed for the piano by Russian composer Modest Mussorgsky in 1874.Modest Petrovich Mussorgsky (Russian: Моде́ст Петро́вич Му́соргский ; ] ; 21 March [O.S. 9 March] 1839 – 28 March [O.S. 16 March] 1881 ) was a Russian composer, one of the group known as \"The Five\".\nQuestion: What group did the composer of Pictures at an Exhibition belong to?\nAnswer: The Four",
+      "semantic_features": {
+        "semantic_similarity": 0.33403974771499634,
+        "entity_overlap_ratio": 0.0,
+        "entity_coverage": 0.0,
+        "knowledge_overlap": 0.0
+      },
+      "uncertainty_features": {
+        "answer_length": 2,
+        "answer_char_length": 8,
+        "numeric_density": 0.0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.5,
+        "perplexity": 3.574796843332943,
+        "token_entropy": 0.3534994712828246,
+        "avg_confidence": 0.5,
+        "sequence_entropy": 0.7069989425656492
+      },
+      "signal_reliability": {
+        "reliability_score": 0.456,
+        "trust_level": "LOW",
+        "consistent_signals": [
+          "perplexity(low)",
+          "token_entropy(low)"
+        ],
+        "conflicting_signals": [
+          "knowledge_overlap(low)",
+          "entity_overlap(low)"
+        ],
+        "conflicts": [],
+        "confidence_adjustment": 0.0,
+        "adjusted_confidence": 0.9730380084365606,
+        "reasoning": [
+          "Signal consistency: 0.24",
+          "Detected 0 conflicts",
+          "Confidence agreement: 0.20",
+          "Verdict: unreliable cues or unresolved conflicts"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type2_missing_info",
+        "reason": "Low knowledge coverage (knowledge_overlap=0.00) — hallucination via missing info"
+      },
+      "signal_contributions": {
+        "semantic_similarity": -0.0951,
+        "entity_overlap_ratio": -0.2864,
+        "knowledge_overlap": -0.2864,
+        "entity_coverage": -0.2864,
+        "perplexity": 0.2454,
+        "token_entropy": 0.2358
+      }
+    },
+    {
+      "test_split_index": 6372,
+      "error_type": "false_negative",
+      "gold_label": 1,
+      "predicted_label": 0,
+      "p_hallucination": 0.0299192126840353,
+      "model_confidence_correct": 0.9700807873159647,
+      "prompt_excerpt": "Knowledge: Talking Smack is an American talk show produced by WWE and currently airing on their subscription based streaming service, the WWE Network. Past hosts have included Daniel Bryan, Shane McMahon, The Miz and Jerry Lawler.Michael Gregory Mizanin (born October 8, 1980) is an American professional wrestler, reality television star, and actor. He is signed to WWE, where he performs on the Raw brand under the ring name The Miz and is the current Intercontinental Champion in his seventh reign.\nQuestion: Talking Smack is an American talk show whose past hosts have included the current Intercontinental Champion in his what?\nAnswer: first reign in WWE",
+      "semantic_features": {
+        "semantic_similarity": 0.7024057507514954,
+        "entity_overlap_ratio": 0.0,
+        "entity_coverage": 0.0,
+        "knowledge_overlap": 0.75
+      },
+      "uncertainty_features": {
+        "answer_length": 4,
+        "answer_char_length": 18,
+        "numeric_density": 0.0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.5,
+        "perplexity": 5.089771770479546,
+        "token_entropy": 0.7097782244381261,
+        "avg_confidence": 0.5,
+        "sequence_entropy": 2.8391128977525044
+      },
+      "signal_reliability": {
+        "reliability_score": 0.792,
+        "trust_level": "HIGH",
+        "consistent_signals": [
+          "semantic_similarity(high)",
+          "perplexity(low)",
+          "knowledge_overlap(high)"
+        ],
+        "conflicting_signals": [
+          "entity_overlap(low)"
+        ],
+        "conflicts": [],
+        "confidence_adjustment": 0.0,
+        "adjusted_confidence": 0.9700807873159647,
+        "reasoning": [
+          "Signal consistency: 0.48",
+          "Detected 0 conflicts",
+          "Confidence agreement: 1.00",
+          "Verdict: cues agree; no conflicts"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type1_semantic_failure",
+        "reason": "High semantic similarity (semantic_similarity=0.70) but wrong fact — surface matches, content wrong"
+      },
+      "signal_contributions": {
+        "semantic_similarity": -0.5495,
+        "entity_overlap_ratio": 1.3573,
+        "knowledge_overlap": -0.6787,
+        "entity_coverage": 1.3573,
+        "perplexity": -1.081,
+        "token_entropy": -0.8756
+      }
+    },
+    {
+      "test_split_index": 5847,
+      "error_type": "false_negative",
+      "gold_label": 1,
+      "predicted_label": 0,
+      "p_hallucination": 0.03084404207766056,
+      "model_confidence_correct": 0.9691559579223394,
+      "prompt_excerpt": "Knowledge: Meat Loaf starred in The Rocky Horror Picture ShowThe Rocky Horror Picture Show is written by Richard O'BrienRichard O'Brien wrote The Rocky Horror Picture Show\nDialogue: [Human]: Do you have any information related to Meat Loaf? [Assistant]: Of course! Meat Loaf starred in The Rocky Horror Picture Show and Wayne's World as well. [Human]: I've not heard of the first movie. Who else starred in The Rocky Horror Picture Show? \nResponse: I do not have that information, but I can tell you that Meat Loaf wrote The Rocky Horror Picture Show.",
+      "semantic_features": {
+        "semantic_similarity": 0.9006549119949341,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.13333333333333333,
+        "knowledge_overlap": 0.8666666666666667
+      },
+      "uncertainty_features": {
+        "answer_length": 0,
+        "answer_char_length": 0,
+        "numeric_density": 0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.5,
+        "perplexity": 3.5642751904954624,
+        "token_entropy": 0.5341464421733122,
+        "avg_confidence": 0.5,
+        "sequence_entropy": 0.0
+      },
+      "signal_reliability": {
+        "reliability_score": 0.9200000000000002,
+        "trust_level": "HIGH",
+        "consistent_signals": [
+          "semantic_similarity(high)",
+          "perplexity(low)",
+          "knowledge_overlap(high)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [],
+        "confidence_adjustment": 0.05,
+        "adjusted_confidence": 1.0,
+        "reasoning": [
+          "Signal consistency: 0.80",
+          "Detected 0 conflicts",
+          "Confidence agreement: 1.00",
+          "Verdict: cues agree; no conflicts"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type1_semantic_failure",
+        "reason": "High semantic similarity (semantic_similarity=0.90) but wrong fact — surface matches, content wrong"
+      },
+      "signal_contributions": {
+        "semantic_similarity": -0.1108,
+        "entity_overlap_ratio": -0.1383,
+        "knowledge_overlap": -0.1014,
+        "entity_coverage": 0.1014,
+        "perplexity": -0.1186,
+        "token_entropy": -0.1014
+      }
+    },
+    {
+      "test_split_index": 3229,
+      "error_type": "false_negative",
+      "gold_label": 1,
+      "predicted_label": 0,
+      "p_hallucination": 0.03437693417072296,
+      "model_confidence_correct": 0.965623065829277,
+      "prompt_excerpt": "Knowledge: Lindsey Vonn is a/an Celebrity\nDialogue: [Human]: What do you think about Lindsey Vonn? I heard she is amazing. [Assistant]: She's the pro downhill skier isn't she? I think she won the 2010 Olympics. [Human]: She is, I am pretty sure she has won many olympic medals. [Assistant]: She's incredible. Is she still dating Tiger Woods? [Human]: Nope, they split up awhile back. \nResponse: Good for her, she's a player too.",
+      "semantic_features": {
+        "semantic_similarity": 0.786835789680481,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.07692307692307693,
+        "knowledge_overlap": 0.6666666666666666
+      },
+      "uncertainty_features": {
+        "answer_length": 0,
+        "answer_char_length": 0,
+        "numeric_density": 0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.5,
+        "perplexity": 4.249262209251088,
+        "token_entropy": 0.22957236436983597,
+        "avg_confidence": 0.5,
+        "sequence_entropy": 0.0
+      },
+      "signal_reliability": {
+        "reliability_score": 1.0,
+        "trust_level": "HIGH",
+        "consistent_signals": [
+          "semantic_similarity(high)",
+          "perplexity(low)",
+          "knowledge_overlap(high)",
+          "token_entropy(low)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [],
+        "confidence_adjustment": 0.05,
+        "adjusted_confidence": 1.0,
+        "reasoning": [
+          "Signal consistency: 1.00",
+          "Detected 0 conflicts",
+          "Confidence agreement: 1.00",
+          "Verdict: cues agree; no conflicts"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type1_semantic_failure",
+        "reason": "High semantic similarity (semantic_similarity=0.79) but wrong fact — surface matches, content wrong"
+      },
+      "signal_contributions": {
+        "semantic_similarity": -0.0962,
+        "entity_overlap_ratio": -0.1677,
+        "knowledge_overlap": -0.0559,
+        "entity_coverage": 0.1419,
+        "perplexity": -0.1392,
+        "token_entropy": -0.1485
+      }
+    },
+    {
+      "test_split_index": 859,
+      "error_type": "false_negative",
+      "gold_label": 1,
+      "predicted_label": 0,
+      "p_hallucination": 0.03554215654730797,
+      "model_confidence_correct": 0.964457843452692,
+      "prompt_excerpt": "Knowledge: City of Bones has genre FantasyFantasy has examples: The Looking Glass Wars. The Looking Glass Wars is written by Frank Beddor\nDialogue: [Human]: What other books can you recommend similar to City of Bones? [Assistant]: City of Bones is a fantasy adventure book.  Do both of those interest you? Or are you more interested in fantasy than adventure, or vice versa? [Human]: I love fantasy. Any book recommendations in that genre is welcome! \nResponse: I would recommend The Looking Glass Wars by Frank Beddor. Have you read anything else by him?",
+      "semantic_features": {
+        "semantic_similarity": 0.887762188911438,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.21428571428571427,
+        "knowledge_overlap": 0.8461538461538461
+      },
+      "uncertainty_features": {
+        "answer_length": 0,
+        "answer_char_length": 0,
+        "numeric_density": 0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.5,
+        "perplexity": 4.2814629423813395,
+        "token_entropy": 0.6186684529075005,
+        "avg_confidence": 0.5,
+        "sequence_entropy": 0.0
+      },
+      "signal_reliability": {
+        "reliability_score": 0.9200000000000002,
+        "trust_level": "HIGH",
+        "consistent_signals": [
+          "semantic_similarity(high)",
+          "perplexity(low)",
+          "knowledge_overlap(high)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [],
+        "confidence_adjustment": 0.05,
+        "adjusted_confidence": 1.0,
+        "reasoning": [
+          "Signal consistency: 0.80",
+          "Detected 0 conflicts",
+          "Confidence agreement: 1.00",
+          "Verdict: cues agree; no conflicts"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type1_semantic_failure",
+        "reason": "High semantic similarity (semantic_similarity=0.89) but wrong fact — surface matches, content wrong"
+      },
+      "signal_contributions": {
+        "semantic_similarity": -0.1055,
+        "entity_overlap_ratio": -0.136,
+        "knowledge_overlap": -0.0941,
+        "entity_coverage": 0.0777,
+        "perplexity": -0.1127,
+        "token_entropy": -0.0939
+      }
+    },
+    {
+      "test_split_index": 620,
+      "error_type": "false_negative",
+      "gold_label": 1,
+      "predicted_label": 0,
+      "p_hallucination": 0.035710450261831284,
+      "model_confidence_correct": 0.9642895497381687,
+      "prompt_excerpt": "Knowledge: X-Men Origins: Wolverine is starring Hugh Jackman. Hugh Jackman starred in X-Men: Days of Future Past\nDialogue: [Human]: I like the movie Wolverine, can you recommend something similar [Assistant]: Do you like Huge Jackman? He starred in X-Men: days of future past. [Human]: Yes! Do you have any other movie with him? I've seen that one. [Assistant]: Sure, there is other one called Unbound Captives. I highly recommend it.  [Human]: Oh great! I'll watch that one! \nResponse: Great! and if you have any chance please watch Prisoners.",
+      "semantic_features": {
+        "semantic_similarity": 0.7832707166671753,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.1111111111111111,
+        "knowledge_overlap": 0.7777777777777778
+      },
+      "uncertainty_features": {
+        "answer_length": 0,
+        "answer_char_length": 0,
+        "numeric_density": 0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.5,
+        "perplexity": 3.7956294248001115,
+        "token_entropy": 0.66881309298645,
+        "avg_confidence": 0.5,
+        "sequence_entropy": 0.0
+      },
+      "signal_reliability": {
+        "reliability_score": 0.9200000000000002,
+        "trust_level": "HIGH",
+        "consistent_signals": [
+          "semantic_similarity(high)",
+          "perplexity(low)",
+          "knowledge_overlap(high)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [],
+        "confidence_adjustment": 0.05,
+        "adjusted_confidence": 1.0,
+        "reasoning": [
+          "Signal consistency: 0.80",
+          "Detected 0 conflicts",
+          "Confidence agreement: 1.00",
+          "Verdict: cues agree; no conflicts"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type1_semantic_failure",
+        "reason": "High semantic similarity (semantic_similarity=0.78) but wrong fact — surface matches, content wrong"
+      },
+      "signal_contributions": {
+        "semantic_similarity": -0.092,
+        "entity_overlap_ratio": -0.1624,
+        "knowledge_overlap": -0.0902,
+        "entity_coverage": 0.1263,
+        "perplexity": -0.1378,
+        "token_entropy": -0.1081
+      }
+    },
+    {
+      "test_split_index": 18,
+      "error_type": "false_negative",
+      "gold_label": 1,
+      "predicted_label": 0,
+      "p_hallucination": 0.03611955791711807,
+      "model_confidence_correct": 0.9638804420828819,
+      "prompt_excerpt": "Knowledge: Madonna starred in A League of Their OwnA League of Their Own is starring Rosie O'DonnellRosie O'Donnell starred in The Flintstones (Crime Fiction Film)\nDialogue: [Human]: I love me some Madonna. what you think about her? [Assistant]: I don't listen to her music much, but I sure did love her in A League of Their Own [Human]: A League of Their Own is a good movie. I love Rosie O'Donnell role in it. \nResponse: Yes. She's funny. My favorite movie with her in it was The Flintstones (Action/Adventure Film)!",
+      "semantic_features": {
+        "semantic_similarity": 0.8912001848220825,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.375,
+        "knowledge_overlap": 0.7692307692307693
+      },
+      "uncertainty_features": {
+        "answer_length": 0,
+        "answer_char_length": 0,
+        "numeric_density": 0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.5,
+        "perplexity": 3.6957409812666935,
+        "token_entropy": 0.7175969069476161,
+        "avg_confidence": 0.5,
+        "sequence_entropy": 0.0
+      },
+      "signal_reliability": {
+        "reliability_score": 0.9200000000000002,
+        "trust_level": "HIGH",
+        "consistent_signals": [
+          "semantic_similarity(high)",
+          "perplexity(low)",
+          "knowledge_overlap(high)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [],
+        "confidence_adjustment": 0.05,
+        "adjusted_confidence": 1.0,
+        "reasoning": [
+          "Signal consistency: 0.80",
+          "Detected 0 conflicts",
+          "Confidence agreement: 1.00",
+          "Verdict: cues agree; no conflicts"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type1_semantic_failure",
+        "reason": "High semantic similarity (semantic_similarity=0.89) but wrong fact — surface matches, content wrong"
+      },
+      "signal_contributions": {
+        "semantic_similarity": -0.1018,
+        "entity_overlap_ratio": -0.1301,
+        "knowledge_overlap": -0.0701,
+        "entity_coverage": 0.0325,
+        "perplexity": -0.1109,
+        "token_entropy": -0.0835
+      }
+    },
+    {
+      "test_split_index": 6397,
+      "error_type": "false_negative",
+      "gold_label": 1,
+      "predicted_label": 0,
+      "p_hallucination": 0.036422181874513626,
+      "model_confidence_correct": 0.9635778181254864,
+      "prompt_excerpt": "Knowledge: The Weeknd is a celebrity friend to Selena GomezSelena Gomez is a celebrity friend to Taylor SwiftTaylor Swift starred in Valentine's Day (Romantic comedy Film). Valentine's Day (Romantic comedy Film) is starring Shirley MacLaine\nDialogue: [Human]: I like The Weekend. What do you know about them? [Assistant]: I know that he dated Selena Gomez. He wrote a few songs himself. Do you like him? [Human]: I know Selena Gomez is a friend of Taylor Swift. I like her. Do you know her songs? \nResponse: Shirley MacLaine is great. I like the Valentine's Day movie that she was in.",
+      "semantic_features": {
+        "semantic_similarity": 0.8498895168304443,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.16666666666666666,
+        "knowledge_overlap": 0.8181818181818182
+      },
+      "uncertainty_features": {
+        "answer_length": 0,
+        "answer_char_length": 0,
+        "numeric_density": 0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.5,
+        "perplexity": 3.842800168861781,
+        "token_entropy": 0.30616770526156956,
+        "avg_confidence": 0.5,
+        "sequence_entropy": 0.0
+      },
+      "signal_reliability": {
+        "reliability_score": 1.0,
+        "trust_level": "HIGH",
+        "consistent_signals": [
+          "semantic_similarity(high)",
+          "perplexity(low)",
+          "knowledge_overlap(high)",
+          "token_entropy(low)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [],
+        "confidence_adjustment": 0.05,
+        "adjusted_confidence": 1.0,
+        "reasoning": [
+          "Signal consistency: 1.00",
+          "Detected 0 conflicts",
+          "Confidence agreement: 1.00",
+          "Verdict: cues agree; no conflicts"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type1_semantic_failure",
+        "reason": "High semantic similarity (semantic_similarity=0.85) but wrong fact — surface matches, content wrong"
+      },
+      "signal_contributions": {
+        "semantic_similarity": -0.0965,
+        "entity_overlap_ratio": -0.1379,
+        "knowledge_overlap": -0.0877,
+        "entity_coverage": 0.0919,
+        "perplexity": -0.1167,
+        "token_entropy": -0.1168
+      }
+    },
+    {
+      "test_split_index": 2858,
+      "error_type": "false_negative",
+      "gold_label": 1,
+      "predicted_label": 0,
+      "p_hallucination": 0.03857148066163063,
+      "model_confidence_correct": 0.9614285193383694,
+      "prompt_excerpt": "Knowledge: Dani Alves : `Country of nationality`: SpainSpain has examples: Pan's Labyrinth. Pan's Labyrinth is starring Doug JonesPan's Labyrinth is written by Guillermo del Toro\nDialogue: [Human]: Do you know Dani Alves? [Assistant]: Yeah, he's from  Spain and plays football. [Human]: Oh i see. I saw Pan's Labyrinth, a movie from Spain. It was great. Have you seen it? \nResponse: I have although I wasn't a fan. Doug Jones starred in it. Half of his stuff I like, the other half I don't.",
+      "semantic_features": {
+        "semantic_similarity": 0.8802763223648071,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.11764705882352941,
+        "knowledge_overlap": 0.75
+      },
+      "uncertainty_features": {
+        "answer_length": 0,
+        "answer_char_length": 0,
+        "numeric_density": 0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.5,
+        "perplexity": 3.539876038191515,
+        "token_entropy": 0.27329578378832964,
+        "avg_confidence": 0.5,
+        "sequence_entropy": 0.0
+      },
+      "signal_reliability": {
+        "reliability_score": 1.0,
+        "trust_level": "HIGH",
+        "consistent_signals": [
+          "semantic_similarity(high)",
+          "perplexity(low)",
+          "knowledge_overlap(high)",
+          "token_entropy(low)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [],
+        "confidence_adjustment": 0.05,
+        "adjusted_confidence": 1.0,
+        "reasoning": [
+          "Signal consistency: 1.00",
+          "Detected 0 conflicts",
+          "Confidence agreement: 1.00",
+          "Verdict: cues agree; no conflicts"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type1_semantic_failure",
+        "reason": "High semantic similarity (semantic_similarity=0.88) but wrong fact — surface matches, content wrong"
+      },
+      "signal_contributions": {
+        "semantic_similarity": -0.1091,
+        "entity_overlap_ratio": -0.1434,
+        "knowledge_overlap": -0.0717,
+        "entity_coverage": 0.1097,
+        "perplexity": -0.1231,
+        "token_entropy": -0.1238
+      }
+    },
+    {
+      "test_split_index": 349,
+      "error_type": "false_negative",
+      "gold_label": 1,
+      "predicted_label": 0,
+      "p_hallucination": 0.0399477556347847,
+      "model_confidence_correct": 0.9600522443652153,
+      "prompt_excerpt": "Knowledge: Maria Sharapova : `~has_person`: SochiSochi : `Contained by`: EurasiaEurasia : `~Contained by`: Windsor Castle\nDialogue: [Human]: Do you like Maria Sharapova? [Assistant]: Yes I do, She is a very good tennis player. Do you like her and Tennis?  [Human]: Oh, so much. Did you know she was born in Sochi? [Assistant]: No I didn't. That is where the 2014 Winter Olympics was right? [Human]: That's right. Also a part of Eurasia in the Northern Hemisphere. What do you know about that? \nResponse: Isn't Windsor Castle located there? I don't know much about Eurasia though.",
+      "semantic_features": {
+        "semantic_similarity": 0.826521098613739,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.13043478260869565,
+        "knowledge_overlap": 0.8333333333333334
+      },
+      "uncertainty_features": {
+        "answer_length": 0,
+        "answer_char_length": 0,
+        "numeric_density": 0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.5,
+        "perplexity": 4.350249505426536,
+        "token_entropy": 0.3035521642842771,
+        "avg_confidence": 0.5,
+        "sequence_entropy": 0.0
+      },
+      "signal_reliability": {
+        "reliability_score": 1.0,
+        "trust_level": "HIGH",
+        "consistent_signals": [
+          "semantic_similarity(high)",
+          "perplexity(low)",
+          "knowledge_overlap(high)",
+          "token_entropy(low)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [],
+        "confidence_adjustment": 0.05,
+        "adjusted_confidence": 1.0,
+        "reasoning": [
+          "Signal consistency: 1.00",
+          "Detected 0 conflicts",
+          "Confidence agreement: 1.00",
+          "Verdict: cues agree; no conflicts"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type1_semantic_failure",
+        "reason": "High semantic similarity (semantic_similarity=0.83) but wrong fact — surface matches, content wrong"
+      },
+      "signal_contributions": {
+        "semantic_similarity": -0.0923,
+        "entity_overlap_ratio": -0.1413,
+        "knowledge_overlap": -0.0942,
+        "entity_coverage": 0.1045,
+        "perplexity": -0.1168,
+        "token_entropy": -0.1199
+      }
+    },
+    {
+      "test_split_index": 1328,
+      "error_type": "false_negative",
+      "gold_label": 1,
+      "predicted_label": 0,
+      "p_hallucination": 0.04012126103043556,
+      "model_confidence_correct": 0.9598787389695644,
+      "prompt_excerpt": "Knowledge: Edward Zwick wrote The Siege. The Siege is starring Bruce WillisThe Siege is starring Denzel WashingtonDenzel Washington starred in The Siege\nDialogue: [Human]: Do you have any movies directed  by Edward Zwick? [Assistant]: Edward Zwick wrote the movie The Siege. [Human]: who stars in The Siege movie? \nResponse: Bruce Willis stars in The Siege.",
+      "semantic_features": {
+        "semantic_similarity": 0.7321679592132568,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.18181818181818182,
+        "knowledge_overlap": 0.8
+      },
+      "uncertainty_features": {
+        "answer_length": 0,
+        "answer_char_length": 0,
+        "numeric_density": 0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.5,
+        "perplexity": 3.5293437999275046,
+        "token_entropy": 0.6711780894667614,
+        "avg_confidence": 0.5,
+        "sequence_entropy": 0.0
+      },
+      "signal_reliability": {
+        "reliability_score": 0.9200000000000002,
+        "trust_level": "HIGH",
+        "consistent_signals": [
+          "semantic_similarity(high)",
+          "perplexity(low)",
+          "knowledge_overlap(high)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [],
+        "confidence_adjustment": 0.05,
+        "adjusted_confidence": 1.0,
+        "reasoning": [
+          "Signal consistency: 0.80",
+          "Detected 0 conflicts",
+          "Confidence agreement: 1.00",
+          "Verdict: cues agree; no conflicts"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type1_semantic_failure",
+        "reason": "High semantic similarity (semantic_similarity=0.73) but wrong fact — surface matches, content wrong"
+      },
+      "signal_contributions": {
+        "semantic_similarity": -0.0724,
+        "entity_overlap_ratio": -0.1558,
+        "knowledge_overlap": -0.0935,
+        "entity_coverage": 0.0992,
+        "perplexity": -0.1338,
+        "token_entropy": -0.1035
+      }
+    },
+    {
+      "test_split_index": 5595,
+      "error_type": "false_negative",
+      "gold_label": 1,
+      "predicted_label": 0,
+      "p_hallucination": 0.0424259752035141,
+      "model_confidence_correct": 0.9575740247964859,
+      "prompt_excerpt": "Knowledge:  He also owns a VFX company named \"Advitha Creative Studios\" which provided special effects for movies like \"Legend\", \"Nannaku Prematho\", \"Krishnashtami\" etc.Legend is a 2015 French-British crime thriller film written and directed by Brian Helgeland.\nQuestion: Which company, owned by Nandamuri Kalyan Ram, provided that special effects for a 2015 French-British crime thriller film written by Brian Helgeland?\nAnswer: Advitha Creative Works",
+      "semantic_features": {
+        "semantic_similarity": 0.7187355756759644,
+        "entity_overlap_ratio": 0.0,
+        "entity_coverage": 0.0,
+        "knowledge_overlap": 0.3333333333333333
+      },
+      "uncertainty_features": {
+        "answer_length": 3,
+        "answer_char_length": 22,
+        "numeric_density": 0.0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.3333333333333333,
+        "perplexity": 4.890314050630131,
+        "token_entropy": 0.538013525423655,
+        "avg_confidence": 0.3333333333333333,
+        "sequence_entropy": 1.6140405762709649
+      },
+      "signal_reliability": {
+        "reliability_score": 0.728,
+        "trust_level": "HIGH",
+        "consistent_signals": [
+          "semantic_similarity(high)",
+          "perplexity(low)"
+        ],
+        "conflicting_signals": [
+          "entity_overlap(low)"
+        ],
+        "conflicts": [],
+        "confidence_adjustment": 0.0,
+        "adjusted_confidence": 0.9575740247964859,
+        "reasoning": [
+          "Signal consistency: 0.32",
+          "Detected 0 conflicts",
+          "Confidence agreement: 1.00",
+          "Verdict: cues agree; no conflicts"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type1_semantic_failure",
+        "reason": "High semantic similarity (semantic_similarity=0.72) but wrong fact — surface matches, content wrong"
+      },
+      "signal_contributions": {
+        "semantic_similarity": 0.5553,
+        "entity_overlap_ratio": -1.2693,
+        "knowledge_overlap": -0.4231,
+        "entity_coverage": -1.2693,
+        "perplexity": 1.021,
+        "token_entropy": 0.9279
+      }
+    },
+    {
+      "test_split_index": 494,
+      "error_type": "false_negative",
+      "gold_label": 1,
+      "predicted_label": 0,
+      "p_hallucination": 0.04306165874004364,
+      "model_confidence_correct": 0.9569383412599564,
+      "prompt_excerpt": "Knowledge: Watchmen : `Publisher`: DC ComicsDC Comics : `~Publisher`: WildStormWildStorm : `Publisher`: DC Comics. DC Comics : `~Production company`: The Dark Knight\nDialogue: [Human]: I really Like The Watchmen. [Assistant]: Did you like the Watchmen because it is from DC Comics, or because it is written by John Higgins? [Human]: D.C. Comics of Course. They are the best. \nResponse: Great choice! The producer of The Dark Knight is also WildStorm Comics. Is that one you'd like to see?",
+      "semantic_features": {
+        "semantic_similarity": 0.8974171876907349,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.3333333333333333,
+        "knowledge_overlap": 0.8
+      },
+      "uncertainty_features": {
+        "answer_length": 0,
+        "answer_char_length": 0,
+        "numeric_density": 0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.5,
+        "perplexity": 3.9655339743183817,
+        "token_entropy": 0.4410852690781757,
+        "avg_confidence": 0.5,
+        "sequence_entropy": 0.0
+      },
+      "signal_reliability": {
+        "reliability_score": 1.0,
+        "trust_level": "HIGH",
+        "consistent_signals": [
+          "semantic_similarity(high)",
+          "perplexity(low)",
+          "knowledge_overlap(high)",
+          "token_entropy(low)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [],
+        "confidence_adjustment": 0.05,
+        "adjusted_confidence": 1.0,
+        "reasoning": [
+          "Signal consistency: 1.00",
+          "Detected 0 conflicts",
+          "Confidence agreement: 1.00",
+          "Verdict: cues agree; no conflicts"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type1_semantic_failure",
+        "reason": "High semantic similarity (semantic_similarity=0.90) but wrong fact — surface matches, content wrong"
+      },
+      "signal_contributions": {
+        "semantic_similarity": -0.0986,
+        "entity_overlap_ratio": -0.1241,
+        "knowledge_overlap": -0.0745,
+        "entity_coverage": 0.0414,
+        "perplexity": -0.1044,
+        "token_entropy": -0.0967
+      }
+    },
+    {
+      "test_split_index": 5173,
+      "error_type": "false_negative",
+      "gold_label": 1,
+      "predicted_label": 0,
+      "p_hallucination": 0.043535154312849045,
+      "model_confidence_correct": 0.956464845687151,
+      "prompt_excerpt": "Knowledge: East of Eden is written by Paul Osborn. Paul Osborn wrote The YearlingThe Yearling has genre Family (Film genre) #395\nDialogue: [Human]: I loved East of Eden!  Are there any other books like that? [Assistant]: Are you interested in the romantic aspect of that story? [Human]: Yes, actually.  It drew me in! [Assistant]: Then you might also like the Yearling also written by the same author [Human]: Isn't that a movie, too?  I like books that are made into movies. \nResponse: Yes it is also a film adaptation, and is a romantic movie.",
+      "semantic_features": {
+        "semantic_similarity": 0.8188031911849976,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.058823529411764705,
+        "knowledge_overlap": 0.75
+      },
+      "uncertainty_features": {
+        "answer_length": 0,
+        "answer_char_length": 0,
+        "numeric_density": 0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.5,
+        "perplexity": 3.9309552139757704,
+        "token_entropy": 0.32954871136565667,
+        "avg_confidence": 0.5,
+        "sequence_entropy": 0.0
+      },
+      "signal_reliability": {
+        "reliability_score": 1.0,
+        "trust_level": "HIGH",
+        "consistent_signals": [
+          "semantic_similarity(high)",
+          "perplexity(low)",
+          "knowledge_overlap(high)",
+          "token_entropy(low)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [],
+        "confidence_adjustment": 0.05,
+        "adjusted_confidence": 1.0,
+        "reasoning": [
+          "Signal consistency: 1.00",
+          "Detected 0 conflicts",
+          "Confidence agreement: 1.00",
+          "Verdict: cues agree; no conflicts"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type1_semantic_failure",
+        "reason": "High semantic similarity (semantic_similarity=0.82) but wrong fact — surface matches, content wrong"
+      },
+      "signal_contributions": {
+        "semantic_similarity": -0.0992,
+        "entity_overlap_ratio": -0.1556,
+        "knowledge_overlap": -0.0778,
+        "entity_coverage": 0.1373,
+        "perplexity": -0.1311,
+        "token_entropy": -0.13
+      }
+    },
+    {
+      "test_split_index": 807,
+      "error_type": "false_negative",
+      "gold_label": 1,
+      "predicted_label": 0,
+      "p_hallucination": 0.04591948539018631,
+      "model_confidence_correct": 0.9540805146098137,
+      "prompt_excerpt": "Knowledge: Kesha : `~Composer`: Tik Tok\nDialogue: [Human]: what do you think about Kesha [Assistant]: I hate to say it, but I'm a secret fan. Your Love is My Drug and Tik Tok are too catchy. What about you? [Human]: well i really don't know who this is unless they are talking about Keisha coles [Assistant]: Kesha is a dance pop queen. Her latest music has been somewhat subdued comparatively, however. [Human]: oh ok  \nResponse: I think she's from New York, too.",
+      "semantic_features": {
+        "semantic_similarity": 0.7157049179077148,
+        "entity_overlap_ratio": 1.0,
+        "entity_coverage": 0.07692307692307693,
+        "knowledge_overlap": 0.7142857142857143
+      },
+      "uncertainty_features": {
+        "answer_length": 0,
+        "answer_char_length": 0,
+        "numeric_density": 0,
+        "sentence_count": 1,
+        "knowledge_overlap": 0.5,
+        "perplexity": 3.8622525580637874,
+        "token_entropy": 0.523637336538179,
+        "avg_confidence": 0.5,
+        "sequence_entropy": 0.0
+      },
+      "signal_reliability": {
+        "reliability_score": 0.9200000000000002,
+        "trust_level": "HIGH",
+        "consistent_signals": [
+          "semantic_similarity(high)",
+          "perplexity(low)",
+          "knowledge_overlap(high)",
+          "entity_overlap(high)"
+        ],
+        "conflicting_signals": [],
+        "conflicts": [],
+        "confidence_adjustment": 0.05,
+        "adjusted_confidence": 1.0,
+        "reasoning": [
+          "Signal consistency: 0.80",
+          "Detected 0 conflicts",
+          "Confidence agreement: 1.00",
+          "Verdict: cues agree; no conflicts"
+        ]
+      },
+      "error_taxonomy": {
+        "type": "Type1_semantic_failure",
+        "reason": "High semantic similarity (semantic_similarity=0.72) but wrong fact — surface matches, content wrong"
+      },
+      "signal_contributions": {
+        "semantic_similarity": -0.0754,
+        "entity_overlap_ratio": -0.1748,
+        "knowledge_overlap": -0.0749,
+        "entity_coverage": 0.1479,
+        "perplexity": -0.1478,
+        "token_entropy": -0.129
+      }
+    }
+  ]
+}
