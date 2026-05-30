@@ -1,5 +1,7 @@
 torch>=2.1.0,<3.0
-transformers>=4.36.0,<5.0
+# summac<=0.17 hub vs transformers>=4.36 (hub>=0.19.3) — use 4.35.x + hub 0.17.x
+transformers>=4.35.0,<4.36.0
+huggingface-hub>=0.16.4,<=0.17.0
 numpy>=1.24.0,<3.0
 scikit-learn>=1.3.0,<2.0
 matplotlib>=3.7.0,<4.0
